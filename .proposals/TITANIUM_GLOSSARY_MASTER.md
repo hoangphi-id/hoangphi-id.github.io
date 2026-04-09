@@ -134,4 +134,16 @@ graph TD
 - **AI-Augmented:** "Tôi sử dụng trí tuệ nhân tạo (AI) như một trợ lý thiết kế để tăng tốc độ sản xuất nội dung lên gấp nhiều lần, giúp tối ưu hóa ROI cho công ty."
 
 ---
-*File này sẽ được AI tự động cập nhật mỗi khi có kỹ năng mới xuất hiện. Mày nhớ đọc nó mỗi tuần 1 lần nhé!*
+
+## 🏗️ 6. DEPLOYMENT & INFRASTRUCTURE (Hạ tầng Portfolio)
+
+- **GitHub Pages:** Công cụ giúp host trang web miễn phí dựa trên kho mã nguồn GitHub.
+    *   *Talkpoint:* "Tôi sử dụng GitHub Pages để triển khai Portfolio vì nó giúp tôi kiểm soát hoàn toàn mã nguồn và tối ưu hóa tốc độ tải trang toàn cầu."
+- **Static vs. Dynamic Content:** 
+    *   **Static (Tĩnh):** Các file HTML/CSS/JS chạy trực tiếp (như Rise/Storyline sau khi export). Ưu điểm là nhanh và bảo mật tuyệt đối.
+    *   **Dynamic (Động):** Các hệ thống cần cơ sở dữ liệu (như Moodle).
+    *   *Strategy:* "Chúng ta đã sử dụng chiến lược 'Static Mirroring' cho các khóa học Articulate để đảm bảo tính ổn định vĩnh viễn cho Portfolio."
+- **Personal Access Token (PAT):** "Chìa khóa" kỹ thuật để kết nối các máy trạm với hệ thống đám mây.
+
+---
+*Last Updated: 2026-04-09 21:00 (Infrastructure Sync)*

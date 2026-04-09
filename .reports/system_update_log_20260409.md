@@ -9,8 +9,9 @@
 
 | File Path | Trạng thái | Nội dung chính |
 |---|---|---|
-| `portfolio_hub.html` | ✅ UPDATED | Cập nhật toàn bộ link sang Version nội bộ (Onboarding course, Context Briefing, Simulator). Thiết lập luồng 2 bước cho Simulator. |
-| `Project_3_Master_Plan.md` | ✅ DONE | Hoàn thành Step 2 của Phase 5: "Offline Asset Integration". |
+| `index.html` | ✅ LIVE | Trang chủ Portfolio chính thức hoạt động tại hoangphi-id.github.io. |
+| `Project_3_Master_Plan.md` | ✅ COMPLETED | Đánh dấu hoàn tất Phase 5. |
+| `TITANIUM_GLOSSARY_MASTER.md` | ✅ UPDATED | Thêm mục số 6 về Hạ tầng và Triển khai (Infrastructure). |
 | `assets/Moodle Backup/` | ✅ SECURED | Đã lưu trữ file `.mbz` - bảo hiểm kỹ thuật cho dự án Moodle. |
 
 ---
@@ -24,6 +25,6 @@ Hệ thống hiện đã hoạt động hoàn hảo dưới dạng **Portable We
 
 ---
 
-## 3. LƯU Ý CHO HOÀNG PHI
+## 3. LỜI KẾT NGÀY 09/04
 
-Mày có thể mở file `portfolio_hub.html` lên và bắt đầu "test" thử các nút bấm. Nếu mày thấy mọi thứ đã mượt mà, chúng ta chỉ còn một bước cuối cùng: **Deploy lên GitHub Pages** để lấy một cái đường link duy nhất gửi cho nhà tuyển dụng!
+Hệ thống đã được đồng bộ hoàn toàn. Toàn bộ các link trong CV, Portfolio và tài liệu nội bộ hiện tại đều thống nhất trỏ về hạ tầng mới. Dự án Project 3 chính thức khép lại phần triển khai kỹ thuật.
