@@ -1,0 +1,13 @@
+{
+    "markdown-pdf.format": "A4",
+    "markdown-pdf.type": "pdf",
+    "markdown-pdf.margin.top": "15mm",
+    "markdown-pdf.margin.bottom": "15mm",
+    "markdown-pdf.margin.left": "15mm",
+    "markdown-pdf.margin.right": "15mm",
+    "markdown-pdf.styles": [
+        "/Users/tonghoangphi/Desktop/Remote_Job_Hunting_2026/Remote CVs/style.css"
+    ],
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.highlight": true
+}

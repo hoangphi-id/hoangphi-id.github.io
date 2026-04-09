@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phi Tong | Learning Experience Architect Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #1a1a1a;
+            --accent: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-dim: #9ca3af;
+            --border: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 80px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 600px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+            margin-left: 20px;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        h3 { font-size: 1rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 10px; }
+        p { font-size: 1rem; color: var(--text-main); margin-bottom: 20px; }
+
+        .tag {
+            display: inline-block;
+            background: #2563eb22;
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            border: 1px solid var(--accent);
+        }
+
+        .coming-soon {
+            opacity: 0.5;
+            border-style: dashed;
+        }
+
+        .footer {
+            margin-top: 100px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .project-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PHI TONG</h1>
+            <div class="tagline">Learning Experience Architect</div>
+            <p class="intro">
+                Combining 10 years of Linguistic expertise with a robust Information Technology background to design scalable, effective, and data-driven learning ecosystems.
+            </p>
+        </header>
+
+        <h2 class="section-title">Case Studies</h2>
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-meta">LMS STRATEGY & AUTOMATION</div>
+            <div class="project-title">IELTS Writing Foundation Ecosystem</div>
+            <div class="project-grid">
+                <div>
+                    <h3>Problem</h3>
+                    <p>Inconsistent feedback loops and slow learner progression in high-stakes test preparation.</p>
+                </div>
+                <div>
+                    <h3>Logic Solution</h3>
+                    <p>Architected a Moodle Cloud environment with automated MCQ feedback and rubric-based sequential tracking.</p>
+                </div>
+            </div>
+            <div>
+                <span class="tag">Moodle LMS</span>
+                <span class="tag">Needs Analysis</span>
+                <span class="tag">Andragogy</span>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-meta">CORPORATE ONBOARDING</div>
+            <div class="project-title">Staff Training & QA Hub</div>
+            <div class="project-grid">
+                <div>
+                    <h3>Problem</h3>
+                    <p>New educators entered the classroom with content knowledge but lacked alignment in instructional standards.</p>
+                </div>
+                <div>
+                    <h3>Logic Solution</h3>
+                    <p>Developed a 3-module interactive course using Articulate Rise 360, utilizing Bloom’s Taxonomy for cognitive progression.</p>
+                </div>
+            </div>
+            <div>
+                <span class="tag">Articulate Rise 360</span>
+                <span class="tag">SCORM 1.2</span>
+                <span class="tag">Bloom's Taxonomy</span>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-meta">BRANCHING SCENARIO SIMULATOR</div>
+            <div class="project-title"><a href="https://share.articulate.com/pJOEwYqzhkawJg5nEXF4U" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 2px solid var(--accent);">The Deadline Crisis Simulator ↗</a></div>
+            <div class="project-grid">
+                <div>
+                    <h3>Goal</h3>
+                    <p>Assess and train managers in high-pressure stakeholder communication and crisis management.</p>
+                </div>
+                <div>
+                    <h3>Logic Solution</h3>
+                    <p>Designed a 3-stage variable-driven simulator (TrustScore) on Storyline 360, enveloped in a sleek Rise 360 interface for immersive web UX.</p>
+                </div>
+            </div>
+            <div>
+                <span class="tag">Storyline 360</span>
+                <span class="tag">Rise 360</span>
+                <span class="tag">Variables Logic</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Phi Tong — All rights reserved. <br>
+            Titanium Edition - Built with Antigravity
+        </div>
+    </div>
+</body>
+</html>
