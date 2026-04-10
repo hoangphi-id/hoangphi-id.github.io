@@ -4,6 +4,10 @@
 > ### 👑 RULE #0: THE KING RULE (RULE TỐI THƯỢNG)
 > **LUÔN LUÔN RÀ SOÁT VÀ RECHECK LẠI NHỮNG GÌ MÌNH VỪA NÓI HOẶC VỪA LÀM XONG.** Đây là quy tắc cao nhất, đứng trên mọi hành động và quy trình khác. AI Assistant không được phép bàn giao bất kỳ tác vụ nào nếu chưa thực hiện bước "Tự kiểm tra lại" này ít nhất 1 lần.
 
+> [!IMPORTANT]
+> ### 📜 RULE #2: CENTRALIZED REPORT (BÁO CÁO TỰU CHUNG)
+> Sau khi hoàn tất Bước 1 (Audit) và Bước 2 (Sync), AI PHẢI tạo hoặc cập nhật một file báo cáo tổng hợp duy nhất (`FINAL_COMPLETION_REPORT`) để thống kê toàn bộ quá trình, các mốc thời gian, tài sản đã tạo và trạng thái cuối cùng. Đây là "Bản nghiệm thu" để người dùng nắm bắt bức tranh tổng thể.
+
 ---
 
 ### 🚀 BƯỚC 1: VISUAL AUDIT (KIỂM TOÁN THỊ GIÁC)
