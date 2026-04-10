@@ -40,6 +40,10 @@ AI sử dụng công cụ Search để tìm hiểu:
 ## BƯỚC 6: PHÂN TÍCH CHI TIẾT & VIẾT LẠI (TITANIUM REWRITE)
 - Rà soát trình bày theo chuẩn Titanium Layout.
 - **Rewriting**: Viết lại kinh nghiệm theo cấu trúc **STAR/XYZ**.
+- **Project Branding (Bắt buộc)**: AI phải đề xuất ít nhất 3 cái tên "Kêu" và "Gợi hình" (Metaphorical names) cho các sản phẩm Proof of Work của người dùng, gắn liền với "Nỗi đau" mà sản phẩm đó giải quyết.
+- **Technical Evidence Packaging (Nâng cao)**: Đối với các job yêu cầu Tech-fluency, AI phải gợi ý chèn Case Study (ví dụ: Titanium Simulator) vào CV.
+    - Hướng dẫn dùng terminology chuẩn: "Boundary Value Analysis", "Data Warehouse", "Async Pipeline".
+    - Nhắc nhở đính kèm các ảnh "Nội soi" Backend để tăng độ tin cậy 100%.
 - Tập trung vào **Clarity over Fluency** và các kỹ năng phối hợp từ xa.
 - Xuất file báo cáo phân tích hoàn chỉnh tại `.reports/`.
 

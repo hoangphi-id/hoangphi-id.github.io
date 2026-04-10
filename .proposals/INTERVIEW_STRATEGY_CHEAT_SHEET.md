@@ -91,11 +91,11 @@ Dùng khung này để tạo ra "Sức nặng" (Weighty speech) cho câu trả l
 5. **Achievement**: Phát triển đội ngũ và chuyển giao năng lực sư phạm tại ZIM.
    - (Nội dung cũ giữ nguyên...)
 
-6. **Innovation**: Xây dựng "The Deadline Crisis Simulator" (Storyline 360 + Data Pipeline).
-   - **P (Problem)**: Các bài học ID truyền thống thường chỉ có "Đúng/Sai" tĩnh, không đo lường được sự tích lũy lòng tin và khả năng xử lý khủng hoảng thực tế của Manager.
-   - **A (Action)**: Thiết kế simulator rẽ nhánh (Branching Scenario) sử dụng biến **TrustScore** để cộng dồn điểm qua 3 giai đoạn. Tích hợp Script Javascript để đẩy dữ liệu sống về Google Sheets qua Webhook.
-   - **R (Result)**: Một hệ thống học tập "sống", cung cấp Data thực tế cho bộ phận L&D để biết chính xác nhân viên đang yếu ở mindset nào (Đàm phán hay Giao tiếp).
-   - **L (Learning)**: "Data-Driven Learning Architecture". Một LXD chuyên nghiệp không chỉ làm nội dung đẹp, mà phải biết xây dựng hệ thống thu thập dữ liệu (Measurement strategy) để chứng minh hiệu quả đào tạo với Business.
+6. **Innovation**: Building "The Deadline Crisis Simulator" (Storyline 360 + High-Fidelity Data Pipeline).
+   - **P (Problem)**: Traditional e-learning only evaluates static "Right/Wrong" answers. It fails to measure the **cumulative psychological impact** of crisis communication on stakeholder trust. 
+   - **A (Action)**: I designed a high-fidelity Branching Simulator using a custom **TrustScore variable logic**. I engineered a modern **JavaScript Bridge (V2.3)** using the **Fetch API** to bypass SCORM limitations and transmit real-time behavioral data to a **Google Apps Script Webhook**.
+   - **R (Result)**: A fully automated data pipeline. I validated the system's reliability through **Boundary Value Analysis** (Stress testing at 0%, 40%, and 100% thresholds). This provides organizations with **Behavioral Heatmaps** to identify critical mindset gaps in their management team.
+   - **L (Learning)**: "Data-Driven Learning Architecture". A Senior LXD doesn't just design "pretty slides"; we design **Measurement Ecosystems** that provide the business with actionable evidence of behavioral change.
 
 ---
 
@@ -118,5 +118,7 @@ Dùng khung này để tạo ra "Sức nặng" (Weighty speech) cho câu trả l
 | **CORS** | Rào cản bảo mật giữa các website | "I bypassed the **CORS restriction** by using a plain text Content-Type workaround." |
 | **Validation** | Kiểm tra tính hợp lệ của dữ liệu đầu vào | "I implemented a **regex-based validation layer** to prevent malformed data from entering our analytics pipeline." |
 | **UX Feedback** | Phản hồi trải nghiệm người dùng | "Using a **callback function**, the system provides immediate visual confirmation (Alert) once the transmission is successful." |
-| **Fetch API** | Công nghệ mới để gửi dữ liệu qua web | "I'm using the modern **Fetch API** for more reliable data transmission than the old XHR methods." |
+| **Fetch API** | Công nghệ hiện đại nhất để gửi dữ liệu qua web | "I opted for the modern **Fetch API** over legacy XHR methods to ensure superior reliability and cleaner asynchronous data handling." |
+| **Boundary Testing** | Kiểm tra các ngưỡng "nhạy cảm" của logic | "I performed **Boundary Value Analysis** at the 0%, 40%, and 100% thresholds to stress-test the visual feedback states and data integrity." |
+| **Behavioral Heatmap** | Bản đồ thể hiện xu hướng hành vi của nhân viên | "The Google Sheets backend generates a **Behavioral Heatmap**, showing us exactly where our team's communication mindset is failing during a project crisis." |
 | **Payload** | Gói dữ liệu thực sự được gửi đi | "The **payload** contains the TrustScore, UserName, and the final behavioral result." |

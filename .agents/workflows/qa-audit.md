@@ -23,7 +23,11 @@ Quy trình này PHẢI được thực hiện sau mỗi lần sửa lỗi hoặc
 
 ### Bước 3: Chụp ảnh bằng chứng (Proof of Work)
 - Chụp ảnh Screenshot tại các điểm nhạy cảm (điểm ngắt trang, các mục vừa thêm mới).
-- Mô tả rõ: "Tôi đã nhìn thấy những gì trong ảnh và tôi cam kết mọi thứ đã ổn định, số trang vẫn là X trang."
+- **Bước 3.1: Technical Backend Capture (Đối với Simulator/Interactive Project)**:
+    - Bắt buộc chụp "Nội soi" các thành phần kỹ thuật: Variables Panel, Trigger Logic, và JS Bridge.
+    - Phải có bằng chứng **Data Sync**: Ảnh chụp Storyline UI cạnh ảnh chụp Google Sheets/Database để chứng minh logic khớp 100%.
+    - Thực hiện **Boundary Testing**: Chụp đủ 3 trạng thái cực hạn (0%, 50/40%, 100%) để làm tư liệu Case Study.
+- Mô tả rõ: "Tôi đã nhìn thấy những gì trong ảnh và tôi cam kết mọi thứ đã ổn định."
 
 ### Bước 4: Tự động sửa Side-effect
 - Nếu phát hiện bất kỳ lỗi lắt nhắc nào phát sinh do thêm thông tin mới -> TỰ ĐỘNG SỬA NGAY.

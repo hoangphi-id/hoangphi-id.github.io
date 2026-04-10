@@ -27,4 +27,8 @@ description: Skill chuyên biệt cho việc phân tích Job Description (JD), t
 
 ## 📚 Kỹ thuật "Khơi thông sương mù"
 - Khi người dùng hoang mang, hãy yêu cầu họ xác định **Vấn đề siêu nhỏ** có thể giải quyết bằng **Hành động ngay lập tức**.
-- Dùng ngôn ngữ thực tế, tránh các hứa hẹn viển vông không khớp với thực tế ngành.
+## 💎 Kỹ thuật "Bằng chứng thép" (Technical Evidence Strategy)
+1. **Thiết kế "Nội soi" (Backend Visuals)**: Trong mọi dự án kỹ thuật (Simulator, LMS, Web), luôn yêu cầu chụp ảnh Backend (Variables, Triggers, Data Log). Đây là bằng chứng tối thượng để phân biệt Senior vs Junior.
+2. **Phân tích giá trị biên (Boundary Analysis)**: Luôn hướng dẫn người dùng kiểm tra hệ thống tại các ngưỡng cực hạn (0%, 40%, 100%). Đây là "vũ khí" để 'khè' nhà tuyển dụng trong buổi phỏng vấn về tư duy QA/Testing.
+3. **Storytelling Dữ liệu**: Không chỉ nói "Tôi làm nội dung", mà phải nói "Tôi xây dựng hệ sinh thái đo lường hành vi" (Behavioral Measurement Ecosystem).
+4. **Project Branding Strategy (Chiến lược đặt tên)**: Tuyệt đối KHÔNG dùng tên dự án chung chung (Project 1, Lesson 2). Luôn phải đặt một cái tên mang tính "Biểu tượng" (ví dụ: Titanium, Ironwood, Sapphire) và chuẩn bị sẵn một **Rationale** (Lý do chọn tên) gắn liền với giá trị Sư phạm và Kỹ thuật của dự án đó.

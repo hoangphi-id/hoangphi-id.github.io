@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: The Deadline Crisis | Behavioral Simulation Architecture | Phi Tong</title>
+    <meta name="description" content="An in-depth look at building 'The Deadline Crisis'—a high-fidelity branching simulator with a custom JavaScript data bridge to track and analyze management-level behavioral performance in real-time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #006ae6;
+            --bg-dark: #0a0c10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::after {
+            content: '';
+            height: 1px;
+            flex-grow: 1;
+            background: var(--border-glass);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .mermaid {
+            background: rgba(255,255,255,0.02);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-glass);
+        }
+
+        .image-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .image-card img {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .image-caption {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .grid-3-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .status-card {
+            text-align: center;
+        }
+
+        .status-card img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-dim);
+        }
+
+        strong {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <header class="section">
+            <h1>THE DEADLINE CRISIS</h1>
+            <div class="subtitle">Adaptive Learning Architecture & Behavioral Simulation</div>
+            <p><strong>Tools:</strong> Articulate Storyline 360, JavaScript ES6, Google Apps Script, Data Webhooks.</p>
+        </header>
+
+        <section class="section">
+            <h2>1. THE PROBLEM</h2>
+            <p>In high-stakes corporate environments, communication during a "Project Crisis" is often the difference between success and total failure. Standard e-learning fails to simulate the <strong>cumulative psychological impact</strong> of communication choices.</p>
+            <div class="highlight-box">
+                "Traditional modules tell you what to do. The Titanium Simulator makes you feel the consequences of your choices."
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>2. DATA ARCHITECTURE</h2>
+            <p>To bypass standard SCORM limitations and achieve real-time automation, I engineered a seamless external pipeline.</p>
+            
+            <div class="mermaid">
+                graph LR
+                    A[Storyline 360 UI] -- "1. JSON Payload" --> B["JavaScript Bridge (ES6)"]
+                    B -- "2. Async POST Request" --> C["Google Apps Script Webhook"]
+                    C -- "3. Data Validation" --> D["Google Sheets Warehouse"]
+                    D -- "4. Performance Analytics" --> E["Strategy Team"]
+                    
+                    style B fill:#006ae6,stroke:#00f2ff,color:#fff
+                    style C fill:#006ae6,stroke:#00f2ff,color:#fff
+                    style D fill:#1a1c22,stroke:#00f2ff,color:#fff
+            </div>
+            
+            <div class="image-card">
+                <img src="assets/Case Study/01_Technical_Capture/08_Google_Apps_Script_Webhook.png" alt="Backend Code">
+                <div class="image-caption">The Webhook Processor: A custom-built Google Apps Script acting as the simulator's "Brain".</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>3. THE BEHAVIORAL JOURNEY</h2>
+            <p>The learner navigates through three critical stages: Negotiation, Strategy Email, and Team Updates. Each decision affects a global <strong>TrustScore</strong> variable.</p>
+
+            <div class="mermaid">
+                graph TD
+                    Start((Crisis Starts)) --> S1[Stage 1: Negotiation]
+                    S1 --> S1_A[Option A: Yes-man]
+                    S1 --> S1_B[Option B: Passive-Aggressive]
+                    S1 --> S1_C[Option C: Proactive Negotiator]
+                    
+                    S1_A & S1_B & S1_C --> S2[Stage 2: Formal Email]
+                    S2 --> S3[Stage 3: Team Update]
+                    S3 --> End[Final Achievement Dashboard]
+                    
+                    style S1_C fill:#00f2ff,stroke:#fff,color:#000
+                    style End fill:#00f2ff,stroke:#fff,color:#000
+            </div>
+
+            <div class="image-card">
+                <img src="assets/Case Study/01_Technical_Capture/01_Decision_Logic_And_States.png" alt="Storyline Logic">
+                <div class="image-caption">Variable-based branching logic: Every decision is tracked and aggregated for final reporting.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>4. ADAPTIVE UI RENDERING</h2>
+            <p>The simulator features a dynamic dashboard that changes its visual state (Glow Effects) based on the user's real-time performance.</p>
+            
+            <div class="grid-3-col">
+                <div class="status-card">
+                    <img src="assets/Case Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Success">
+                    <p style="font-size: 0.8rem; margin-top: 10px;">SUCCESS (Green)</p>
+                </div>
+                <div class="status-card">
+                    <img src="assets/Case Study/01_Technical_Capture/04_State_Warning_Visual.png" alt="Warning">
+                    <p style="font-size: 0.8rem; margin-top: 10px;">WARNING (Yellow)</p>
+                </div>
+                <div class="status-card">
+                    <img src="assets/Case Study/01_Technical_Capture/05_State_Fail_Visual.png" alt="Fail">
+                    <p style="font-size: 0.8rem; margin-top: 10px;">FAIL (Red)</p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="assets/Case Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Final Polish">
+                <div class="image-caption">Final UI Polish: High-fidelity visual dashboard with integrated TrustScore meter.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>5. MEASURABLE RESULTS</h2>
+            <p>Total transparency for L&D Managers. Every decision is logged into the <strong>Behavioral Data Warehouse</strong>, allowing for post-simulation coaching and gap analysis.</p>
+
+            <div class="image-card">
+                <img src="assets/Case Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Warehouse">
+                <div class="image-caption">Live Data Storage: Confirming 100% data sync across the simulation environment.</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with Passion and Precision | Phi Tong 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: IELTS Writing Masterclass | Phi Tong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Deep Navy */
+            --secondary: #3b82f6;
+            --bg-neutral: #f1f5f9;
+            --card-white: #ffffff;
+            --border: #cbd5e1;
+            --text-dark: #0f172a;
+            --text-light: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-neutral);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .main-card {
+            background: var(--card-white);
+            padding: 3.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: '•';
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .image-container {
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .caption {
+            background: #f8fafc;
+            padding: 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: var(--bg-neutral);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .tech-pill {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .main-card { padding: 1.5rem; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <header>
+            <h1>IELTS WRITING MASTERCLASS</h1>
+            <p class="subtitle">End-to-End Moodle Development & Pedagogical Engineering</p>
+            <div style="margin-top: 1.5rem;">
+                <span class="tech-pill">Moodle LMS</span>
+                <span class="tech-pill">Asymptotic Rubrics</span>
+                <span class="tech-pill">Activity Completion</span>
+            </div>
+        </header>
+
+        <section class="main-card">
+            <h2>Pedagogical Architecture</h2>
+            <p>Designed for academic rigor, this course utilizes a <strong>scaffolded learning pathway</strong>. Each module integrates instructional content via Articulate Rise blocks directly embedded into Moodle, followed by weighted assessments to ensure cumulative knowledge gain.</p>
+            
+            <div class="image-container">
+                <img src="assets/Moodle Backup/Moodle_Portfolio_Screenshots/Moodle_Course_Homepage.png" alt="Moodle Home">
+                <div class="caption">Structured Curriculum: Logic-gated topics ensuring a linear learning journey.</div>
+            </div>
+        </section>
+
+        <section class="main-card">
+            <h2>Precision Grading & Feedback</h2>
+            <p>To eliminate subjective bias in writing assessments, I engineered complex <strong>Advanced Grading Rubrics</strong> aligned with official IELTS Band Descriptors (Task Response, Cohesion, Lexical Resource, Grammatical Range).</p>
+            
+            <div class="image-container">
+                <img src="assets/Moodle Backup/Moodle_Portfolio_Screenshots/Moodle_Unit2_Rubric.png" alt="Moodle Rubric">
+                <div class="caption">Advanced Rubric: Automated criterion-based marking for consistent feedback.</div>
+            </div>
+        </section>
+
+        <section class="main-card">
+            <h2>Data-Driven Monitoring</h2>
+            <p>L&D managers benefit from real-time <strong>Activity Completion Tracking</strong> and a centralized Gradebook, providing 100% visibility into student success rates and critical bottlenecks.</p>
+            
+            <div class="feature-grid">
+                <div class="image-container" style="margin:0;">
+                    <img src="assets/Moodle Backup/Moodle_Portfolio_Screenshots/Moodle_Admin_Gradebook.png" alt="Gradebook">
+                    <div class="caption">Centralized Gradebook.</div>
+                </div>
+                <div class="image-container" style="margin:0;">
+                    <img src="assets/Moodle Backup/Moodle_Portfolio_Screenshots/Moodle_Unit4_Completion.png" alt="Completion">
+                    <div class="caption">Real-time Progression Tracking.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-card">
+            <h2>Administrative Backbone</h2>
+            <p>Behind the scenes, I optimized the LMS settings for scalability, including automated enrolment methods and conditional access restricted by formative assessment scores.</p>
+            <div class="image-container">
+                <img src="assets/Moodle Backup/Moodle_Portfolio_Screenshots/Moodle_Admin_CompletionSettings.png" alt="Admin Settings">
+                <div class="caption">Admin Control: Configuring complex conditional logic for asynchronous delivery.</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Phi Tong | Senior Learning Experience Architect</p>
+        </footer>
+    </div>
+
+</body>
+</html>
