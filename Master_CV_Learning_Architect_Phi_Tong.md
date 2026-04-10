@@ -72,19 +72,19 @@ Ho Chi Minh City, Vietnam | phitong.official@gmail.com | +84 (799) 445 377
 
 ---
 
-## PORTFOLIO ARCHITECTURE
+## PORTFOLIO ARCHITECTURE (🏛️ TITANIUM CASE STUDIES)
 
-**IELTS Writing Foundation — Moodle Cloud (2026)**  
-Designed a 4-unit interactive ecosystem featuring automated rubrics and sequential completion tracking.  
-*Focus: Structural integrity and automated learner success.*
+**1. IELTS Writing Masterclass — Moodle Cloud (2026)** | [🔗 View Technical Architecture](https://hoangphi-id.github.io/case-study-moodle.html)  
+*   **Engineered** a 4-unit interactive ecosystem featuring automated rubrics, sequential completion tracking, and conditional activity gating.  
+*   *Focus: LMS Architectural Integrity and Instructional Quality Assurance.*
 
-**New Staff Onboarding — Articulate Rise 360 (2026)**  
-Developed a 3-module SCORM-compliant training system with interactive sorting and reflective scenarios.  
-*Focus: Scalable corporate training and pedagogical consistency.*
+**2. Remote Work Onboarding — Articulate Rise 360 (2026)** | [🔗 View Instructional Strategy](https://hoangphi-id.github.io/case-study-onboarding.html)  
+*   **Developed** a scalable micro-learning system with branching scenarios and reflective assessments to accelerate employee time-to-value.  
+*   *Focus: UX/UI Consistency and High-Volume Corporate Deployment.*
 
-**The Deadline Crisis Simulator — Rise/Storyline 360 (2026)** | [🔗 View Simulator](https://share.articulate.com/pJOEwYqzhkawJg5nEXF4U)  
-Engineered a variable-driven (TrustScore) branching scenario to assess executive crisis management and remote communication under absolute pressure.  
-*Focus: Conditional logic, UI/UX architecture, and gamified performance assessment.*
+**3. The Deadline Crisis Simulator — Full-Stack Storyline (2026)** | [🔗 View Data & Logic Case Study](https://hoangphi-id.github.io/case-study-titanium.html)  
+*   **Engineered** a high-fidelity behavioral simulator using a **JavaScript ES6 Data Bridge**. Tracks real-time "TrustScore" variables and exports performance heatmaps to a Google Sheets cloud warehouse.  
+*   *Focus: Architectural Complex Logic, External Data Pipelines, and Behavioral Measurement.*
 
 ---
 
