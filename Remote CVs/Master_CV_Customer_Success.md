@@ -95,15 +95,19 @@ Ho Chi Minh City, Vietnam | phitong.official@gmail.com | +84 (799) 445 377
 
 ---
 
-## PORTFOLIO PROJECTS
+## PORTFOLIO PROJECTS (🏛️ TITANIUM CASE STUDIES)
 
-**Digital Learning Hub — IELTS Writing Task 2 (2026)**  
-Deployed a full-stack self-paced course on **Moodle** with automated feedback and tracking.  
-*Key Focus: User onboarding, milestone tracking, and automated support.*
+**1. Scalable Onboarding Architecture — Articulate Rise 360 (2026)** | [🔗 View Case Study](https://hoangphi-id.github.io/case-study-onboarding.html)  
+*   **Engineered** a 3-module training ecosystem designed to accelerate user time-to-value and ensure 100% onboarding completion through interactive UI and reflective sorting scenarios.  
+*   *Key Focus: Scalable UX, Cross-platform Consistency, and User Adoption.*
 
-**Staff Onboarding System — Digital Course (2026)**  
-Engineered a 3-module training ecosystem using **Articulate Rise 360** with SCORM 1.2 deployment.  
-*Key Focus: Scalable training, interactive UI, and cross-platform compatibility.*
+**2. Behavior-Driven Performance Simulator — Storyline 360 (2026)** | [🔗 View Case Study](https://hoangphi-id.github.io/case-study-titanium.html)  
+*   **Developed** a high-fidelity "TrustScore" simulator using a **JavaScript ES6 Data Bridge**. This system tracks user behavioral choices in real-time and exports performance heatmaps to a cloud warehouse to identify mindset gaps.  
+*   *Key Focus: Retention Analytics, Root Cause Analysis, and Behavioral Measurement.*
+
+**3. Automated Learning Ecosystem — Moodle Cloud (2026)** | [🔗 View Case Study](https://hoangphi-id.github.io/case-study-moodle.html)  
+*   **Deployed** a full-stack self-paced course featuring automated feedback rubrics and activity completion gates to ensure learner success without manual intervention.  
+*   *Key Focus: Operational Autonomy and Automated Milestones.*
 
 ---
 

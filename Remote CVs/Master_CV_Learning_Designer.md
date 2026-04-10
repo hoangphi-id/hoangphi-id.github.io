@@ -107,19 +107,19 @@ Ho Chi Minh City, Vietnam | phitong.official@gmail.com | +84 (799) 445 377
 
 ---
 
-## PORTFOLIO PROJECTS
+## PORTFOLIO PROJECTS (🏛️ TITANIUM CASE STUDIES)
 
-**IELTS Writing Task 2 — Foundation Course (2026)**  
-Designed and deployed a 4-unit self-paced course on **Moodle** with formative assessments.  
-*Tools: Moodle LMS, Canva, MCF.*
+**1. Remote Work Onboarding — Articulate Rise 360 (2026)** | [🔗 View UX Case Study](https://hoangphi-id.github.io/case-study-onboarding.html)  
+*   **Designed** a scalable UI/UX system for corporate onboarding, featuring custom sorting interactions and mobile-responsive layouts to ensure high learner adoption.  
+*   *Focus: Branding Consistency and Learner-Centered UX.*
 
-**New IELTS Teacher Onboarding — Digital Course (2026)**  
-Engineered a 3-module self-paced course using **Articulate Rise 360** with **SCORM 1.2 export to Moodle**.  
-*Tools: Articulate Rise 360, Moodle LMS.*
+**2. The Deadline Crisis Simulator — High-Fidelity Simulator (2026)** | [🔗 View Design Case Study](https://hoangphi-id.github.io/case-study-titanium.html)  
+*   **Engineered** an interactive branching simulation with visual feedback states (Success/Warning/Fail) powered by a JavaScript TrustScore engine.  
+*   *Focus: Interactive Storytelling and Visual Design Logic.*
 
-**The Deadline Crisis Simulator — Rise/Storyline 360 (2026)** | [🔗 View Simulator](https://share.articulate.com/pJOEwYqzhkawJg5nEXF4U)  
-Engineered a variable-driven (TrustScore) branching scenario to assess executive crisis management and remote communication under absolute pressure.  
-*Tools: Articulate Storyline 360, Rise 360, Variables Logic.*
+**3. Academic Assessment Ecosystem — Moodle Cloud (2026)** | [🔗 View Project Architecture](https://hoangphi-id.github.io/case-study-moodle.html)  
+*   **Deployed** a structured learning environment with high-fidelity rubrics and tracking systems to optimize the asynchronous academic experience.  
+*   *Focus: LMS Navigation and Automated Feedback Design.*
 
 ---
 

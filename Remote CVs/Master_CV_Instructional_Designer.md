@@ -104,17 +104,19 @@ Ho Chi Minh City, Vietnam | phitong.official@gmail.com | +84 (799) 445 377
 
 ## PORTFOLIO PROJECTS
 
-**IELTS Writing Task 2 — Foundation Course (2026)**  
-Designed and deployed a 4-unit self-paced course on **Moodle** with formative assessments.  
-*Tools: Moodle LMS, Canva, MCF.*
+## PORTFOLIO PROJECTS (🏛️ TITANIUM CASE STUDIES)
 
-**New IELTS Teacher Onboarding — Digital Course (2026)**  
-Engineered a 3-module self-paced course using **Articulate Rise 360** with **SCORM 1.2 export to Moodle**.  
-*Tools: Articulate Rise 360, Moodle LMS.*
+**1. The Deadline Crisis Simulator — Rise/Storyline 360 (2026)** | [🔗 View Technical Case Study](https://hoangphi-id.github.io/case-study-titanium.html)  
+*   **Engineered** a high-fidelity branching scenario with a custom **JavaScript ES6 Data Bridge**. Tracks real-time "TrustScore" variables and exports performance heatmaps to a Google Sheets cloud warehouse.  
+*   *Focus: Conditional Logic, UI/UX Architecture, and Behavioral Data Pipelines.*
 
-**The Deadline Crisis Simulator — Rise/Storyline 360 (2026)** | [🔗 View Simulator](https://share.articulate.com/pJOEwYqzhkawJg5nEXF4U)  
-Engineered a variable-driven (TrustScore) branching scenario to assess executive crisis management and remote communication under absolute pressure.  
-*Tools: Articulate Storyline 360, Rise 360, Variables Logic.*
+**2. Remote Work Onboarding — Articulate Rise 360 (2026)** | [🔗 View Instructional Case Study](https://hoangphi-id.github.io/case-study-onboarding.html)  
+*   **Developed** a scalable micro-learning system with interactive sorting and reflective scenarios, ensuring high-stakes corporate compliance and user engagement.  
+*   *Focus: Scalable ID Strategy and Pedagogical Consistency.*
+
+**3. IELTS Writing Masterclass — Moodle Cloud (2026)** | [🔗 View Architecture Case Study](https://hoangphi-id.github.io/case-study-moodle.html)  
+*   **Designed** a 4-unit interactive ecosystem featuring automated rubrics and sequential completion tracking to ensure 100% goal attainment for remote learners.  
+*   *Focus: LMS Implementation and Automated Quality Assurance.*
 
 ---
 
