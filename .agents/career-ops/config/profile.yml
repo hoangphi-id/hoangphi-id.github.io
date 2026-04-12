@@ -1,0 +1,72 @@
+# Career-Ops Profile Configuration — PHI TONG
+# SOURCE OF TRUTH for all personal data. NEVER auto-updated.
+# Last updated: 2026-04-11
+
+candidate:
+  full_name: "Phi (Phillip) Tong"
+  email: "phitong.official@gmail.com"
+  phone: "+84 (799) 445 377"
+  location: "Ho Chi Minh City, Vietnam"
+  linkedin: "linkedin.com/in/hoang-phi-tong"
+  portfolio_url: "https://hoangphi-id.github.io"
+  portfolio_display: "hoangphi-id.github.io"
+  # canva_resume_design_id: ""  # Uncomment when Canva design is set up
+
+target_roles:
+  primary:
+    - "Learning Experience Architect"
+    - "Senior Instructional Designer"
+    - "Senior Learning Designer"
+  archetypes:
+    - name: "Learning Experience Architect (LXA)"
+      level: "Senior"
+      fit: "primary"
+    - name: "Instructional Designer (ID)"
+      level: "Senior"
+      fit: "secondary"
+    - name: "Learning Designer (LD)"
+      level: "Senior"
+      fit: "secondary"
+    - name: "Customer Success (EdTech)"
+      level: "Mid-Senior"
+      fit: "adjacent"
+    - name: "AI Data Ops / Localization QA"
+      level: "Mid"
+      fit: "adjacent"
+
+narrative:
+  headline: "Learning Experience Architect — IT background, IELTS 8.0, behavioral simulation builder"
+  exit_story: "10 years architecting learning systems at Vietnam's largest test-prep institutions. Moved from delivery to curriculum design to LMS administration to behavioral data pipelines. Now taking that systems thinking to global EdTech."
+  superpowers:
+    - "Rare hybrid: IT degree + linguistics + 10 years L&D = full-stack learning architect"
+    - "Build behavioral measurement systems, not just content (JS data bridge + Google Sheets pipeline)"
+    - "Bilingual at C1 level — work natively in English, not translated"
+    - "Academic quality assurance at scale — 4.8/5.0 maintained across 100+ learners"
+  proof_points:
+    - name: "The Deadline Crisis Simulator"
+      url: "https://hoangphi-id.github.io/case-study-titanium.html"
+      hero_metric: "First behavioral simulation with real-time JS data bridge to Google Sheets"
+    - name: "Remote Work Onboarding — Rise 360"
+      url: "https://hoangphi-id.github.io/case-study-onboarding.html"
+      hero_metric: "Scalable micro-learning, SCORM 1.2, Moodle LMS deployment"
+    - name: "IELTS Writing Masterclass — Moodle LMS"
+      url: "https://hoangphi-id.github.io/case-study-moodle.html"
+      hero_metric: "500+ assets digitized, 20+ staff trained, 4-unit completion-gated ecosystem"
+
+compensation:
+  target_range: "$2,000-3,500/month USD"
+  currency: "USD"
+  minimum: "$2,000/month"
+  location_flexibility: "100% remote only. No relocation."
+
+location:
+  country: "Vietnam"
+  city: "Ho Chi Minh City"
+  timezone: "UTC+7"
+  visa_status: "Vietnam-based. No relocation. Remote only."
+  remote_overlap: "UTC+7 overlaps APAC hours natively. Flexible on core hours for UTC+1 to UTC+8."
+
+language:
+  modes_dir: "modes"   # use "modes/de" for German, "modes/fr" for French, "modes/ja" for Japanese
+  output_default: "en"
+  cv_language: "en"

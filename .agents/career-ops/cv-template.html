@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}} — CV</title>
+  <style>
+    /* ============================================================
+       ATS-OPTIMIZED CV TEMPLATE — PHI TONG EDITION
+       Based on career-ops pdf.md spec (Santiago Valdarrama)
+       Fonts: Space Grotesk (headings) + DM Sans (body)
+       Single-column layout. No sidebars. No images.
+       ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+    @page {
+      size: {{PAGE_WIDTH}} 297mm;
+      margin: 0.6in;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #1a1a2e;
+      background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, hsl(187,74%,32%), hsl(270,70%,45%)) 1;
+    }
+
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+
+    .contact-row {
+      margin-top: 5px;
+      font-size: 10px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .contact-row a {
+      color: hsl(187,74%,32%);
+      text-decoration: none;
+    }
+
+    .contact-row span { margin: 0 6px; color: #cbd5e1; }
+
+    /* ── SECTION HEADERS ── */
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: hsl(187,74%,32%);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e2e8f0;
+      page-break-after: avoid;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 11px;
+      line-height: 1.55;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+
+    /* ── COMPETENCIES GRID ── */
+    .competencies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .competency-tag {
+      background: hsl(187,74%,95%);
+      color: hsl(187,74%,25%);
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 9.5px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* ── EXPERIENCE ENTRIES ── */
+    .exp-entry {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .job-date {
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    .company-name {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: hsl(270,70%,45%);
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+
+    .company-desc {
+      font-size: 9.5px;
+      font-style: italic;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      padding-left: 16px;
+      margin-top: 3px;
+    }
+
+    li {
+      margin-bottom: 2.5px;
+      font-size: 11px;
+      line-height: 1.45;
+      break-inside: avoid;
+    }
+
+    strong { color: #0f172a; font-weight: 600; }
+
+    /* ── PROJECTS ── */
+    .project-entry {
+      margin-bottom: 8px;
+      page-break-inside: avoid;
+    }
+
+    .project-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .project-title a {
+      color: hsl(187,74%,32%);
+      text-decoration: none;
+    }
+
+    .project-meta {
+      font-size: 9.5px;
+      color: #94a3b8;
+      font-style: italic;
+      margin-top: 1px;
+      margin-bottom: 3px;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .edu-left { flex: 1; }
+    .edu-degree { font-size: 11px; font-weight: 500; color: #0f172a; }
+    .edu-school { font-size: 10px; color: #475569; margin-top: 1px; }
+    .edu-date { font-size: 10px; color: #64748b; white-space: nowrap; margin-left: 8px; }
+
+    /* ── SKILLS ── */
+    .skills-row { margin-bottom: 4px; font-size: 11px; }
+    .skills-label { font-weight: 600; color: #0f172a; }
+    .skills-value { color: #475569; }
+
+    /* ── PRINT UTILITY ── */
+    section { margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="contact-row">
+      {{LOCATION}}<span>|</span>
+      <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><span>|</span>
+      <a href="{{LINKEDIN_URL}}">{{LINKEDIN_DISPLAY}}</a><span>|</span>
+      <a href="{{PORTFOLIO_URL}}">{{PORTFOLIO_DISPLAY}}</a>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section>
+    <h2>{{SECTION_SUMMARY}}</h2>
+    <p class="summary">{{SUMMARY_TEXT}}</p>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <h2>{{SECTION_COMPETENCIES}}</h2>
+    <div class="competencies">
+      {{COMPETENCIES}}
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section>
+    <h2>{{SECTION_EXPERIENCE}}</h2>
+    {{EXPERIENCE}}
+  </section>
+
+  <!-- PROJECTS / CASE STUDIES -->
+  <section>
+    <h2>{{SECTION_PROJECTS}}</h2>
+    {{PROJECTS}}
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>{{SECTION_EDUCATION}}</h2>
+    {{EDUCATION}}
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <h2>{{SECTION_CERTIFICATIONS}}</h2>
+    {{CERTIFICATIONS}}
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>{{SECTION_SKILLS}}</h2>
+    {{SKILLS}}
+  </section>
+
+</body>
+</html>

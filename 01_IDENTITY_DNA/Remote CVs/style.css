@@ -1,0 +1,74 @@
+/* MASTER RESUME STYLE — PURE MARKDOWN COMPATIBLE */
+
+:root {
+  --primary-color: #003366; /* Word Blue */
+  --text-color: #000000;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 🛡️ SECURITY: HIDE AUTO-TOC BY SELECTORS 🛡️ */
+#toc, .toc, .markdown-toc, nav, .table-of-contents {
+  display: none !important;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 10pt;
+  line-height: 1.25;
+  color: var(--text-color);
+  padding: 0.5in 0.75in;
+}
+
+/* Name Line */
+h1 {
+  font-size: 20pt;
+  font-weight: bold;
+  color: #004a99;
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Section Headers (SUMMARY, EXPERIENCE) */
+h2 {
+  font-size: 11pt;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  border: none;
+}
+
+/* Bold lines for Jobs and Projects */
+p strong {
+  color: #000000;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+p, li {
+  margin-bottom: 4px;
+}
+
+/* Spacing Fixes */
+hr {
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  margin: 15px 0;
+}
+
+/* Anti-Split for PDF Printing */
+@media print {
+  body {
+    padding: 0.3in 0.5in;
+  }
+  h2, p strong {
+    page-break-after: avoid;
+  }
+  ul, p, li {
+    page-break-inside: avoid;
+  }
+}

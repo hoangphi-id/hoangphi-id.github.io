@@ -1,0 +1,9 @@
+status	label	description
+Evaluated	Evaluated	Report completed, pending decision
+Applied	Applied	Application sent
+Responded	Responded	Company responded (email, recruiter, etc.)
+Interview	Interview	In interview process (any round)
+Offer	Offer	Offer received
+Rejected	Rejected	Rejected by company
+Discarded	Discarded	Discarded by candidate or offer closed
+SKIP	SKIP	Does not fit — do not apply

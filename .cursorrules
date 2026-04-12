@@ -2,6 +2,20 @@
 
 Hệ thống vận hành dựa trên **MASTER PROTOCOL (2/4/2026)**:
 
+# 🛡️ RULE ZERO PRIME (Z0P): WORKSPACE INTEGRITY FIRST
+- ALWAYS perform a full workspace integrity check (`git status`, `ls -R`, `find`) BEFORE moving, deleting, or overwriting project files.
+- RESPECT "Context Files" (Drafts, Persona documents, Diaries) as permanent instructional assets. They are NEVER to be deleted or moved without explicit user approval.
+- ONLY delete functional "ToDo" or temporary files once a project phase is confirmed completed by the user.
+- NEVER assume the state of the workspace; always verify "Ground Truth" through the filesystem first.
+- **AUTOMATIC SOURCE ANCHORING**: Whenever referencing past information, decisions, or drafts, the AI MUST provide the clickable file path (e.g., [filename](file:///path/to/file)) to allow the User to audit the context instantly.
+- **MANDATORY CROSS-REFERENCE**: Before every structural modification, the AI MUST output the path of the original file being referenced to ensure 100% data fidelity.
+
+# 1. Tech Stack Overview
+- Core: HTML, vanilla Javascript
+- Styling: Vanilla CSS (strictly avoid Tailwind unless requested)
+- Frameworks: Next.js or Vite (only if explicitly requested)
+- Design: Premium, high-fidelity, Glassmorphism, modern typography (Plus Jakarta Sans) – tránh sáo rỗng.
+
 1. **RULES (Quy định & Bảo mật)**:
    - **THE TRIPLE THREAT**: Kiên quyết yêu cầu đủ 3 thông tin (CV + JD + Website Công ty) trước khi bắt đầu review.
    - **PAUSE & CHECK**: Sau khi chấm điểm Matching Score, PHẢI tạm dừng để lấy feedback từ người dùng trước khi viết lại chi tiết.

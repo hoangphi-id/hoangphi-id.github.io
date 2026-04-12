@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}} — CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 0.5in 0.75in;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 10.5px;
+      line-height: 1.4;
+      color: #000000;
+      background: #ffffff;
+    }
+
+    .header { text-align: center; margin-bottom: 20px; }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1f497d;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .contact-row { font-size: 10px; color: #333; }
+    .contact-row a { color: #333; text-decoration: none; }
+    .contact-row span { margin: 0 8px; color: #999; }
+
+    h2 {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #1f497d;
+      text-transform: uppercase;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #1f497d;
+    }
+
+    .summary-section { margin-bottom: 12px; }
+
+    /* ── EXPERIENCE HEADER SYNC WITH GUIDE ── */
+    .exp-entry { margin-bottom: 15px; page-break-inside: avoid; }
+    .line-title-date { display: flex; justify-content: space-between; align-items: baseline; }
+    .job-title { font-size: 11.5px; font-weight: 700; color: #000; }
+    .job-date { font-size: 11px; font-weight: 700; color: #000; }
+    
+    .line-company-loc { display: flex; justify-content: space-between; align-items: baseline; margin-top: 2px; }
+    .company-name { font-size: 11px; font-weight: 500; font-style: italic; color: #000; }
+    .company-loc { font-size: 10px; font-style: italic; color: #444; }
+
+    .company-summary { 
+        font-size: 9.5px; 
+        font-style: normal; 
+        color: #555; 
+        margin: 6px 0; 
+        line-height: 1.5;
+        border-left: 2px solid #eee;
+        padding-left: 8px;
+    }
+
+    ul { padding-left: 22px; margin-top: 5px; }
+    li { margin-bottom: 4px; font-size: 10.5px; list-style-type: disc; color: #222; }
+
+    .edu-line-flat, .cert-line-flat { font-size: 10.5px; margin-bottom: 4px; }
+    .skills-line { margin-bottom: 5px; font-size: 10.5px; }
+    strong { font-weight: 600; }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="contact-row">
+      {{LOCATION}}<span>|</span>
+      <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><span>|</span>
+      {{PHONE}}<span>|</span>
+      <a href="{{LINKEDIN_URL}}">{{LINKEDIN_DISPLAY}}</a><span>|</span>
+      <a href="{{PORTFOLIO_URL}}">{{PORTFOLIO_DISPLAY}}</a>
+    </div>
+  </div>
+
+  <section class="summary-section">
+    <h2>Executive Summary</h2>
+    <ul>{{SUMMARY_BULLETS}}</ul>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    {{EXPERIENCE}}
+  </section>
+
+  <section>
+    <h2>Portfolio Projects</h2>
+    {{PROJECTS}}
+  </section>
+
+  <section>
+    <h2>Education & Certifications</h2>
+    {{EDUCATION}}
+    {{CERTIFICATIONS}}
+  </section>
+
+  <section>
+    <h2>Skills & Tech</h2>
+    {{SKILLS}}
+  </section>
+
+</body>
+</html>
