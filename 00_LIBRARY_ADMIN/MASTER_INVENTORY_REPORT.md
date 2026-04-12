@@ -45,3 +45,9 @@
 --- 
 ## 🛡️ CẬP NHẬT ĐIỀU LỆ THỦ THƯ (12/04 - V3.0)
 **The Portal Rule:** Bắt buộc phải cung cấp link file tuyệt đối trong mọi phản hồi để Chủ nhân có quyền tự đọc và kiểm soát dữ liệu gốc.
+
+### ⚙️ [PROTOCOLS/AUTOMATION/](./PROTOCOLS/AUTOMATION/)
+> **Phân khu:** Động cơ Tự động hóa (Automation Engines).
+- [build-final.mjs](./PROTOCOLS/AUTOMATION/build-final.mjs): Trình biên dịch Markdown sang PDF.
+- [cv-template.html](./PROTOCOLS/AUTOMATION/cv-template.html): Bản thiết kế khung của CV.
+- [audit_rule_0.mjs](./PROTOCOLS/AUTOMATION/audit_rule_0.mjs): Công cụ rà soát lỗi và kỹ thuật.
