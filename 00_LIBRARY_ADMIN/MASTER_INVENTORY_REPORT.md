@@ -51,3 +51,10 @@
 - [build-final.mjs](./PROTOCOLS/AUTOMATION/build-final.mjs): Trình biên dịch Markdown sang PDF.
 - [cv-template.html](./PROTOCOLS/AUTOMATION/cv-template.html): Bản thiết kế khung của CV.
 - [audit_rule_0.mjs](./PROTOCOLS/AUTOMATION/audit_rule_0.mjs): Công cụ rà soát lỗi và kỹ thuật.
+
+--- 
+## 📜 NHẬT KÝ THAY ĐỔI HỆ THỐNG (SYSTEM CHANGELOG)
+| Thời gian | Tác giả | Hành động | Chi tiết |
+| :--- | :--- | :--- | :--- |
+| 12/04/2026 10:07 | **AI Antigravity** | Khởi tạo Cấu trúc Titanium V3.1 | Tái cấu trúc toàn bộ Workspace vào 5 folder chức năng (00-04). Tự động di chuyển toàn bộ file MD từ root vào DNA/Archives. |
+| 12/04/2026 10:07 | **AI Antigravity** | Kích hoạt Turbo Mode & Portal Rule | Cập nhật .cursorrules để tự động hóa vận hành theo yêu cầu của Chủ nhân. |
