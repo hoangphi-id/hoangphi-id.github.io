@@ -1,4 +1,5 @@
-# HOANG PHI — MASTER PROTOCOL FOR ANTIGRAVITY
+> [!IMPORTANT]
+> [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS]# HOANG PHI — MASTER PROTOCOL FOR ANTIGRAVITY
 **Cập nhật: 8/4/2026**
 **Mục đích:** Context đầy đủ về người dùng, career research, CV status, và rules làm việc — dùng cho Antigravity IDE để không cần giải thích lại từ đầu.
 

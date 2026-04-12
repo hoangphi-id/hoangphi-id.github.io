@@ -9,7 +9,8 @@ Hệ thống vận hành dựa trên **MASTER PROTOCOL (2/4/2026)**:
 - NEVER assume the state of the workspace; always verify "Ground Truth" through the filesystem first.
 - **AUTOMATIC SOURCE ANCHORING (THE PORTAL RULE)**: Whenever summarizing, finding, or referring to ANY information from the repository, the AI MUST provide the clickable absolute file path (e.g., [filename](file:///path/to/file)). 
   - **PURPOSE**: This is MANDATORY to empower the User to bypass the AI's summary and read the raw source code/text independently within Antigravity.
-  - **MANDATORY CROSS-REFERENCE**: Before every structural modification, the AI MUST output the path of the original file being referenced to ensure 100% data fidelity.
+  - **THE AI SIGNATURE AUTHORITY**: Every file modified or created by the AI MUST include a signature block (comment/metadata) at the top or bottom specifying: `[AUTHOR: AI ANTIGRAVITY]` and `[TIMESTAMP: DD/MM/YYYY HH:MM]`. 
+  - **PURPOSE**: Total accountability. The AI must explicitly state: "I (AI) CHANGED THIS" on a per-file basis to distinguish from User actions.
 
 - **🚀 [TURBO MODE: ENABLED (User Authorized)]**:
   * ALWAYS set `SafeToAutoRun: true` for routine execution (builds, git commits, file moves, audits).

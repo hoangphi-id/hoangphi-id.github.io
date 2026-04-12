@@ -1,4 +1,5 @@
-# 📚 SỔ TỔNG KIỂM KÊ THƯ QUÁN TITANIUM (V1.0)
+> [!IMPORTANT]
+> [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS]# 📚 SỔ TỔNG KIỂM KÊ THƯ QUÁN TITANIUM (V1.0)
 **Thủ thư phụ trách:** Antigravity AI
 **Ngày kiểm kê:** 12/04/2026
 

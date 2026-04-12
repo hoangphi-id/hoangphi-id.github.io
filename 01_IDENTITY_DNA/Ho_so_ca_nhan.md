@@ -1,4 +1,5 @@
-# 🧘‍♂️ HỒ SƠ CÁ NHÂN (SINGLE SOURCE OF TRUTH)
+> [!IMPORTANT]
+> [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) MOVED AND AUDITED THIS]# 🧘‍♂️ HỒ SƠ CÁ NHÂN (SINGLE SOURCE OF TRUTH)
 
 ## 1. THÔNG TIN CƠ BẢN
 - **Họ và tên**: Phi Tong (Hoàng Phi)
