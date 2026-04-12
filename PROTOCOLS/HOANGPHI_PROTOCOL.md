@@ -273,14 +273,16 @@ Nhằm đảm bảo tính toàn vẹn của dữ liệu và sự tôn trọng đ
 2.  **Bảo tồn ADN (Identity Preservation)**: Các file như `Ho_so_ca_nhan.md`, `Remote CV drafts` được coi là tài sản dữ liệu vĩnh viễn, tuyệt đối không được xóa hoặc di chuyển vào Legacy nếu không có lệnh trực tiếp.
 3.  **Dọn dẹp chức năng**: Chỉ thực hiện dọn dẹp (Archive) đối với các file mang tính chất "Task/ToDo" đã hoàn thành và được người dùng xác nhận.
 4.  **Báo cáo sai lệch**: Nếu phát hiện file bị thiếu ở thư mục gốc, AI phải báo cáo và hỏi ý kiến thay vì tự ý khôi phục từ Archive.
-5.  **Tự động Truy xuất Nguồn (Source Anchoring)**: Mọi câu trả lời liên quan đến lịch sử hoặc thông qua "bản cũ" đều phải đính kèm Link file vật lý để người dùng click kiểm tra ngay lập tức. AI không được phép nói suông.
+5.  **Quy tắc Cửa ngõ (The Portal Rule - Mandatory)**: Mọi câu trả lời liên quan đến lịch sử hoặc thông qua "bản cũ" đều phải đính kèm Link file vật lý để người dùng click kiểm tra ngay lập tức. AI không được phép nói suông.
+6.  **🚀 TURBO MODE ENABLED**: Dựa trên quyền hạn người dùng cấp ngày 12/04/2026, AI được phép tự động chạy lệnh (SafeToAutoRun) đối với 90% các tác vụ vận hành thường nhật để giảm thiểu ma sát với người dùng.
 
 ---
 
 ## VII. TRẠNG THÁI HIỆN TẠI (12/04/2026)
 - **Portfolio**: Đã khôi phục `index.html` và các Case Study về root.
 - **Titanium CV**: Bản V3 Final đã sẵn sàng bắn phá.
-- **Workflow**: Đã cập nhật `Rule Zero Prime` vào hệ thống lõi.
+- **Workspace**: Đã dọn dẹp "Triệt để" vào các folder 01, 02, 03, 04 theo [Bản thiết kế kiến trúc](file:///Users/tonghoangphi/Desktop/Remote_Job_Hunting_2026/WORKSPACE_ARCHITECTURE.md).
+- **Workflow**: Đã kích hoạt [TURBO MODE].
 
 **Immediate (tuần này):**
 - [ ] Phase 4: xAPI & Zapier Integration cho Simulator (thao túng data thực tế)

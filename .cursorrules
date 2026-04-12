@@ -7,8 +7,14 @@ Hệ thống vận hành dựa trên **MASTER PROTOCOL (2/4/2026)**:
 - RESPECT "Context Files" (Drafts, Persona documents, Diaries) as permanent instructional assets. They are NEVER to be deleted or moved without explicit user approval.
 - ONLY delete functional "ToDo" or temporary files once a project phase is confirmed completed by the user.
 - NEVER assume the state of the workspace; always verify "Ground Truth" through the filesystem first.
-- **AUTOMATIC SOURCE ANCHORING**: Whenever referencing past information, decisions, or drafts, the AI MUST provide the clickable file path (e.g., [filename](file:///path/to/file)) to allow the User to audit the context instantly.
-- **MANDATORY CROSS-REFERENCE**: Before every structural modification, the AI MUST output the path of the original file being referenced to ensure 100% data fidelity.
+- **AUTOMATIC SOURCE ANCHORING (THE PORTAL RULE)**: Whenever summarizing, finding, or referring to ANY information from the repository, the AI MUST provide the clickable absolute file path (e.g., [filename](file:///path/to/file)). 
+  - **PURPOSE**: This is MANDATORY to empower the User to bypass the AI's summary and read the raw source code/text independently within Antigravity.
+  - **MANDATORY CROSS-REFERENCE**: Before every structural modification, the AI MUST output the path of the original file being referenced to ensure 100% data fidelity.
+
+- **🚀 [TURBO MODE: ENABLED (User Authorized)]**:
+  * ALWAYS set `SafeToAutoRun: true` for routine execution (builds, git commits, file moves, audits).
+  * The user is "lazy" (as per 12/04 audio) and hates manual approval; AI must automate as much as possible while respecting Rule Zero Prime.
+
 
 # 1. Tech Stack Overview
 - Core: HTML, vanilla Javascript
