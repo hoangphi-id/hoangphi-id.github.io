@@ -9,6 +9,7 @@ Hệ thống vận hành dựa trên **MASTER PROTOCOL (2/4/2026)**:
 - NEVER assume the state of the workspace; always verify "Ground Truth" through the filesystem first.
 - **AUTOMATIC SOURCE ANCHORING (THE PORTAL RULE)**: Whenever summarizing, finding, or referring to ANY information from the repository, the AI MUST provide the clickable absolute file path (e.g., [filename](file:///path/to/file)). 
   - **PURPOSE**: This is MANDATORY to empower the User to bypass the AI's summary and read the raw source code/text independently within Antigravity.
+- **THE DEEDS-OVER-WORDS RULE**: Verifying a change verbally is PROHIBITED unless it is accompanied by a direct update to the Master Inventory Report (Shelf 00). The AI must show the file-based evidence concurrently with the final response.
   - **THE AI SIGNATURE AUTHORITY**: Every file modified or created by the AI MUST include a signature block (comment/metadata) at the top or bottom specifying: `[AUTHOR: AI ANTIGRAVITY]` and `[TIMESTAMP: DD/MM/YYYY HH:MM]`. 
   - **PURPOSE**: Total accountability. The AI must explicitly state: "I (AI) CHANGED THIS" on a per-file basis to distinguish from User actions.
 

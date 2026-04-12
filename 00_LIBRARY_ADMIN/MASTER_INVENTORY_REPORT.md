@@ -59,3 +59,4 @@
 | :--- | :--- | :--- | :--- |
 | 12/04/2026 10:07 | **AI Antigravity** | Khởi tạo Cấu trúc Titanium V3.1 | Tái cấu trúc toàn bộ Workspace vào 5 folder chức năng (00-04). Tự động di chuyển toàn bộ file MD từ root vào DNA/Archives. |
 | 12/04/2026 10:07 | **AI Antigravity** | Kích hoạt Turbo Mode & Portal Rule | Cập nhật .cursorrules để tự động hóa vận hành theo yêu cầu của Chủ nhân. |
+| 12/04/2026 10:14 | **AI Antigravity** | Nâng cấp Hiến pháp V6.0 | Tích hợp quy tắc DEEDS-OVER-WORDS. Bắt buộc báo cáo kèm bằng chứng file. |
