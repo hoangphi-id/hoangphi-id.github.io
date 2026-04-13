@@ -155,6 +155,96 @@
             border-radius: 2px;
         }
 
+        /* --- Executive Summary Styles --- */
+        .exec-summary {
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exec-summary::before {
+            content: 'EXECUTIVE SUMMARY';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: rgba(0, 242, 255, 0.3);
+        }
+
+        .exec-summary h2 {
+            background: linear-gradient(to right, var(--primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            border: none;
+        }
+
+        .exec-summary h2::before { display: none; }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .exec-item h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exec-item h3 i { color: var(--primary); }
+
+        .exec-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exec-item ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .exec-item ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .takeaway-box {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: rgba(0, 242, 255, 0.1);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .takeaway-box p {
+            margin: 0;
+            font-style: italic;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .exec-grid { grid-template-columns: 1fr; }
+            .exec-summary { padding: 2rem 1.5rem; }
+        }
+
         p {
             margin-bottom: 1.5rem;
             color: var(--text-dim);
@@ -258,19 +348,42 @@
             Back to Portfolio
         </a>
 
-        <header>
-            <div class="badge">Adaptive behavioral simulation</div>
-            <h1>The Deadline<br><span>Crisis Simulator.</span></h1>
-            <p class="subtitle">A full-stack instructional architecture designed to measure and transform high-stakes communication behaviors through data-driven branching logic.</p>
-            
-            <div class="tech-stack">
-                <span class="tech-pill">Storyline 360</span>
-                <span class="tech-pill">JavaScript (ES6)</span>
-                <span class="tech-pill">Google Apps Script</span>
-                <span class="tech-pill">Webhooks</span>
-                <span class="tech-pill">UX Engineering</span>
-            </div>
         </header>
+
+        <!-- --- Project Executive Summary --- -->
+        <section class="exec-summary">
+            <h2>🚀 Project Executive Summary: TITANIUM</h2>
+            
+            <div class="exec-grid">
+                <div class="exec-item">
+                    <h3>The Meta-Challenge: Beyond the SCORM "Black Box"</h3>
+                    <p>Standard eLearning development often hits a data wall: we know if a learner finished, but we have zero visibility into their decision-making logic. For high-stakes sales negotiation, "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
+                </div>
+                <div class="exec-item">
+                    <h3>The Architecture: A High-Fidelity Behavioral Simulator</h3>
+                    <p>I engineered <strong>Titanium</strong>, a high-fidelity simulator built with Articulate Storyline 360 but powered by a custom <strong>JavaScript (ES6) Data Bridge</strong>.</p>
+                    <ul>
+                        <li><strong>Technical Edge:</strong> Bypassed SCORM limitations by architecting an asynchronous pipeline that pipes granular interaction data directly into a private serverless backend.</li>
+                        <li><strong>Data Integrity:</strong> Utilizes <strong>Async POST methods</strong> via Webhooks to a <strong>Google Apps Script</strong> data warehouse, ensuring 100% data fidelity.</li>
+                    </ul>
+                </div>
+                <div class="exec-item" style="grid-column: span 2;">
+                    <h3>Strategic Impact: From Assessment to Predictive Analytics</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div>
+                            <p><strong>The 48-Hour Window:</strong> Achieved 100% visibility into learner behavior, identifying struggling representatives within **48 hours**—a 90% improvement.</p>
+                        </div>
+                        <div>
+                            <p><strong>Measurable Mastery:</strong> Developed a dynamic **"TrustScore"** system quantifying "Yes-man" vs. "Strategic Negotiator" archetypes for actionable performance data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <p><strong>Senior Architect’s Takeaway:</strong> Titanium isn't just a course; it's a <strong>data-driven diagnostic engine</strong> that proves how technical architecture can transform qualitative pedagogy into quantitative business intelligence.</p>
+            </div>
+        </section>
 
         <!-- --- Section 1: The Problem --- -->
         <section class="card">

@@ -147,6 +147,75 @@
             .main-card { padding: 1.5rem; }
             .feature-grid { grid-template-columns: 1fr; }
         }
+
+        /* --- Executive Summary Styles --- */
+        .exec-summary {
+            background: rgba(30, 58, 138, 0.03);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .exec-summary::before {
+            content: 'EXECUTIVE SUMMARY';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: rgba(30, 58, 138, 0.3);
+        }
+
+        .exec-summary h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            border: none;
+            display: block;
+        }
+
+        .exec-summary h2::before { display: none; }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .exec-item h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .exec-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .takeaway-box {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: rgba(30, 58, 138, 0.05);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .takeaway-box p {
+            margin: 0;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .exec-grid { grid-template-columns: 1fr; }
+            .exec-summary { padding: 2rem 1.5rem; }
+        }
     </style>
 <style>html{scroll-behavior:smooth;}</style></head>
 <body>
@@ -154,15 +223,39 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to Portfolio</a>
         
-        <header>
-            <h1>IELTS WRITING MASTERCLASS</h1>
-            <p class="subtitle">End-to-End Moodle Development & Pedagogical Engineering</p>
-            <div style="margin-top: 1.5rem;">
-                <span class="tech-pill">Moodle LMS</span>
-                <span class="tech-pill">Asymptotic Rubrics</span>
-                <span class="tech-pill">Activity Completion</span>
-            </div>
         </header>
+
+        <!-- --- Project Executive Summary --- -->
+        <section class="exec-summary">
+            <h2>🏛️ Project Executive Summary: MOODLE ECOSYSTEM</h2>
+            
+            <div class="exec-grid">
+                <div class="exec-item">
+                    <h3>The Challenge: Scaling Qualitative Rigor</h3>
+                    <p>Traditional language training often struggles with subjective grading bias and slow feedback loops when scaling to hundreds of assets. We needed a system that maintained high pedagogical rigor while automating the operational core for a global workforce.</p>
+                </div>
+                <div class="exec-item">
+                    <h3>The Architecture: A Hybrid SCORM-Moodle Hub</h3>
+                    <p>I engineered a scalable learning ecosystem by architectural integration of <strong>Articulate Rise micro-modules</strong> into <strong>Moodle 4.x</strong>.</p>
+                    <p style="margin-top:10px;">Pioneered the implementation of <strong>"Asymptotic Rubrics"</strong> strictly mapped to international standards, transforming qualitative feedback into a quantitative data pipeline.</p>
+                </div>
+                <div class="exec-item" style="grid-column: span 2;">
+                    <h3>Strategic Impact: Consistency at Scale</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div>
+                            <p><strong>Asset Management:</strong> Successfully digitalized and deployed **500+ pedagogical assets** within a single development window.</p>
+                        </div>
+                        <div>
+                            <p><strong>Data Visibility:</strong> Achieved **100% visibility** for regional L&D managers, allowing for comparative performance analysis without manual entry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <p><strong>Senior Architect’s Takeaway:</strong> This project proves my ability to lead **Pedagogical Engineering** at scale, turning complex, subjective learning requirements into standardized, high-volume automated systems.</p>
+            </div>
+        </section>
 
         <section class="main-card">
             <h2>Pedagogical Architecture</h2>
