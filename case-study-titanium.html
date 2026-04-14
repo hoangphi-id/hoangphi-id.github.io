@@ -1,16 +1,19 @@
-<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS] --><!DOCTYPE html>
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS] -->
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phi Tong | High-Fidelity Behavioral Analytics Simulator & ES6 Arch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <!-- Mermaid JS for diagrams -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ 
+        mermaid.initialize({
             startOnLoad: true,
             theme: 'dark',
             securityLevel: 'loose'
@@ -50,7 +53,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: 
+            background:
                 radial-gradient(circle at 10% 20%, rgba(0, 106, 230, 0.1) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.05) 0%, transparent 40%);
             z-index: -1;
@@ -186,7 +189,9 @@
             border: none;
         }
 
-        .exec-summary h2::before { display: none; }
+        .exec-summary h2::before {
+            display: none;
+        }
 
         .exec-grid {
             display: grid;
@@ -203,7 +208,9 @@
             gap: 0.5rem;
         }
 
-        .exec-item h3 i { color: var(--primary); }
+        .exec-item h3 i {
+            color: var(--primary);
+        }
 
         .exec-item ul {
             list-style: none;
@@ -241,8 +248,13 @@
         }
 
         @media (max-width: 768px) {
-            .exec-grid { grid-template-columns: 1fr; }
-            .exec-summary { padding: 2rem 1.5rem; }
+            .exec-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .exec-summary {
+                padding: 2rem 1.5rem;
+            }
         }
 
         p {
@@ -252,7 +264,7 @@
         }
 
         .mermaid-container {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 2rem;
             border-radius: 16px;
             margin: 2rem 0;
@@ -264,7 +276,7 @@
             border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border-glass);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .image-box img {
@@ -274,7 +286,7 @@
 
         .caption {
             padding: 1rem;
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-dim);
@@ -289,7 +301,7 @@
         }
 
         .stat-item {
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border-glass);
@@ -332,19 +344,27 @@
         }
 
         @media (max-width: 768px) {
-            .card { padding: 1.5rem; }
-            h1 { font-size: 2.2rem; }
+            .card {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="bg-glow"></div>
 
     <div class="container">
-        
+
         <a href="index.html" class="back-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
             Back to Portfolio
         </a>
 
@@ -353,121 +373,156 @@
         <!-- --- Project Executive Summary --- -->
         <section class="exec-summary">
             <h2>🚀 Project Executive Summary: TITANIUM</h2>
-            
+
             <div class="exec-grid">
                 <div class="exec-item">
                     <h3>The Meta-Challenge: Beyond the SCORM "Black Box"</h3>
-                    <p>Standard eLearning development often hits a data wall: we know if a learner finished, but we have zero visibility into their decision-making logic. For high-stakes sales negotiation, "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
+                    <p>Standard eLearning development often hits a data wall: we know if a learner finished, but we have
+                        zero visibility into their decision-making logic. For high-stakes sales negotiation,
+                        "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
                 </div>
                 <div class="exec-item">
                     <h3>The Architecture: A High-Fidelity Behavioral Simulator</h3>
-                    <p>I engineered <strong>Titanium</strong>, a high-fidelity simulator built with Articulate Storyline 360 but powered by a custom <strong>JavaScript (ES6) Data Bridge</strong>.</p>
+                    <p>I engineered <strong>Titanium</strong>, a high-fidelity simulator built with Articulate Storyline
+                        360 but powered by a custom <strong>JavaScript (ES6) Data Bridge</strong>.</p>
                     <ul>
-                        <li><strong>Technical Edge:</strong> Bypassed SCORM limitations by architecting an asynchronous pipeline that pipes granular interaction data directly into a private serverless backend.</li>
-                        <li><strong>Data Integrity:</strong> Utilizes <strong>Async POST methods</strong> via Webhooks to a <strong>Google Apps Script</strong> data warehouse, ensuring 100% data fidelity.</li>
+                        <li><strong>Technical Edge:</strong> Bypassed SCORM limitations by architecting an asynchronous
+                            pipeline that pipes granular interaction data directly into a private serverless backend.
+                        </li>
+                        <li><strong>Data Integrity:</strong> Utilizes <strong>Async POST methods</strong> via Webhooks
+                            to a <strong>Google Apps Script</strong> data warehouse, ensuring 100% data fidelity.</li>
                     </ul>
                 </div>
                 <div class="exec-item" style="grid-column: span 2;">
                     <h3>Strategic Impact: From Assessment to Predictive Analytics</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                         <div>
-                            <p><strong>The 48-Hour Window:</strong> Achieved 100% visibility into learner behavior, identifying struggling representatives within <strong>48 hours</strong>—a 90% improvement.</p>
+                            <p><strong>The 48-Hour Window:</strong> Achieved 100% visibility into learner behavior,
+                                identifying struggling representatives within <strong>48 hours</strong>—a 90%
+                                improvement.</p>
                         </div>
                         <div>
-                            <p><strong>Measurable Mastery:</strong> Developed a dynamic <strong>"TrustScore"</strong> system quantifying "Yes-man" vs. "Strategic Negotiator" archetypes for actionable performance data.</p>
+                            <p><strong>Measurable Mastery:</strong> Developed a dynamic <strong>"TrustScore"</strong>
+                                system quantifying "Yes-man" vs. "Strategic Negotiator" archetypes for actionable
+                                performance data.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="takeaway-box">
-                <p><strong>Senior Architect’s Takeaway:</strong> Titanium isn't just a course; it's a <strong>data-driven diagnostic engine</strong> that proves how technical architecture can transform qualitative pedagogy into quantitative business intelligence.</p>
+                <p><strong>Senior Architect’s Takeaway:</strong> Titanium isn't just a course; it's a
+                    <strong>data-driven diagnostic engine</strong> that proves how technical architecture can transform
+                    qualitative pedagogy into quantitative business intelligence.
+                </p>
             </div>
         </section>
 
-        <!-- --- Section 1: The Problem --- -->
+        <!-- --- Project Executive Summary --- -->
         <section class="card">
             <h2>The Challenge</h2>
-            <p>In high-pressure corporate environments, the way a lead handles a "Friday Night Crisis" defines the long-term health of the team. Standard e-learning (video + quiz) fails to capture the <strong>psychological stakes</strong> of real-time negotiation. Learners need an environment where their choices have immediate, visible consequences on stakeholder trust.</p>
-            
+            <p>In high-pressure corporate environments, the way a lead handles a "Friday Night Crisis" defines the
+                long-term health of the team. Standard e-learning (video + quiz) fails to capture the
+                <strong>psychological stakes</strong> of real-time negotiation. Learners need an environment where their
+                choices have immediate, visible consequences on stakeholder trust.
+            </p>
+
             <div class="stat-item" style="border-left: 4px solid var(--danger);">
                 <span class="stat-label">Core Objective</span>
-                <p style="margin:0;">Simulate the "Trust Factor" between a Project Lead, a Client, and their internal Team using a dynamic multi-variable scoring system.</p>
+                <p style="margin:0;">Simulate the "Trust Factor" between a Project Lead, a Client, and their internal
+                    Team using a dynamic multi-variable scoring system.</p>
             </div>
         </section>
 
         <!-- --- Section 2: Technical Architecture --- -->
         <section class="card">
             <h2>Technical Architecture</h2>
-            <p>To overcome traditional SCORM limitations, I engineered a serverless data pipeline. This architecture enables granular tracking of every learner interaction, exporting behavioral logs directly to a private data warehouse.</p>
-            
+            <p>To overcome traditional SCORM limitations, I engineered a serverless data pipeline. This architecture
+                enables granular tracking of every learner interaction, exporting behavioral logs directly to a private
+                data warehouse.</p>
+
             <div class="mermaid-container">
                 <div class="mermaid">
                     graph LR
-                        A[Storyline UI] -- "1. JSON Data" --> B["JS Bridge (ES6)"]
-                        B -- "2. Async POST" --> C["GAS Webhook"]
-                        C -- "3. Data Log" --> D["Google Sheets"]
-                        C -- "4. Auto-Email" --> E["Learner Feedback"]
-                        
-                        style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
-                        style C fill:#002b5c,stroke:#00f2ff,stroke-width:2px,color:#fff
-                        style D fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
+                    A[Storyline UI] -- "1. JSON Data" --> B["JS Bridge (ES6)"]
+                    B -- "2. Async POST" --> C["GAS Webhook"]
+                    C -- "3. Data Log" --> D["Google Sheets"]
+                    C -- "4. Auto-Email" --> E["Learner Feedback"]
+
+                    style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style C fill:#002b5c,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style D fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
                 </div>
             </div>
-            
+
             <div class="image-box">
                 <img src="assets/Case_Study/01_Technical_Capture/02_JS_Data_Bridge_Trigger.png" alt="JS Bridge">
-                <div class="caption">The JavaScript Data Bridge (V2.3) bypassing standard LMS constraints for real-time analytics.</div>
+                <div class="caption">The JavaScript Data Bridge (V2.3) bypassing standard LMS constraints for real-time
+                    analytics.</div>
             </div>
         </section>
 
         <!-- --- Section 3: The Behavioral Journey --- -->
         <section class="card">
             <h2>The Behavioral Journey</h2>
-            <p>The simulator is divided into 3 high-stakes stages. Every decision updates a hidden global <strong>TrustScore</strong>, which determines the aesthetic and outcome of the final dashboard.</p>
+            <p>The simulator is divided into 3 high-stakes stages. Every decision updates a hidden global
+                <strong>TrustScore</strong>, which determines the aesthetic and outcome of the final dashboard.
+            </p>
 
             <div class="grid-stats">
                 <div class="stat-item">
                     <span class="stat-label">Stage 1: Negotiation</span>
-                    <p class="stat-desc">Balancing client pressure against resource reality. Testing "Yes-man" vs "Strategic Negotiator" patterns.</p>
+                    <p class="stat-desc">Balancing client pressure against resource reality. Testing "Yes-man" vs
+                        "Strategic Negotiator" patterns.</p>
                 </div>
                 <div class="stat-item">
                     <span class="stat-label">Stage 2: Diplomacy</span>
-                    <p class="stat-desc">Formalizing strategies via high-stakes communication. Precision alignment with stakeholder expectations.</p>
+                    <p class="stat-desc">Formalizing strategies via high-stakes communication. Precision alignment with
+                        stakeholder expectations.</p>
                 </div>
                 <div class="stat-item">
                     <span class="stat-label">Stage 3: Team Alignment</span>
-                    <p class="stat-desc">Leading under pressure. Gauging the impact of managerial stress on team psychological safety.</p>
+                    <p class="stat-desc">Leading under pressure. Gauging the impact of managerial stress on team
+                        psychological safety.</p>
                 </div>
             </div>
 
             <div class="image-box">
-                <img src="assets/Case_Study/01_Technical_Capture/01_Decision_Logic_And_States.png" alt="Branching Logic">
-                <div class="caption">Mapping complex behavioral variables: How decision logic translates into instructional impact.</div>
+                <img src="assets/Case_Study/01_Technical_Capture/01_Decision_Logic_And_States.png"
+                    alt="Branching Logic">
+                <div class="caption">Mapping complex behavioral variables: How decision logic translates into
+                    instructional impact.</div>
             </div>
         </section>
 
         <!-- --- Section 4: Visual Fidelity --- -->
         <section class="card">
             <h2>Adaptive Feedback</h2>
-            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow (Success, Warning, Danger) based on the user's current performance state.</p>
-            
+            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
+                (Success, Warning, Danger) based on the user's current performance state.</p>
+
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
-                <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png" style="width:100%; border-radius:10px; border:1px solid var(--success);" alt="Success">
-                <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png" style="width:100%; border-radius:10px; border:1px solid var(--warning);" alt="Warning">
-                <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png" style="width:100%; border-radius:10px; border:1px solid var(--danger);" alt="Fail">
+                <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png"
+                    style="width:100%; border-radius:10px; border:1px solid var(--success);" alt="Success">
+                <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png"
+                    style="width:100%; border-radius:10px; border:1px solid var(--warning);" alt="Warning">
+                <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png"
+                    style="width:100%; border-radius:10px; border:1px solid var(--danger);" alt="Fail">
             </div>
-            <p style="text-align:center; font-size:0.8rem; margin-top:10px;">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
+            <p style="text-align:center; font-size:0.8rem; margin-top:10px;">Visual States: Dynamic environment
+                transformations based on real-time TrustScore.</p>
         </section>
 
         <!-- --- Section 5: Real-world Impact --- -->
         <section class="card">
             <h2>Actionable Data Warehouse</h2>
-            <p>Behind the aesthetics lies the data. L&D Managers receive a full <strong>Behavioral Heatmap</strong>, allowing them to pinpoint exactly where their leaders are making high-risk decisions.</p>
-            
+            <p>Behind the aesthetics lies the data. L&D Managers receive a full <strong>Behavioral Heatmap</strong>,
+                allowing them to pinpoint exactly where their leaders are making high-risk decisions.</p>
+
             <div class="image-box">
                 <img src="assets/Case_Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Warehouse">
-                <div class="caption">Real-time Data Warehouse capturing cross-session behavioral archetypes for organizational analysis.</div>
+                <div class="caption">Real-time Data Warehouse capturing cross-session behavioral archetypes for
+                    organizational analysis.</div>
             </div>
         </section>
 
@@ -482,4 +537,5 @@
     </div>
 
 </body>
+
 </html>
