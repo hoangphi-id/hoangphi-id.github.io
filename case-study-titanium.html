@@ -253,7 +253,7 @@
             .subtitle { font-size: 1rem; margin-bottom: 2rem; }
             .card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
             .exec-grid, .grid-stats, .state-grid { 
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr !important; 
                 gap: 1.5rem; 
             }
             .exec-item h3 { font-size: 1.05rem; }
@@ -415,9 +415,7 @@
 
         /* --- Responsive Queries --- */
         @media (max-width: 768px) {
-            .exec-grid {
-                grid-template-columns: 1fr;
-            }
+            .exec-grid, .grid-2 { grid-template-columns: 1fr !important; gap: 1.5rem; }
 
             .exec-summary {
                 padding: 2rem 1.5rem;
