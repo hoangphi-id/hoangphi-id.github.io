@@ -247,20 +247,6 @@
             font-size: 1rem;
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 2rem 1.2rem; }
-            h1 { font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.1; }
-            .subtitle { font-size: 1rem; margin-bottom: 2rem; }
-            .card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
-            .exec-grid, .grid-stats, .state-grid { 
-                grid-template-columns: 1fr !important; 
-                gap: 1.5rem; 
-            }
-            .exec-item h3 { font-size: 1.05rem; }
-            .image-box, .evidence-frame { margin: 1.5rem 0; width: 100%; }
-            .mermaid-container { padding: 1rem; overflow-x: auto; }
-            .next-step { font-size: 1.2rem; }
-        }
 
         p {
             margin-bottom: 1.5rem;
@@ -413,26 +399,27 @@
             padding-left: 10px;
         }
 
-        /* --- Responsive Queries --- */
+        /* --- COMPREHENSIVE MOBILE HARDENING --- */
         @media (max-width: 768px) {
-            .exec-grid, .grid-2 { grid-template-columns: 1fr !important; gap: 1.5rem; }
-
-            .exec-summary {
-                padding: 2rem 1.5rem;
+            .container { padding: 2rem 1.2rem; }
+            h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; line-height: 1.1; }
+            .subtitle { font-size: 1rem; margin-bottom: 2rem; }
+            .card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
+            
+            /* Force all grids to stack 100% width */
+            .exec-grid, .grid-stats, .state-grid, .grid-2 { 
+                grid-template-columns: 1fr !important; 
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem; 
             }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-
-            .mermaid-container {
-                padding: 1rem;
-                overflow-x: auto;
-            }
+            
+            .exec-item { width: 100% !important; }
+            .exec-item h3 { font-size: 1.1rem; }
+            .state-grid .evidence-frame { margin-bottom: 1rem; }
+            .image-box, .evidence-frame { margin: 1.5rem 0; width: 100% !important; }
+            .mermaid-container { padding: 1rem; overflow-x: auto; }
+            .next-step { font-size: 1.2rem; display: block; }
         }
     </style>
 </head>
