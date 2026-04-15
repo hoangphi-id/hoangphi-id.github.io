@@ -305,5 +305,33 @@
             </div>
         </footer>
     </div>
+    <!-- ULTIMATUM MOBILE FIX: FORCED STACKING & SYNC -->
+    <style>
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem !important; width: 100% !important; max-width: 100% !important; }
+            h1 { font-size: clamp(2rem, 10vw, 3rem) !important; line-height: 1.1 !important; margin-bottom: 2rem !important; }
+            
+            /* FORCE VERTICAL STACK FOR ALL GRID CONTAINERS */
+            .exec-grid, .grid-2, .grid-3 {
+                display: block !important;
+                grid-template-columns: 1fr !important;
+            }
+            
+            .exec-item, .section, .image-box {
+                width: 100% !important;
+                margin-bottom: 1.5rem !important;
+                display: block !important;
+                padding: 1.2rem !important;
+            }
+            
+            .exec-item h3 { font-size: 1.1rem !important; }
+            
+            /* IMAGE FIT */
+            img { max-width: 100% !important; height: auto !important; border-radius: 8px !important; }
+            
+            /* SYNC: Ensure no sections are hidden */
+            section, div, p, span { display: block !important; }
+        }
+    </style>
 </body>
 </html>
