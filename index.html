@@ -250,11 +250,22 @@
         }
 
         @media (max-width: 768px) {
-            header { padding-top: 5rem; height: auto; margin-bottom: 5rem; }
+            header { padding-top: 3rem; min-height: 80vh; }
             .hero-flex { flex-direction: column-reverse; text-align: center; gap: 2rem; }
-            .hero-desc { margin: 0 auto 3rem auto; }
-            h1 { font-size: 3rem; }
-            .hero-image img { max-width: 250px; }
+            .hero-desc { margin: 0 auto 3rem auto; font-size: 1.1rem; }
+            h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); line-height: 1.1; }
+            .hero-image img { max-width: 250px; margin: 0 auto; display: block; border-radius: 50%; }
+            .projects-grid { 
+                grid-template-columns: 1fr; 
+                gap: 1.5rem; 
+                margin-bottom: 5rem;
+            }
+            .project-card {
+                padding: 1.5rem;
+            }
+            .container {
+                padding: 0 1.5rem;
+            }
         }
     </style>
 <style>html{scroll-behavior:smooth;}</style></head>

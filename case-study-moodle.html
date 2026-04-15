@@ -213,8 +213,12 @@
         }
 
         @media (max-width: 768px) {
-            .exec-grid { grid-template-columns: 1fr; }
-            .exec-summary { padding: 2rem 1.5rem; }
+            .container { padding: 2rem 1.2rem; }
+            h1 { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.1; margin-bottom: 2rem; }
+            .subtitle { font-size: 1rem; }
+            .main-card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
+            .exec-grid, .feature-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .image-container { margin: 1.5rem 0; width: 100%; }
         }
     </style>
 <style>html{scroll-behavior:smooth;}</style></head>
