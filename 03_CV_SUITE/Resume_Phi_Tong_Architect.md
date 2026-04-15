@@ -1,12 +1,12 @@
-# RESUME — PHI TONG (Learning Experience Architect)
+# PHI TONG | Senior LXD Architect & Full-Stack Learning Engineer
 **Ho Chi Minh City, Vietnam** | **phitong.official@gmail.com** | **+84 (799) 445 377**
-**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Titanium Hub](https://hoangphi-id.github.io)
+**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Senior Architect Portfolio](https://hoangphi-id.github.io)
 
 ## EXECUTIVE SUMMARY
 - **Learning Experience Architect (LXA)** with 10+ years of experience driving educational innovation across high-growth EdTech and international education consultancies.
 - **Architected** end-to-end digital learning ecosystems, facilitating over **$10,000 in university merit scholarships** through data-driven assessment frameworks and adaptive IELTS/SAT curricula.
 - **Engineered** scalable LMS architectures for **500+ digital assets**, reducing operational friction and content delivery lead times by **40%**.
-- **Spearheaded** the development of high-fidelity **JS-integrated behavioral simulators**, enabling evidence-based tracking of complex learner decision-making metrics.
+- **Spearheaded** the development of high-fidelity **JS-integrated behavioral simulators**, enabling evidence-based tracking of complex learner decision-making via **asynchronous data pipelines** and **serverless behavioral warehouses**.
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -14,7 +14,7 @@
 **Universal Study Center (USC)** — Ho Chi Minh City, Vietnam
 *USC is an international education consultancy specializing in high-stakes test prep (IELTS/SAT/GRE) for high-performance learners entering global top-tier universities.*
 - **Spearheaded** the digital transformation of high-stakes IELTS curricula, managing a cross-functional team of 4-6 educators to ensure 100% brand-architectural alignment.
-- **Engineered** standardized assessment frameworks and interactive modules, achieving a **15% increase in high-band (7.5+) candidate attainment rates**.
+- **Engineered** standardized assessment frameworks and interactive modules, achieving a **15% increase in high-band (7.5+) candidate attainment rates** through **asymptotically scaled rubrics**.
 - **Automated** placement and student tracking workflows, reducing manual diagnostic and processing lead times by **40%**.
 - **Orchestrated** pedagogical strategy for merit-based candidates, facilitating over **$10,000+ in university scholarship funding**.
 - **Synthesized** learner data from 100+ active candidates to inform curriculum architecture pivots and adaptive instructional execution.
@@ -23,7 +23,7 @@
 **EngTalk Language Center** — Ho Chi Minh City, Vietnam
 *EngTalk is a digital-first EdTech platform focusing on professional communication and language training for corporate learners and high-potential professionals.*
 - **Reported** to the Product Lead; independently **architected** a scalable **36-session hybrid syllabus framework** from conception to market-ready launch.
-- **Led** the production of 200+ micro-learning assets, utilizing Articulate Rise 360 and custom JavaScript to enhance interactivity and retention metrics.
+- **Led** the production of 200+ micro-learning assets, utilizing Articulate Rise 360 and **custom ES6 Data Bridges** to ensure **48-hour behavioral visibility** into learner decision-making logic.
 - **Developed** a centralized digital content hub via Notion and Moodle, reducing content retrieval time for instructors by **30%** and improving update turnaround.
 - **Engineered** digital-first engagement strategies across TikTok and Notion Hubs, increasing organic learner reach through high-utility instructional assets.
 - **Collaborated** with business units to align curriculum goals with a **20% improvement in customer retention targets** through evidence-based learning design.
@@ -42,7 +42,7 @@
 *Vietop is an English training center specializing in standardized test preparation with a strong focus on personalized learning paths and data-driven progress.*
 - **Reported** to the LMS Lead; **digitized** over **500 paper-based assets** into a modular Moodle ecosystem, enabling center-wide data tracking.
 - **Optimized** LMS navigation and UX flow, reducing learner bounce rates on self-paced modules.
-- **Engineered** automated grading rubrics for IELTS Writing, providing instant feedback loops for high-enrollment cohorts and reducing teacher workload by **15 hours/week**.
+- **Engineered** automated grading rubrics for IELTS Writing, providing instant feedback loops for high-enrollment cohorts and reducing teacher workload by **15 hours/week** through **data-driven feedback sub-routines**.
 - **Resolved** critical LMS scaling issues by restructuring the course taxonomy to support a 50% growth in monthly active users during peak enrollment cycles.
 - **Developed** mobile-first learning interactions in Moodle, increasing student participation in "off-site" training sessions and mobile-based micro-quizzes.
 
@@ -66,4 +66,4 @@
 
 ## SKILLS & TECH
 SKILLS: Instructional Design, Learning Experience Design (LXD), Curriculum Development, Adaptive Learning, Behavioral Psychology.
-TECH: JavaScript (ES6), Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).
+TECH: JavaScript (ES6), ES6 Data Bridges, Asynchronous Pipelines, Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).

@@ -1,12 +1,12 @@
-# RESUME — PHI TONG (Instructional Designer)
+# PHI TONG | Senior LXD Architect & Full-Stack Learning Engineer
 **Ho Chi Minh City, Vietnam** | **phitong.official@gmail.com** | **+84 (799) 445 377**
-**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Titanium Hub](https://hoangphi-id.github.io)
+**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Senior Architect Portfolio](https://hoangphi-id.github.io)
 
 ## EXECUTIVE SUMMARY
 - **Senior Instructional Designer** with 10+ years of experience designing scalable learning systems and high-impact digital content for corporate EdTech and language training institutions.
 - **Digitized** over **500 pedagogical assets** into a modular LMS environment, implementing automated gating and activity completion tracking to improve learner autonomy.
 - **Architected** an end-to-end **36-session curriculum framework** for English proficiency, optimizing learning paths for personalized education.
-- **Engineered** custom **JavaScript-to-API bridges** for interactive simulations, enabling precision tracking of learner behavior and decision-making metrics.
+- **Engineered** custom **JavaScript-to-API Bridges** for interactive simulations, enabling precision tracking of learner behavior via **Asynchronous POST methods** and **Serverless Data Warehouses**.
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -24,7 +24,7 @@
 *EngTalk is a digital-first EdTech platform focusing on professional communication and language training for corporate learners.*
 - **Architected** a scalable **36-session hybrid syllabus framework** from conception to market-ready launch for adult learners.
 - **Led** the production of 200+ micro-learning instructional assets, utilizing Articulate Rise 360 and advanced Storyline animations.
-- **Engineered** interactive Storyline blocks with custom JavaScript to track high-stakes decision-making in professional communication scenarios.
+- **Engineered** interactive Storyline blocks with custom **ES6 Logic Gates** to track high-stakes decision-making and pipe data directly to external analytics dashboards.
 - **Developed** a centralized content hub on Notion, streamlining asset management for a distributed team of 20+ instructors.
 - **Collaborated** with business units to align curriculum goals with a **20% improvement in customer retention targets**.
 
@@ -42,7 +42,7 @@
 - **Digitized** 500+ static paper-based assets into a modular Moodle environment with automated rubrics and conditional access gating.
 - **Optimized** the course taxonomy for IELTS preparation, improving student self-service efficiency by **25%**.
 - **Resolved** LMS accessibility issues by developing mobile-responsive CSS and streamlined SCORM packages for Moodle.
-- **Engineered** automated grading systems, significantly reducing manual instructor feedback cycles for writing tasks.
+- **Engineered** automated grading systems and **Pedagogical Logic Gates**, significantly reducing manual instructor feedback cycles while maintaining data fidelity.
 
 ### Senior ID & Curriculum Lead | Sep 2017 – Jun 2019
 **ZIM Academy** — Ho Chi Minh City, Vietnam
@@ -62,4 +62,4 @@
 
 ## SKILLS & TECH
 SKILLS: Instructional Design, Curriculum Development, LMS Architecture, SCORM/xAPI, Technical Writing, Storyboarding.
-TECH: JavaScript (ES6), Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).
+TECH: JavaScript (ES6), ES6 Data Bridges, Asynchronous Pipelines, Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).

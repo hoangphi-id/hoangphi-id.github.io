@@ -61,7 +61,7 @@ function executeTitaniumTransfer() {
     };
 
     // YOUR LATEST GOOGLE WEB APP URL
-    var webAppUrl = "https://script.google.com/macros/s/AKfycbzepiBeT4X_R9urOhRc0Sr4Cqw4lOVMTKEbkYYPztsHlzUoUEEjFqD9syDftWPJBi4v/exec";
+    var webAppUrl = "https://phitong-architect.app.n8n.cloud/webhook/diagnostic-bridge";
 
     // Transmission using Fetch API
     fetch(webAppUrl, {
@@ -127,7 +127,7 @@ function executeTitaniumTransfer() {
     };
 
     // YOUR LATEST GOOGLE WEB APP URL
-    var webAppUrl = "https://script.google.com/macros/s/AKfycbzepiBeT4X_R9urOhRc0Sr4Cqw4lOVMTKEbkYYPztsHlzUoUEEjFqD9syDftWPJBi4v/exec";
+    var webAppUrl = "https://phitong-architect.app.n8n.cloud/webhook/diagnostic-bridge";
 
     // Transmission using Fetch API
     fetch(webAppUrl, {
@@ -193,7 +193,7 @@ function executeTitaniumTransfer() {
     };
 
     // YOUR LATEST GOOGLE WEB APP URL
-    var webAppUrl = "https://script.google.com/macros/s/AKfycbzepiBeT4X_R9urOhRc0Sr4Cqw4lOVMTKEbkYYPztsHlzUoUEEjFqD9syDftWPJBi4v/exec";
+    var webAppUrl = "https://phitong-architect.app.n8n.cloud/webhook/diagnostic-bridge";
 
     // Transmission using Fetch API
     fetch(webAppUrl, {

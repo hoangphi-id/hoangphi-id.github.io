@@ -1,12 +1,12 @@
-# RESUME — PHI TONG (Learning Experience Designer)
+# PHI TONG | Senior LXD Architect & Full-Stack Learning Engineer
 **Ho Chi Minh City, Vietnam** | **phitong.official@gmail.com** | **+84 (799) 445 377**
-**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Titanium Hub](https://hoangphi-id.github.io)
+**LinkedIn:** [hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong) | **Portfolio:** [Senior Architect Portfolio](https://hoangphi-id.github.io)
 
 ## EXECUTIVE SUMMARY
 - **Learning Experience Designer (LXD)** with 10+ years of expertise in crafting human-centric learning journeys and evidence-based educational strategies for high-performance learners.
 - **Secured** **$10,000 in university merit scholarships** for learners by designing high-stakes assessment frameworks and adaptive, data-driven learning paths.
 - **Delivered** **50,000+ lines of data-driven feedback** for 700+ adult learners, optimizing user retention and instructional quality through personalized interaction.
-- **Pioneered** the use of **Behavioral Simulators** with real-time tracking to improve learner decision-making and engagement in high-stakes environment simulators.
+- **Pioneered** the use of **Behavioral Simulators** with real-time tracking to improve learner decision-making via **quantizable TrustScore metrics** and **Asynchronous Data Pipelines**.
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -23,7 +23,7 @@
 **EngTalk Language Center** — Ho Chi Minh City, Vietnam
 *EngTalk is a digital-first EdTech platform focusing on professional communication and language training for corporate learners.*
 - **Architected** the center's identity-driven content strategy, prioritizing learner engagement and real-world application of communication skills.
-- **Designed** high-fidelity interactive modules with Articulate Rise 360, focusing on learner persona-specific journey mapping.
+- **Designed** high-fidelity interactive modules with Articulate Rise 360, focusing on **30-minute proficiency targets** and zero-friction technical deployment.
 - **Implemented** a mobile-first learner experience via custom Moodle interactions, increasing accessibility for full-time professional students.
 - **Orchestrated** the transition to a centralized digital hub, reducing user navigation friction and increasing daily active user engagement by **25%**.
 - **Mapped** learner journeys for corporate cohorts, ensuring instructional content resolved specific professional communication bottlenecks.
@@ -41,7 +41,7 @@
 *Vietop is an English training center specializing in standardized test preparation with a focus on personalized learning paths.*
 - **Transformed** 500+ static assets into an interactive, learner-centric Moodle environment with automated feedback loops and progress gating.
 - **Mapped** the end-to-end student journey from diagnostic to post-exam, identifying and resolving friction points in the digital learning experience.
-- **Engineered** automated grading rubrics that provided instant, actionable feedback, significantly improving the learner's sense of progress.
+- **Engineered** automated grading rubrics that provided instant, actionable feedback and **asymptotically matched pedagogical intent**.
 - **Optimized** UX for mobile learners, increasing activity completion rates on self-paced modules.
 
 ### Senior ID & Curriculum Lead | Sep 2017 – Jun 2019
@@ -63,4 +63,4 @@
 
 ## SKILLS & TECH
 SKILLS: Learning Experience Design (LXD), Learner Persona Design, Journey Mapping, Behavioral Psychology, UX for Learning, Data-Driven Feedback.
-TECH: JavaScript (ES6), Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).
+TECH: JavaScript (ES6), ES6 Data Bridges, Asynchronous Pipelines, Moodle LMS (Admin), Articulate Storyline/Rise (Advanced JS), Canvas, GenAI Automation (Make.com/Zapier).

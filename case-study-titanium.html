@@ -271,17 +271,81 @@
             border: 1px solid var(--border-glass);
         }
 
+        /* --- Evidence Containers (Clean & Uniform) --- */
+        .evidence-frame {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .evidence-frame:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 255, 0.4);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
         .image-box {
-            margin: 3rem 0;
-            border-radius: 20px;
+            margin: 2.5rem 0;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-glass);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: #000;
         }
 
         .image-box img {
             width: 100%;
+            height: auto;
             display: block;
+            transition: transform 0.5s;
+        }
+
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .state-grid .evidence-frame {
+            padding: 8px;
+        }
+
+        .state-grid img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* --- Impact Grid Balance --- */
+        .state-grid img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* --- Image Gallery (Natural Stack) --- */
+        .evidence-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .evidence-stack img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-box:hover img {
+            transform: scale(1.01);
         }
 
         .caption {
@@ -321,6 +385,15 @@
             color: var(--text-dim);
         }
 
+        /* --- Global Image Enhancements --- */
+        .image-overlay-card {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid var(--border-glass);
+        }
+
         /* --- Footer --- */
         footer {
             text-align: center;
@@ -343,13 +416,27 @@
             padding-left: 10px;
         }
 
+        /* --- Responsive Queries --- */
         @media (max-width: 768px) {
-            .card {
-                padding: 1.5rem;
+            .exec-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .exec-summary {
+                padding: 2rem 1.5rem;
             }
 
             h1 {
                 font-size: 2.2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .mermaid-container {
+                padding: 1rem;
+                overflow-x: auto;
             }
         }
     </style>
@@ -368,8 +455,6 @@
             Back to Portfolio
         </a>
 
-        </header>
-
         <!-- --- Project Executive Summary --- -->
         <section class="exec-summary">
             <h2>🚀 Project Executive Summary: TITANIUM</h2>
@@ -382,15 +467,12 @@
                         "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
                 </div>
                 <div class="exec-item">
-                    <h3>The Architecture: A High-Fidelity Behavioral Simulator</h3>
-                    <p>I engineered <strong>Titanium</strong>, a high-fidelity simulator built with Articulate Storyline
-                        360 but powered by a custom <strong>JavaScript (ES6) Data Bridge</strong>.</p>
+                    <h3>The Architecture: A High-Fidelity Serverless Pipeline</h3>
+                    <p>I engineered <strong>Titanium V8.0</strong>, a professional-grade simulator powered by a custom <strong>JavaScript (ES6) Data Bridge</strong> and an <strong>n8n Serverless Pipeline</strong>.</p>
                     <ul>
-                        <li><strong>Technical Edge:</strong> Bypassed SCORM limitations by architecting an asynchronous
-                            pipeline that pipes granular interaction data directly into a private serverless backend.
+                        <li><strong>Technical Edge:</strong> Bypassed SCORM "Black Box" limitations using asynchronous JSON payloads to a dedicated n8n webhook.
                         </li>
-                        <li><strong>Data Integrity:</strong> Utilizes <strong>Async POST methods</strong> via Webhooks
-                            to a <strong>Google Apps Script</strong> data warehouse, ensuring 100% data fidelity.</li>
+                        <li><strong>Enterprise Integrity:</strong> Implemented <strong>Cross-Node Referencing</strong> in n8n, ensuring 100% data fidelity across parallel execution branches (Sheets + Notifications).</li>
                     </ul>
                 </div>
                 <div class="exec-item" style="grid-column: span 2;">
@@ -438,27 +520,28 @@
         <section class="card">
             <h2>Technical Architecture</h2>
             <p>To overcome traditional SCORM limitations, I engineered a serverless data pipeline. This architecture
-                enables granular tracking of every learner interaction, exporting behavioral logs directly to a private
-                data warehouse.</p>
+                enables granular tracking of every learner interaction, parallelizing data logging and real-time alerts.</p>
 
             <div class="mermaid-container">
                 <div class="mermaid">
                     graph LR
-                    A[Storyline UI] -- "1. JSON Data" --> B["JS Bridge (ES6)"]
-                    B -- "2. Async POST" --> C["GAS Webhook"]
-                    C -- "3. Data Log" --> D["Google Sheets"]
-                    C -- "4. Auto-Email" --> E["Learner Feedback"]
+                    A[Storyline UI] -- "1. JSON Logic" --> B["JS Bridge (V4.0)"]
+                    B -- "2. Webhook" --> C["n8n Engine"]
+                    C -- "3a. Append" --> D["Google Sheets"]
+                    C -- "3b. Custom API" --> E["Telegram Alert"]
 
                     style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
-                    style C fill:#002b5c,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
                     style D fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
+                    style E fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
                 </div>
             </div>
 
-            <div class="image-box">
-                <img src="assets/Case_Study/01_Technical_Capture/02_JS_Data_Bridge_Trigger.png" alt="JS Bridge">
-                <div class="caption">The JavaScript Data Bridge (V2.3) bypassing standard LMS constraints for real-time
-                    analytics.</div>
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="Assets/Titanium_Evidence/n8n.png" alt="n8n Pipeline">
+                </div>
+                <div class="caption" style="border:none;">The n8n Serverless Engine parallelizing data flows for instant stakeholder visibility.</div>
             </div>
         </section>
 
@@ -501,29 +584,41 @@
             <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
                 (Success, Warning, Danger) based on the user's current performance state.</p>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
-                <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png"
-                    style="width:100%; border-radius:10px; border:1px solid var(--success);" alt="Success">
-                <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png"
-                    style="width:100%; border-radius:10px; border:1px solid var(--warning);" alt="Warning">
-                <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png"
-                    style="width:100%; border-radius:10px; border:1px solid var(--danger);" alt="Fail">
+            <div class="state-grid">
+                <div class="evidence-frame" style="border-color: var(--success);">
+                    <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Success State">
+                </div>
+                <div class="evidence-frame" style="border-color: var(--warning);">
+                    <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png" alt="Warning State">
+                </div>
+                <div class="evidence-frame" style="border-color: var(--danger);">
+                    <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png" alt="Fail State">
+                </div>
             </div>
-            <p style="text-align:center; font-size:0.8rem; margin-top:10px;">Visual States: Dynamic environment
-                transformations based on real-time TrustScore.</p>
+            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
         </section>
 
         <!-- --- Section 5: Real-world Impact --- -->
         <section class="card">
-            <h2>Actionable Data Warehouse</h2>
-            <p>Behind the aesthetics lies the data. L&D Managers receive a full <strong>Behavioral Heatmap</strong>,
-                allowing them to pinpoint exactly where their leaders are making high-risk decisions.</p>
+            <h2>Strategic Diagnostic Center</h2>
+            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant architectural intervention</strong> while all data is logged into the master warehouse.</p>
 
-            <div class="image-box">
-                <img src="assets/Case_Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Warehouse">
-                <div class="caption">Real-time Data Warehouse capturing cross-session behavioral archetypes for
-                    organizational analysis.</div>
+            <div class="evidence-stack">
+                <div class="evidence-frame">
+                    <div class="image-box" style="margin:0;">
+                        <img src="Assets/Titanium_Evidence/Telegram.png" alt="Telegram Notification">
+                    </div>
+                    <div class="caption" style="border:none;">Real-time Telegram Alert Payload: Instant visibility from the serverless bridge.</div>
+                </div>
+
+                <div class="evidence-frame">
+                    <div class="image-box" style="margin:0;">
+                        <img src="Assets/Titanium_Evidence/Google Sheets.png" alt="Google Sheets Log">
+                    </div>
+                    <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
+                </div>
             </div>
+            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Unified Data Ecosystem: Synchronized Telegram alerts and Google Sheets behavioral heatmaps.</p>
         </section>
 
         <footer>
