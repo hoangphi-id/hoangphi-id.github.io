@@ -1,0 +1,408 @@
+{
+  "name": "Titanium_Architect_Bridge_V9_FIXED",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "diagnostic-bridge",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        16
+      ],
+      "id": "dba27e98-2ecf-403d-bc96-b61c15cee7b9",
+      "name": "Webhook",
+      "webhookId": "8d4f672c-c90c-4417-9815-cf8de35cfbbf"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"Webhook\"].json.body.trustScore }}",
+                    "rightValue": 80,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gte"
+                    },
+                    "id": "a06bc0a6-7acd-43ab-91bb-2afce9dfb394"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Master"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6abc7e2e-b537-4654-8508-c1b6e47885ef",
+                    "leftValue": "={{ $node[\"Webhook\"].json.body.trustScore >= 40 && $node[\"Webhook\"].json.body.trustScore < 80 }}",
+                    "rightValue": 40,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Good"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9c995b48-4478-4fb9-9fb1-a5a281841656",
+                    "leftValue": "={{ $node[\"Webhook\"].json.body.trustScore }}",
+                    "rightValue": 40,
+                    "operator": {
+                      "type": "number",
+                      "operation": "lt"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Fail"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        624,
+        0
+      ],
+      "id": "877b64c9-b830-477a-bfa3-1e9f62f98d26",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XA2QPvV-4M1oT9z_Db-WNc44bXwfXk6wtoH6hz0ZaFE",
+          "mode": "list",
+          "cachedResultName": "Project_3_Data_Center",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XA2QPvV-4M1oT9z_Db-WNc44bXwfXk6wtoH6hz0ZaFE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XA2QPvV-4M1oT9z_Db-WNc44bXwfXk6wtoH6hz0ZaFE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ $now.toFormat('dd/MM/yyyy HH:mm:ss') }}",
+            "User_Name": "={{ $node[\"Webhook\"].json.body.userName }}",
+            "User_Email": "={{ $node[\"Webhook\"].json.body.userEmail }}",
+            "TrustScore": "={{ $node[\"Webhook\"].json.body.trustScore }}",
+            "Result": "={{ $node[\"Webhook\"].json.body.result }}",
+            "AI_Verdict": "={{ $node[\"Message a model\"].json.content.parts[0].text.replace(/[\\*#]/g, \"\") }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "User_Name",
+              "displayName": "User_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "User_Email",
+              "displayName": "User_Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TrustScore",
+              "displayName": "TrustScore",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Result",
+              "displayName": "Result",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "AI_Verdict",
+              "displayName": "AI_Verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        16
+      ],
+      "id": "f87d1bf8-902b-4511-bd18-6767dd9a4137",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "o7t6DMGjn24eh1tZ",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8570473170:AAE25tF8rZXwencaB2m9FT6K0vpG5_pKnko/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "6357946055"
+            },
+            {
+              "name": "text",
+              "value": "=🟢 [DIAGNOSTIC] MASTER STATUS REACHED. \n\nLearner: {{ $node[\"Webhook\"].json.body.userName }} has successfully stabilized the project with a TrustScore of {{ $node[\"Webhook\"].json.body.trustScore }}%. Strategic leadership confirmed.\n\n🤖 AI VERDICT: {{ $node[\"Message a model\"].json.content.parts[0].text.replace(/[\\*#]/g, \"\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        928,
+        -208
+      ],
+      "id": "0fc109bd-2f18-4ea2-a9ae-cf28dcd26da4",
+      "name": "Master"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8570473170:AAE25tF8rZXwencaB2m9FT6K0vpG5_pKnko/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "6357946055"
+            },
+            {
+              "name": "text",
+              "value": "=🟡 [DIAGNOSTIC] GOOD STATUS REACHED. \n\nLearner: {{ $node[\"Webhook\"].json.body.userName }} has secured the project with a TrustScore of {{ $node[\"Webhook\"].json.body.trustScore }}%. Professional competency validated.\n\n🤖 AI VERDICT: {{ $node[\"Message a model\"].json.content.parts[0].text.replace(/[\\*#]/g, \"\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        928,
+        -16
+      ],
+      "id": "1b3e93b8-4e8b-43fe-b07c-09e7e8136d0c",
+      "name": "Good"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8570473170:AAE25tF8rZXwencaB2m9FT6K0vpG5_pKnko/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "6357946055"
+            },
+            {
+              "name": "text",
+              "value": "=🔴 [DIAGNOSTIC] CRITICAL FAILURE. \n\nLearner: {{ $node[\"Webhook\"].json.body.userName }} has failed to stabilize the project. TrustScore: {{ $node[\"Webhook\"].json.body.trustScore }}%. Immediate architectural intervention required!\n\n🤖 AI VERDICT: {{ $node[\"Message a model\"].json.content.parts[0].text.replace(/[\\*#]/g, \"\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        928,
+        176
+      ],
+      "id": "431a5ed5-be5f-4c40-9730-b3dc7cce321f",
+      "name": "Fail"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-flash-latest",
+          "mode": "list",
+          "cachedResultName": "models/gemini-flash-latest"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Act as a Senior LXD Architect and Systems Analyst. Conduct an in-depth pedagogical audit based on the following simulator data:\n\n- Candidate Name: {{ $node[\"Webhook\"].json.body.userName }}\n- TrustScore Achieved: {{ $node[\"Webhook\"].json.body.trustScore }}%\n\nYour mission is to generate a \"Strategic Verdict\" for {{ $node[\"Webhook\"].json.body.userName }}. \n\nStructure your response as follows:\n\n1. [Status Assessment]: Based on the score, categorize {{ $node[\"Webhook\"].json.body.userName }} into a professional status (e.g., Master Architect for 90%+, Strategic Leader for 70-89%, Tactical Practitioner for 40-69%, or Critical Risk below 40%).\n\n2. [Behavioral Archetype]: Identify the mental model {{ $node[\"Webhook\"].json.body.userName }} likely applied during the simulation (e.g., \"The Systems Thinker,\" \"The Tactical Firefighter,\" or \"The Reactive Decider\").\n\n3. [Strategic Risks & Opportunities]: Provide 3 detailed bullet points analyzing why {{ $node[\"Webhook\"].json.body.userName }} achieved this specific score and what systemic gaps or strengths were demonstrated.\n\n4. [The Phoenix Action Plan]: Provide 3 actionable, high-level strategic recommendations to help {{ $node[\"Webhook\"].json.body.userName }} reach the next tier of professional competency.\n\n5. [Final Conclusion]: A summary statement addressed directly to {{ $node[\"Webhook\"].json.body.userName }} confirming their current \"Mission Readiness.\"\n\nMaintain a clinical, authoritative, and highly professional tone throughout the report."
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        144,
+        16
+      ],
+      "id": "c7ede509-04d8-4a12-b4cf-7f065a3f578b",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "psU4F5iQ6txiftYZ",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Master",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Good",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "45621e63-f302-4206-a031-51c43fe91704",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ec24ca73fa4f1658e55b7939d8e6de6f81509cc716d7f938b18828ec95b1b581"
+  },
+  "id": "W9p4ZjVM3bU0L5ga",
+  "tags": []
+}

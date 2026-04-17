@@ -170,16 +170,7 @@
             overflow: hidden;
         }
 
-        .exec-summary::before {
-            content: 'EXECUTIVE SUMMARY';
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            color: rgba(0, 242, 255, 0.3);
-        }
+
 
         .exec-summary h2 {
             background: linear-gradient(to right, var(--primary), #fff);
@@ -260,6 +251,16 @@
             border-radius: 16px;
             margin: 2rem 0;
             border: 1px solid var(--border-glass);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         /* --- Evidence Containers (Clean & Uniform) --- */
@@ -428,6 +429,70 @@
 
     <div class="bg-glow"></div>
 
+    <!-- --- PRESTIGE BADGE FOR AUDITS --- -->
+    <style>
+        .prestige-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 242, 255, 0.4);
+            z-index: 10;
+        }
+
+        /* --- STATE OVERLAY BADGES --- */
+        .state-badge {
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid currentColor;
+            z-index: 5;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .speech-overlay {
+            position: absolute;
+            top: 22%;
+            left: 5%;
+            width: 50%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 50% 50% 50% 0;
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 700;
+            line-height: 1.4;
+            text-align: center;
+            z-index: 4;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 2px solid var(--border-glass);
+        }
+
+        .speech-overlay::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 5px;
+            border-width: 8px 8px 0 0;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+        }
+    </style>
+
     <div class="container">
 
         <a href="index.html" class="back-link">
@@ -450,7 +515,7 @@
                 </div>
                 <div class="exec-item">
                     <h3>The Architecture: A High-Fidelity Serverless Pipeline</h3>
-                    <p>I engineered <strong>Titanium V8.0</strong>, a professional-grade simulator powered by a custom <strong>JavaScript (ES6) Data Bridge</strong> and an <strong>n8n Serverless Pipeline</strong>.</p>
+                    <p>I engineered <strong>Titanium V9.0 (Ironclad Edition)</strong>, a professional-grade simulator powered by a custom <strong>JavaScript (ES6) Data Bridge</strong> and an <strong>n8n Serverless Pipeline</strong>.</p>
                     <ul>
                         <li><strong>Technical Edge:</strong> Bypassed SCORM "Black Box" limitations using asynchronous JSON payloads to a dedicated n8n webhook.
                         </li>
@@ -475,10 +540,30 @@
             </div>
 
             <div class="takeaway-box">
-                <p><strong>Senior Architect’s Takeaway:</strong> Titanium isn't just a course; it's a
-                    <strong>data-driven diagnostic engine</strong> that proves how technical architecture can transform
-                    qualitative pedagogy into quantitative business intelligence.
+                <p><strong>Senior Architect’s Takeaway:</strong> Titanium V9.0 isn't just a training module; it's a 
+                    <strong>Hardened Diagnostic Engine</strong>. It proves that a "Senior" approach isn't about more content, but about 
+                    <strong>architectural resilience</strong>—ensuring that every behavioral data point is captured, sanitized, and transformed into an expert strategic verdict.
                 </p>
+            </div>
+        </section>
+
+        <!-- --- Project Architecture Summary (BIG FRAME) --- -->
+        <section class="card" style="padding: 2rem; border: none; background: rgba(255,255,255,0.02); display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Role</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">LXD Architect</p>
+            </div>
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Core Brain</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">Gemini 1.5 Flash</p>
+            </div>
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Pipeline</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">Hardened n8n</p>
+            </div>
+            <div>
+                <span class="stat-label" style="font-size: 0.6rem;">Bridge</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">ES6 V5.0</p>
             </div>
         </section>
 
@@ -506,24 +591,62 @@
 
             <div class="mermaid-container">
                 <div class="mermaid">
-                    graph LR
-                    A[Storyline UI] -- "1. JSON Logic" --> B["JS Bridge (V4.0)"]
+                    graph TD
+                    A[Storyline UI] -- "1. Interaction" --> B["JS Bridge (V5.0)"]
                     B -- "2. Webhook" --> C["n8n Engine"]
-                    C -- "3a. Append" --> D["Google Sheets"]
-                    C -- "3b. Custom API" --> E["Telegram Alert"]
+                    C -- "3. Reasoning" --> D["Gemini 1.5 Flash"]
+                    D -- "4. Database Sync" --> E["Google Sheets"]
+                    E -- "5. Intelligence" --> F["Logic Switch"]
+                    F -- "6. Master Alert" --> G["Telegram Master"]
+                    F -- "7. Tactical Alert" --> H["Telegram Good"]
+                    F -- "8. Critical Alert" --> I["Telegram Fail"]
 
                     style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
                     style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
-                    style D fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
-                    style E fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
+                    style G fill:#0088cc,stroke:#10b981,stroke-width:3px,color:#fff
+                    style I fill:#0088cc,stroke:#ef4444,stroke-width:3px,color:#fff
                 </div>
             </div>
 
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
-                    <img src="assets/Titanium_Evidence/n8n.png" alt="n8n Pipeline">
+                    <img src="assets/Titanium_Evidence/n8n_v9_raw.png" alt="n8n Raw Workflow Blueprint">
                 </div>
-                <div class="caption" style="border:none;">The n8n Serverless Engine parallelizing data flows for instant stakeholder visibility.</div>
+                <div class="caption" style="border:none;">
+                    <strong>Ironclad V9.0 Architecture:</strong> Full serverless pipeline featuring native Telegram Bot API nodes, asynchronous Google Sheets data warehousing, and a multi-tier logic switch driven by Gemini 1.5 Flash reasoning.
+                </div>
+            </div>
+
+            <!-- --- TECHNICAL BLUEPRINT LINKS --- -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem; justify-content: center;">
+                <a href="assets/Titanium_Evidence/Titanium_Architect_Bridge_V9_FIXED.json" target="_blank" class="badge" style="text-decoration: none; border-color: var(--primary);">
+                    View Raw JSON Blueprint
+                </a>
+                <a href="assets/Titanium_Evidence/Titanium_Architect_Bridge_V9_FIXED.json" download class="badge" style="text-decoration: none; background: rgba(255,255,255,0.05);">
+                    Download Logic File
+                </a>
+            </div>
+        </section>
+
+        <!-- --- Strategic Architectural Resilience --- -->
+        <section class="card" style="border-top: 4px solid var(--primary);">
+            <h2>Architectural Resilience & Zero-Trust</h2>
+            <p>A Senior Architect doesn't just build systems; they protect and scale them. In the production version of Titanium, I implemented a <strong>Zero-Trust Configuration Model</strong>.</p>
+            
+            <div class="grid-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Security Hardening</span>
+                    <p class="stat-desc">By externalizing all API secrets into secure <strong>environment variables</strong>, I ensured the infrastructure remains hardened against credential leakage—enterprise standard.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">AI Outcome Intelligence</span>
+                    <p class="stat-desc">Integrated <strong>Google Gemini 1.5 Flash via API</strong> to provide automated <strong>Strategic Verdicts</strong>. The system evaluates learner competency based on final performance metrics, identifying high-potential talent instantly.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Data Sanitization & Integrity</span>
+                    <p class="stat-desc">Implemented a <strong>Triple-Tier Safety Brake</strong> (Regex filtration, Substring truncations, and Parse-Mode silencing) to ensure 100% transmission reliability and prevent API crashes during long-form AI reporting.</p>
+                </div>
             </div>
         </section>
 
@@ -560,47 +683,189 @@
             </div>
         </section>
 
-        <!-- --- Section 4: Visual Fidelity --- -->
+        <!-- --- Section 4: State-Driven UI & Environmental Intelligence --- -->
         <section class="card">
-            <h2>Adaptive Feedback</h2>
-            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
-                (Success, Warning, Danger) based on the user's current performance state.</p>
+            <h2>State-Driven UI & Environmental Intelligence</h2>
+            <p>The UI is alive. Using <strong>Storyline Variable Logic</strong> and state-driven CSS/Triggers, the environment transforms its visual glow (Success, Warning, Danger) in real-time, providing immediate psychological feedback based on the user's current <strong>TrustScore</strong>.</p>
+
 
             <div class="state-grid">
-                <div class="evidence-frame" style="border-color: var(--success);">
-                    <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Success State">
+                <div class="evidence-frame" style="border-color: var(--success); position: relative;">
+                    <div class="state-badge" style="color: var(--success); border-color: var(--success);">FINAL TRUST SCORE: 100%</div>
+                    <div class="speech-overlay">"Master Status: Operational excellence confirmed. Stakeholders validated across all strategic metrics."</div>
+                    <img src="assets/Titanium_Evidence/Master_v9.png" alt="Success State">
                 </div>
-                <div class="evidence-frame" style="border-color: var(--warning);">
-                    <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png" alt="Warning State">
+                <div class="evidence-frame" style="border-color: var(--warning); position: relative;">
+                    <div class="state-badge" style="color: var(--warning); border-color: var(--warning);">FINAL TRUST SCORE: 40%</div>
+                    <div class="speech-overlay">"Tactical alignment marginal. Communication fragmented—realignment required to prevent systemic friction."</div>
+                    <img src="assets/Titanium_Evidence/Good_v9.png" alt="Warning State">
                 </div>
-                <div class="evidence-frame" style="border-color: var(--danger);">
-                    <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png" alt="Fail State">
+                <div class="evidence-frame" style="border-color: var(--danger); position: relative;">
+                    <div class="state-badge" style="color: var(--danger); border-color: var(--danger);">FINAL TRUST SCORE: 5%</div>
+                    <div class="speech-overlay">"Critical collapse. Systemic failure detected. Mission readiness non-operational. Total retraining mandatory!"</div>
+                    <img src="assets/Titanium_Evidence/Fail_v9.png" alt="Fail State">
                 </div>
             </div>
             <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
         </section>
 
-        <!-- --- Section 5: Real-world Impact --- -->
+        <!-- --- Section 5: Strategic Diagnostic Center --- -->
         <section class="card">
             <h2>Strategic Diagnostic Center</h2>
-            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant architectural intervention</strong> while all data is logged into the master warehouse.</p>
+            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant architectural intervention</strong> while all data is logged into this Master Data Warehouse.</p>
 
-            <div class="evidence-stack">
-                <div class="evidence-frame">
-                    <div class="image-box " style="margin:0;">
-                        <img src="assets/Titanium_Evidence/Telegram.png" alt="Telegram Notification">
+            <!-- --- Strategic Audit Explorer --- -->
+            <div class="audit-explorer">
+                <div class="audit-tabs">
+                    <div class="audit-tab active" data-target="master">
+                        <span class="tab-status status-master"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Phillip Tong</span>
+                            <span class="tab-meta">Score: 100% | Master</span>
+                        </div>
                     </div>
-                    <div class="caption" style="border:none;">Real-time Telegram Alert Payload: Instant visibility from the serverless bridge.</div>
+                    <div class="audit-tab" data-target="good">
+                        <span class="tab-status status-good"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Nguyen Pham</span>
+                            <span class="tab-meta">Score: 40% | Tactical</span>
+                        </div>
+                    </div>
+                    <div class="audit-tab" data-target="fail">
+                        <span class="tab-status status-fail"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Thuan Cao</span>
+                            <span class="tab-meta">Score: 5% | Critical</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="evidence-frame">
-                    <div class="image-box" style="margin:0;">
-                        <img src="assets/Titanium_Evidence/Google Sheets.png" alt="Google Sheets Log">
+                <div class="audit-display">
+                    <!-- Master Case -->
+                    <div id="master" class="audit-content active" style="position: relative;">
+                        <div class="prestige-badge">Strategic Verdict: MASTER</div>
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: PHILLIP_TONG_100_MASTER</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Master Architect. Phillip Tong’s 100% TrustScore represents the highest echelon of pedagogical mastery. He demonstrates an absolute command over LXD systems, architectural integrity, and stakeholder alignment.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Systems Sage. Tong operates via a predictive mental model, prioritizing structural equilibrium and high-fidelity outcomes. His decision-making reflects a deep understanding of the interconnectedness between learning interventions and systemic performance.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>3. [Strategic Risks & Opportunities]</h3>
+                                <ul>
+                                    <li><strong>Pedagogical Precision:</strong> The score indicates a zero-variance execution, where theoretical frameworks were perfectly translated into operational reality.</li>
+                                    <li><strong>Cognitive Load Optimization:</strong> High proficiency in navigating complex data sets without experiencing decision fatigue or strategic drift.</li>
+                                    <li><strong>The Perfection Paradox:</strong> The primary risk is the sustainability of 100% benchmarks in hyper-volatile environments; focus must shift toward resilient adaptability.</li>
+                                </ul>
+                            </div>
+                            <div class="audit-section">
+                                <h3>4. [The Phoenix Action Plan]</h3>
+                                <ul>
+                                    <li><strong>Methodological Codification:</strong> Transition from practitioner to architect by formalizing personal heuristics into scalable organizational playbooks.</li>
+                                    <li><strong>Strategic Mentorship:</strong> Deploy current expertise to upskill "Tactical Practitioners," bridging the gap between execution and foresight.</li>
+                                    <li><strong>Advanced Simulation Modeling:</strong> Pilot stress-test scenarios involving "Black Swan" events to test the limits of current systemic frameworks.</li>
+                                </ul>
+                            </div>
+                            <div class="audit-conclusion">
+                                Phillip, your performance reflects total synchronization with the highest professional standards. You are verified for immediate high-stakes strategic leadership.
+                            </div>
+                        </div>
                     </div>
-                    <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
+
+                    <!-- Good Case -->
+                    <div id="good" class="audit-content">
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: NGUYEN_PHAM_40_TACTICAL</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Tactical Practitioner (Entry Tier). Nguyen Pham occupies the absolute baseline of operational viability. While there is a fundamental grasp of pedagogical mechanics, the lack of strategic foresight prevents advancement into leadership roles.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Reactive Decider. Nguyen’s performance indicates a mental model focused on symptom management rather than root-cause resolution. Decisions appear driven by immediate feedback loops, leading to a fragmented architecture.</p>
+                            </div>
+                            <div class="audit-conclusion">
+                                Nguyen, your current Mission Readiness is Marginal. You are currently a liability in high-stakes environments. Realignment must begin immediately.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fail Case -->
+                    <div id="fail" class="audit-content">
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: THUAN_CAO_5_CRITICAL</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Critical Risk. A TrustScore of 5% signifies a profound deficiency in systemic alignment and professional competency. Thuan Cao currently poses a high operational liability.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Disconnected Operator. This mental model reflects an absolute absence of strategic cohesion, characterized by erratic inputs and a failure to recognize interdependencies.</p>
+                            </div>
+                            <div class="audit-conclusion">
+                                Thuan Cao, your current status is Non-Operational. You are unfit for mission deployment; immediate and total structural retraining is non-negotiable.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Unified Data Ecosystem: Synchronized Telegram alerts and Google Sheets behavioral heatmaps.</p>
+
+            <style>
+                .audit-explorer { display: flex; background: rgba(0,0,0,0.3); border: 1px solid var(--border-glass); border-radius: 16px; margin: 3rem 0; overflow: hidden; height: 500px; }
+                .audit-tabs { width: 250px; border-right: 1px solid var(--border-glass); background: rgba(255,255,255,0.02); }
+                .audit-tab { padding: 1.5rem; border-bottom: 1px solid var(--border-glass); cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 12px; }
+                .audit-tab:hover { background: rgba(255,255,255,0.05); }
+                .audit-tab.active { background: rgba(0, 242, 255, 0.05); border-left: 4px solid var(--primary); }
+                .tab-status { width: 10px; height: 10px; border-radius: 50%; }
+                .status-master { background: var(--success); box-shadow: 0 0 10px var(--success); }
+                .status-good { background: var(--warning); box-shadow: 0 0 10px var(--warning); }
+                .status-fail { background: var(--danger); box-shadow: 0 0 10px var(--danger); }
+                .tab-name { display: block; font-weight: 600; font-size: 0.9rem; color: #fff; }
+                .tab-meta { font-size: 0.75rem; color: var(--text-dim); }
+                .audit-display { flex: 1; padding: 2rem; overflow-y: auto; background: rgba(255,255,255,0.01); color: var(--text-main); }
+                .audit-content { display: none; }
+                .audit-content.active { display: block; animation: fadeIn 0.5s ease; }
+                .audit-header { display: flex; justify-content: space-between; margin-bottom: 2rem; font-family: monospace; font-size: 0.75rem; color: var(--primary); opacity: 0.7; }
+                .audit-section h3 { font-size: 1rem; color: #fff; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; }
+                .audit-section p, .audit-section ul { font-size: 0.9rem; margin-bottom: 1.5rem; }
+                .audit-conclusion { margin-top: 2rem; padding: 1rem; background: rgba(0, 242, 255, 0.1); border-radius: 8px; font-style: italic; color: #fff; border-left: 3px solid var(--primary); }
+                @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                @media (max-width: 768px) { .audit-explorer { flex-direction: column; height: auto; } .audit-tabs { width: 100%; display: flex; overflow-x: auto; } .audit-tab { flex: 1; min-width: 150px; border-right: 1px solid var(--border-glass); border-bottom: none; } }
+            </style>
+
+            <script>
+                document.querySelectorAll('.audit-tab').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        document.querySelectorAll('.audit-tab').forEach(t => t.classList.remove('active'));
+                        document.querySelectorAll('.audit-content').forEach(c => c.classList.remove('active'));
+                        tab.classList.add('active');
+                        document.getElementById(tab.dataset.target).classList.add('active');
+                    });
+                });
+            </script>
+
+            <div class="evidence-frame" style="overflow: hidden; max-height: 550px; border-radius: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                <div class="image-box" style="margin:0; transition: transform 0.3s; transform: translateY(-26%);">
+                    <img src="assets/Titanium_Evidence/telegram_v9_audit.png" alt="Telegram Strategic Audit Blueprint" style="width: 100%; border-radius: 0;">
+                </div>
+                <div class="prestige-badge" style="top: 1rem; right: 1rem;">Live System Proof</div>
+            </div>
+            <div class="caption" style="margin-top: 1rem;">
+                <strong>Strategic Logic Validation:</strong> The snapshot above illustrates the system's ability to handle critical performance drops. Using <strong>Gemini 1.5 Flash</strong>, the platform generates a comprehensive 5-point remediation roadmap (The Phoenix Action Plan) within seconds of a 'Critical Failure' detection.
+            </div>
         </section>
 
         <footer>

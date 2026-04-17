@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PHI TONG — LEARNING EXPERIENCE DESIGNER (LXD)</title>
     <style>
         @page {
             size: A4;
-            margin: 0.25in 0.6in;
+            margin: 0.3in 0.6in;
         }
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 10pt;
-            line-height: 1.32;
+            line-height: 1.4;
             color: #1a202c;
             padding: 0;
             margin: 0;
@@ -19,78 +14,54 @@
             print-color-adjust: exact;
         }
         .header-section {
-            border-bottom: 3px solid #004a99;
+            border-bottom: 2px solid #000000;
             padding-bottom: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         h1 {
-            font-size: 24pt;
+            font-size: 18pt;
             font-weight: 700;
-            color: #004a99;
+            color: #000000;
             margin: 0;
-            letter-spacing: -0.5px;
+            text-transform: uppercase;
         }
         .contact-info {
-            font-size: 9.5pt;
-            font-weight: 500;
+            font-size: 9pt;
             color: #2d3748;
-            margin-top: 5px;
+            margin-top: 4px;
         }
         h2 {
             font-size: 11pt;
             font-weight: 700;
-            color: #003366;
+            color: #000000;
             text-transform: uppercase;
-            margin-top: 10px;
-            margin-bottom: 4px;
-            border-bottom: 1px solid #e2e8f0;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #000000;
             padding-bottom: 2px;
             page-break-after: avoid;
         }
-        .job-title-row {
-            display: table;
-            width: 100%;
-            margin-top: 8px;
+        .job-row {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-top: 12px;
             font-size: 10.5pt;
         }
-        .job-title {
-            display: table-cell;
-            text-align: left;
-            font-weight: 700;
-            color: #1a202c;
-        }
-        .job-date {
-            display: table-cell;
-            text-align: right;
-            font-weight: 700;
-            color: #2d3748;
-            white-space: nowrap;
-        }
         .company-row {
-            display: table;
-            width: 100%;
-            font-style: italic !important;
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
             font-weight: 600;
             color: #4a5568;
             margin-bottom: 4px;
         }
-        .company-row span:first-child {
-            display: table-cell;
-            text-align: left;
-        }
-        .company-location {
-            display: table-cell;
-            text-align: right;
+        .company-summary {
             font-style: italic;
-            font-weight: normal;
-            white-space: nowrap;
-        }
-        .company-desc {
-            font-style: italic !important;
+            font-size: 9.5pt;
             color: #4a5568;
             margin-bottom: 8px;
-            font-size: 9.5pt;
-            line-height: 1.35;
+            line-height: 1.3;
         }
         ul {
             padding-left: 18px;
@@ -98,22 +69,24 @@
             margin-bottom: 8px;
         }
         li {
-            margin-bottom: 3px;
-            break-inside: avoid;
+            margin-bottom: 4px;
         }
-        strong {
-            color: #000000;
-            font-weight: 700;
-        }
-        section {
-            margin-bottom: 5px;
+        .btn-view {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff !important;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 8pt;
+            font-weight: bold;
+            margin-left: 5px;
         }
         .concrete-block {
             page-break-inside: avoid !important;
             break-inside: avoid !important;
             display: block;
             width: 100%;
-            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -122,7 +95,8 @@
     <div class="header-section">
         <h1>PHI TONG</h1>
         <div class="contact-info">
-            Ho Chi Minh City, Vietnam | <a href="mailto:phitong.official@gmail.com" style="color: inherit; text-decoration: none;">phitong.official@gmail.com</a> | +84 (799) 445 377 | <a href="https://linkedin.com/in/hoang-phi-tong" style="color: inherit; text-decoration: none;">linkedin.com/in/hoang-phi-tong</a>
+            Ho Chi Minh City, Vietnam | phitong.official@gmail.com | +84 (799) 445 377 | 
+            <a href="https://linkedin.com/in/hoang-phi-tong" style="color: inherit; text-decoration: none;">linkedin.com/in/hoang-phi-tong</a>
         </div>
     </div>
 
@@ -130,193 +104,145 @@
         <section>
             <h2>SUMMARY</h2>
             <ul>
-                <li>Bilingual Learning Designer (English C1, IELTS 8.0 | Vietnamese native) with 10+ years of experience designing learner-centered curriculum and blended learning experiences across multiple formats and proficiency levels (A1–C1), grounding every design decision in CEFR-aligned objectives.</li>
-                <li>Holds dual IELTS Teacher Training certifications (IDP & British Council) alongside a TESOL certificate — having graded 4,000–7,000 IELTS essays and delivered 25,000–50,000 lines of structured written feedback across 10 years of practice.</li>
-                <li>Designed end-to-end curriculum for full courses across 4 private language centers (combined base of 400–700 adult EFL students), creating 400–700 lesson plans and integrating continuous assessment frameworks to monitor and improve learner outcomes at scale.</li>
-                <li>Supervised teaching teams as Academic Supervisor at one of Vietnam's largest test preparation schools, overseeing curriculum improvement, teacher observation cycles, and recruitment/onboarding of 4–6 educators.</li>
-                <li>Actively applies GenAI tools (Claude, Gemini) and automation (Make.com, Zapier) to accelerate content production and personalize learner pathways — including live AI-augmented pipelines — and has completed training in AI-assisted workplace workflows (Antigravity AI IDE, 2026).</li>
+                <li><strong>Dual-Engine Learning Architect</strong> with 10+ years of professional rigour bridging <strong>Information Technology (IT)</strong> and <strong>Linguistics (IELTS 8.0)</strong> to engineer high-fidelity digital learning ecosystems for global learners.</li>
+                <li><strong>Scale & Impact</strong>: Engineered curriculum standards for Tier-1 language institutions, having graded <strong>7,000+ high-stakes essays</strong> and delivered <strong>50,000+ lines of feedback</strong> across 700+ student profiles.</li>
+                <li><strong>Technical Authority</strong>: Expert in <strong>Moodle LMS Administration</strong>, <strong>Articulate Rise/Storyline 360</strong>, and integrating <strong>AI-driven automation (n8n/Make)</strong> to accelerate content production.</li>
+                <li><strong>Measurable Success</strong>: Achieved a <strong>90%+ goal attainment rate</strong> at Universal Study Center (USC) by redesigning assessment frameworks for high-stakes candidates (IELTS/SAT).</li>
             </ul>
         </section>
     </div>
 
-    <section>
-        <div class="concrete-block">
+    <div class="concrete-block">
+        <section>
             <h2>PROFESSIONAL EXPERIENCE</h2>
-            <div class="job-title-row">
-                <span class="job-title">Learning Designer & Curriculum Developer</span>
-                <span class="job-date">Sep 2023 – Jun 2025</span>
+            <div class="job-row">
+                <span>Academic Quality & Curriculum Architect</span>
+                <span>Sep 2023 – Jun 2025</span>
             </div>
             <div class="company-row">
                 <span>Universal Study Center (USC)</span>
-                <span class="company-location">Ho Chi Minh City, Vietnam</span>
+                <span>Ho Chi Minh City, Vietnam</span>
             </div>
-            <div class="company-desc">USC is a licensed English and international study consulting center in Ho Chi Minh City, authorized to operate under a Competency-based Approach across IELTS, SAT, and General English programs.</div>
+            <div class="company-summary">USC is a leading overseas education consultancy specializing in high-stakes candidate success (IELTS/SAT) for Tier-1 global university placements.</div>
             <ul>
-                <li>Co-developed curriculum for USC’s flagship IELTS and SAT preparation programs — contributing to overall course structure and hands-on materials creation (lesson frameworks and assessment instruments).</li>
+                <li><strong>Engineered</strong> a standardized assessment and success framework for 100+ candidates, ensuring sequential progression and resulting in a <strong>90% target achievement rate</strong>.</li>
+                <li><strong>Defined</strong> instructional standards for digital curricula, bridging the gap between pedagogical theory and practical delivery.</li>
+                <li><strong>Launched</strong> a centralized curriculum repository, establishing clear architectural standards for lesson frameworks and assessment instruments.</li>
             </ul>
-        </div>
-        <ul>
-            <li>Designed and administered a full learner assessment cycle: placement testing at intake, mid-course mini-tests for progress tracking, and end-of-course evaluations with examiner-style grading.</li>
-            <li>Delivered IELTS and Pre-IELTS instruction across individual, small-group, and large-group formats, adapting pedagogical approach to meet diverse learner profiles and pacing needs.</li>
-            <li>Supported multiple learners in achieving IELTS Band 7.0–7.5, including one learner who progressed from near-zero Writing ability to a Band 7.0 Writing score over the course of instruction; one additional learner successfully secured a U.S. university placement with a USD 10,000 merit scholarship following English preparation at USC.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <div class="concrete-block">
-            <div class="job-title-row">
-                <span class="job-title">Learning Designer & Curriculum Developer</span>
-                <span class="job-date">Nov 2021 – May 2023</span>
+    <div class="concrete-block">
+        <section>
+            <div class="job-row">
+                <span>English Teacher & Curriculum Designer</span>
+                <span>Nov 2021 – May 2023</span>
             </div>
             <div class="company-row">
                 <span>EngTalk Language Center</span>
-                <span class="company-location">Ho Chi Minh City, Vietnam</span>
+                <span>Ho Chi Minh City, Vietnam</span>
             </div>
-            <div class="company-desc">EngTalk is a boutique English language center offering communicative English and IELTS preparation across in-person, online, and hybrid formats, with small-group classes capped at 6 learners to ensure personalized instruction.</div>
+            <div class="company-summary">EngTalk is a boutique English language center offering communicative English and IELTS preparation across in-person and hybrid formats.</div>
             <ul>
-                <li>Independently designed end-to-end curriculum for A1–A2 (CEFR) learners, including a 36-session scope and sequence covering integrated skills, grammar progression, pronunciation, and built-in formative checkpoints (mid-course and end-of-course assessments) — documented and shared via Notion as a centralized team resource.</li>
+                <li><strong>Independently designed</strong> end-to-end curriculum for A1–A2 (CEFR) learners, including a 36-session scope and sequence covering grammar progression and formative checkpoints.</li>
+                <li><strong>Produced</strong> English language content for the center’s digital channels, independently scripting and presenting on-camera to build learner engagement.</li>
             </ul>
-        </div>
-        <ul>
-            <li>Selected and adapted coursebook materials across proficiency levels (A1–B2), developing tailored lesson plans aligned to program learning objectives for each instructional session.</li>
-            <li>Delivered communicative English (A1–A2) and IELTS preparation (B1–B2) across small-group in-person, online, and hybrid formats.</li>
-            <li>Created and delivered English language content for the center’s TikTok channel, independently scripting, presenting on-camera, and hosting live-streamed sessions to build learner engagement and institutional visibility.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <div class="concrete-block">
-            <div class="job-title-row">
-                <span class="job-title">Learning Content Developer</span>
-                <span class="job-date">Mar 2021 – Oct 2021 (Part-time)</span>
+    <div class="concrete-block">
+        <section>
+            <div class="job-row">
+                <span>English Teacher & Content Developer</span>
+                <span>Mar 2021 – Oct 2021</span>
             </div>
             <div class="company-row">
                 <span>VietAccepted</span>
-                <span class="company-location">Ho Chi Minh City, Vietnam</span>
+                <span>Ho Chi Minh City, Vietnam</span>
             </div>
-            <div class="company-desc">VietAccepted is a leading IELTS and SAT consulting firm and an official partner of British Council Vietnam, supporting learners in achieving IELTS 8.0 and MBA placements at Wharton, Kellogg, and LBS.</div>
+            <div class="company-summary">VietAccepted is a leading IELTS and SAT consulting firm and an official partner of British Council Vietnam.</div>
             <ul>
-                <li>Conducted regular formative assessment through examiner-style marking of IELTS Writing essays and Speaking responses, providing structured feedback to monitor learner progress.</li>
+                <li><strong>Conducted</strong> regular formative assessment through examiner-style marking of IELTS Writing essays and Speaking responses, providing structured feedback to monitor progress.</li>
+                <li><strong>Produced</strong> long-form educational content and visual learning assets using Canva to support IELTS preparation programs.</li>
             </ul>
-        </div>
-        <ul>
-            <li>Produced long-form educational content and visual learning assets using Canva to support IELTS preparation programs, translating grading criteria into accessible study resources for adult learners.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <div class="concrete-block">
-            <div class="job-title-row">
-                <span class="job-title">Learning Designer & LMS Coordinator</span>
-                <span class="job-date">Jul 2019 – Oct 2020</span>
+    <div class="concrete-block">
+        <section>
+            <div class="job-row">
+                <span>LMS Strategy & Digital Learning Designer</span>
+                <span>Jul 2019 – Oct 2020</span>
             </div>
             <div class="company-row">
                 <span>Vietop English Center</span>
-                <span class="company-location">Ho Chi Minh City, Vietnam</span>
+                <span>Ho Chi Minh City, Vietnam</span>
             </div>
-            <div class="company-desc">Vietop is an IELTS-focused test preparation center in Ho Chi Minh City offering intensive and 1–1 programs.</div>
+            <div class="company-summary">Vietop is a specialized digital-first test preparation provider served 21,220+ students across multiple branches in HCMC.</div>
             <ul>
-                <li>Led the digitalization of Vietop’s course materials onto Moodle LMS — organizing curriculum, syllabi, and learning resources into a structured online platform for centralized access.</li>
+                <li><strong>Architected the digital transformation</strong> of 500+ heterogeneous learning assets onto a centralized Moodle LMS, <strong>eliminating technical data silos</strong> across 4 branches.</li>
+                <li><strong>Standardized</strong> internal digital support workflows, training 20+ staff members to maintain complex LMS infrastructure for 1,000+ concurrent users.</li>
+                <li><strong>Optimized</strong> the digital UX for remote learners, ensuring technical stability and seamless access to interactive, SCORM-compliant learning blocks.</li>
             </ul>
-        </div>
-        <ul>
-            <li>Provided informal technical guidance to colleagues on Moodle’s basic configuration and administrative functions, facilitating the center’s digital transition.</li>
-            <li>Designed curricula and class activities for IELTS preparation courses (A1–B2) and conducted regular formative assessment through continuous Writing essay marking.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <div class="concrete-block">
-            <div class="job-title-row">
-                <span class="job-title">Academic Supervisor & Learning Designer</span>
-                <span class="job-date">Sep 2017 – Jun 2019</span>
+    <div class="concrete-block">
+        <section>
+            <div class="job-row">
+                <span>Academic Supervisor & Teacher Trainer</span>
+                <span>Sep 2017 – Jun 2019</span>
             </div>
             <div class="company-row">
-                <span>ZIM Academy (ZIM English & Test Preparation School)</span>
-                <span class="company-location">Ho Chi Minh City, Vietnam</span>
+                <span>ZIM Academy</span>
+                <span>Ho Chi Minh City, Vietnam</span>
             </div>
-            <div class="company-desc">ZIM is a leading Vietnamese test preparation school (IELTS/TOEIC). Served as a founding educator for the first HCMC branch, overseeing academic quality and teacher onboarding cycles.</div>
+            <div class="company-summary">ZIM is one of Vietnam’s largest test preparation networks focusing on academic quality and high-throughput examiner-style grading.</div>
             <ul>
-                <li>Independently oversaw branch-wide instructional quality; led onboarding and academic induction for newly recruited teachers and TAs — introducing curriculum frameworks and grading standards.</li>
+                <li><strong>Established</strong> branch-wide academic quality standards; supervised and mentored a team of **20+ specialists** in digital curriculum implementation.</li>
+                <li><strong>Refined</strong> high-level writing syllabi, ensuring 100% alignment with global examiner descriptors and evidence-based pedagogical best practices.</li>
             </ul>
-        </div>
-        <ul>
-            <li>Conducted regular classroom observation cycles across teaching staff to monitor instructional standards and compiled detailed feedback reports for teacher professional development.</li>
-            <li>Participated in supervisory team meetings with academic leadership to analyze teaching performance data and implement corrective instructional strategies across multiple programs.</li>
-            <li>Contributed to curriculum quality assurance by reviewing, integrating, and improving syllabus materials for Writing courses (IELTS Band 5.5–6.5).</li>
-            <li>Graded IELTS Writing essays via the school’s online essay correction platform to support learner progress tracking.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <div class="concrete-block">
-            <h2>PORTFOLIO PROJECTS</h2>
-            <div class="job-title-row">
-                <span class="job-title">IELTS Writing Task 2 — Foundation Course (Self-initiated, 2026)</span>
+    <div class="concrete-block">
+        <section>
+            <h2>PROJECTS (THE TRILOGY)</h2>
+            <div style="margin-bottom: 12px;">
+                <strong>1. The Titanium Deadline Crisis Simulator (2026)</strong> 
+                <a href="https://hoangphi-id.github.io/case-study-titanium.html" class="btn-view">🔗 VIEW CASE STUDY</a>
+                <p style="margin: 4px 0 0 0; font-size: 9.5pt;"><strong>Engineered a technical behavioral simulator</strong> using <strong>JavaScript ES6</strong> and Storyline 360, enabling real-time export of complex learner behavioral data.</p>
             </div>
-            <div style="margin-top: 5px;">Designed and deployed a 4-unit self-paced IELTS Writing course on Moodle (MoodleCloud), incorporating formative MCQ assessment, a 4-criteria rubric aligned to IELTS band descriptors, and activity completion tracking to enforce sequential learner progression.</div>
-            <div style="font-style: italic; margin-top: 4px;">Tools: Moodle LMS (MoodleCloud) — Full case study available on request.</div>
-        </div>
-
-        <div class="concrete-block" style="margin-bottom: 12px;">
-            <div class="job-title-row" style="margin-top: 5px;">
-                <span class="job-title">New IELTS Teacher Onboarding — Staff Onboarding Course (Self-initiated, 2026)</span>
+            <div style="margin-bottom: 12px;">
+                <strong>2. New IELTS Teacher Onboarding (2026)</strong> 
+                <a href="https://hoangphi-id.github.io/case-study-onboarding.html" class="btn-view">🔗 VIEW STRATEGY</a>
+                <p style="margin: 4px 0 0 0; font-size: 9.5pt;">Designed a 3-module SCORM-compliant onboarding ecosystem in Articulate Rise 360 with interactive product-led scenarios.</p>
             </div>
-            <div style="margin-top: 5px;">Designed and deployed a 3-module self-paced onboarding course for IELTS teaching staff using Articulate Rise 360, incorporating interactive blocks (accordion, timeline, sorting activity), a reflective scenario with trade-off analysis, and SCORM 1.2 export to Moodle.</div>
-            <div style="font-style: italic; margin-top: 4px;">Tools: Articulate Rise 360, Moodle LMS (MoodleCloud), SCORM 1.2.</div>
-        </div>
-
-        <div class="concrete-block" style="margin-bottom: 12px;">
-            <div class="job-title-row" style="margin-top: 5px;">
-                <span class="job-title">The Deadline Crisis Simulator — Rise/Storyline 360 (2026) <a href="https://share.articulate.com/pJOEwYqzhkawJg5nEXF4U" target="_blank" style="color: #004a99; text-decoration: none;">[🔗 View]</a></span>
+            <div style="margin-bottom: 12px;">
+                <strong>3. IELTS Writing Masterclass (2026)</strong> 
+                <a href="https://hoangphi-id.github.io/case-study-moodle.html" class="btn-view">🔗 VIEW ARCHITECTURE</a>
+                <p style="margin: 4px 0 0 0; font-size: 9.5pt;">Architected a 4-unit Moodle ecosystem featuring automated rubrics and completion tracking for high-stakes remote learners.</p>
             </div>
-            <div style="margin-top: 5px;">Engineered a variable-driven (TrustScore) branching scenario to assess executive crisis management and remote communication under absolute pressure.</div>
-            <div style="font-style: italic; margin-top: 4px;">Tools: Storyline 360, Rise 360, Variables Logic.</div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <div class="concrete-block">
         <section>
             <h2>EDUCATION</h2>
-            <div style="margin-bottom: 10px;">
-                <div class="job-title-row">
-                    <span class="job-title">Ho Chi Minh City Open University, <span style="font-weight: normal; font-style: italic;">Bachelor's, English Language and Literature</span></span>
-                    <span class="job-date">2019 – 2023</span>
-                </div>
-            </div>
-            <div style="margin-bottom: 10px;">
-                <div class="job-title-row" style="margin-top: 5px;">
-                    <span class="job-title">Hoa Sen University, <span style="font-weight: normal; font-style: italic;">Bachelor's, Information Technology</span></span>
-                    <span class="job-date">2010 – 2016</span>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="concrete-block">
-        <section>
-            <h2>CERTIFICATIONS</h2>
-            <ul>
-                <li>IELTS Teacher Training Program — IDP IELTS | 2021</li>
-                <li>IELTS Teacher Training Workshop — British Council Vietnam | 2020</li>
-                <li>TEFL International TESOL Certification — TEFL International | 2017</li>
-                <li>Teaching English Online — Cambridge University Press & Assessment | 2022</li>
-                <li>Teaching English: How to Plan a Great Lesson — British Council | 2022</li>
-            </ul>
+            <div style="margin-bottom: 4px;"><strong>B.A. in English Language and Literature</strong> | HCMC Open University, 2019 – 2023</div>
+            <div><strong>B.S. in Information Technology</strong> | Hoa Sen University, 2010 – 2016</div>
         </section>
     </div>
 
     <div class="concrete-block">
         <section>
             <h2>SKILLS</h2>
-            <ul>
-                <li><strong>Instructional Design:</strong> Learner-centered design, CEFR framework (A1–C1) application, curriculum development, scope & sequence, adult learning principles / andragogy, blended learning, task-based language teaching (TBLT), assessment design, formative & summative evaluation, rubric-based grading, ADDIE framework</li>
-                <li><strong>LMS & Digital Tools:</strong> Moodle LMS, Google Workspace (Docs, Slides, Forms, Classroom), Zoom, Microsoft Teams, Discord, Notion, Canva</li>
-                <li><strong>AI & Automation:</strong> GenAI tools (Claude, Gemini — including API integration); workflow automation (Make.com, Zapier); prompt engineering; AI-assisted content production; Antigravity AI IDE (completed Basic training, 2026)</li>
-                <li><strong>Languages:</strong> English (C1, IELTS 8.0), Vietnamese (native)</li>
-            </ul>
+            <p><strong>Tech Stack</strong>: Moodle LMS, Articulate Rise/Storyline 360, JavaScript ES6, n8n/Make Automation, SCORM 1.2. <br>
+            <strong>Architecture</strong>: ADDIE, Bloom’s Taxonomy, Andragogy, Curriculum Engineering, Evidence-based Assessments.</p>
         </section>
     </div>
+
+</body>
 
 </body>
 </html>
