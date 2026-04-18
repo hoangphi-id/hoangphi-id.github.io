@@ -344,6 +344,27 @@
             border-top: 1px solid var(--border-glass);
         }
 
+        /* --- Score Badge Overlay --- */
+        .score-badge {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            z-index: 10;
+            border: 1px solid var(--border-glass);
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .badge-success { color: var(--success); border-color: var(--success); }
+        .badge-warning { color: var(--warning); border-color: var(--warning); }
+        .badge-danger { color: var(--danger); border-color: var(--danger); }
+
         .grid-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -605,12 +626,15 @@
 
             <div class="state-grid">
                 <div class="evidence-frame" style="border-color: var(--success);">
+                    <div class="score-badge badge-success">FINAL TRUST SCORE: 100%</div>
                     <img src="../assets/Titanium_Evidence/success_v9.png" alt="Success State">
                 </div>
                 <div class="evidence-frame" style="border-color: var(--warning);">
+                    <div class="score-badge badge-warning">FINAL TRUST SCORE: 40%</div>
                     <img src="../assets/Titanium_Evidence/warning_v9.png" alt="Warning State">
                 </div>
                 <div class="evidence-frame" style="border-color: var(--danger);">
+                    <div class="score-badge badge-danger">FINAL TRUST SCORE: 5%</div>
                     <img src="../assets/Titanium_Evidence/Fail_v9.png" alt="Fail State">
                 </div>
             </div>
