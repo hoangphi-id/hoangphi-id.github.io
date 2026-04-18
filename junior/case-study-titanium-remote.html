@@ -1,0 +1,681 @@
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS] -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phi Tong | Technical Implementation & Remote Workflow Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Mermaid JS for diagrams -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose'
+        });
+    </script>
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #006ae6;
+            --bg-dark: #0a0c10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(0, 106, 230, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        header {
+            margin-bottom: 5rem;
+        }
+
+        .badge {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 800px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-pill {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            padding: 0.4rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        /* --- Sections --- */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: var(--primary);
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        /* --- Executive Summary Styles --- */
+        .exec-summary {
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exec-summary::before {
+            content: 'EXECUTIVE SUMMARY';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: rgba(0, 242, 255, 0.3);
+        }
+
+        .exec-summary h2 {
+            background: linear-gradient(to right, var(--primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            border: none;
+        }
+
+        .exec-summary h2::before {
+            display: none;
+        }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .exec-item h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exec-item h3 i {
+            color: var(--primary);
+        }
+
+        .exec-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exec-item ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .exec-item ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .takeaway-box {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: rgba(0, 242, 255, 0.1);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .takeaway-box p {
+            margin: 0;
+            font-style: italic;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .mermaid-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-glass);
+        }
+
+        /* --- Evidence Containers (Clean & Uniform) --- */
+        .evidence-frame {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .evidence-frame:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 255, 0.4);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .image-box {
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            background: #000;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .state-grid .evidence-frame {
+            padding: 8px;
+        }
+
+        .state-grid img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* --- Image Gallery (Natural Stack) --- */
+        .evidence-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .evidence-stack img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-box:hover img {
+            transform: scale(1.01);
+        }
+
+        .caption {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .grid-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .stat-label {
+            display: block;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .stat-desc {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        /* --- Global Image Enhancements --- */
+        .image-overlay-card {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid var(--border-glass);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 6rem 0;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .next-step {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            transition: all 0.3s;
+        }
+
+        .next-step:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+
+        /* --- COMPREHENSIVE MOBILE HARDENING --- */
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1.2rem; }
+            h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; line-height: 1.1; }
+            .subtitle { font-size: 1rem; margin-bottom: 2rem; }
+            .card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
+            
+            /* Force all grids to stack 100% width */
+            .exec-grid, .grid-stats, .state-grid, .grid-2 { 
+                grid-template-columns: 1fr !important; 
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem; 
+            }
+            
+            .exec-item { width: 100% !important; }
+            .exec-item h3 { font-size: 1.1rem; }
+            .state-grid .evidence-frame { margin-bottom: 1rem; }
+            .image-box, .evidence-frame { margin: 1.5rem 0; width: 100% !important; }
+            .mermaid-container { padding: 1rem; overflow-x: auto; }
+            .next-step { font-size: 1.2rem; display: block; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <!-- --- Project Executive Summary --- -->
+        <section class="exec-summary">
+            <h2>🚀 Project Implementation: TITANIUM (Remote Focus)</h2>
+
+            <div class="exec-grid">
+                <div class="exec-item">
+                    <h3>The Meta-Challenge: Beyond the SCORM "Black Box"</h3>
+                    <p>Standard eLearning development often hits a data wall: we know if a learner finished, but we have
+                        zero visibility into their decision-making logic. For high-stakes sales negotiation,
+                        "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
+                </div>
+                <div class="exec-item">
+                    <h3>The Execution: A Professional Remote Pipeline</h3>
+                    <p>I led the <strong>Technical Implementation</strong> for Titanium V8.0, ensuring a robust 100% remote workflow through a custom <strong>JavaScript (ES6) Data Bridge</strong> and <strong>n8n Serverless Integration</strong>.</p>
+                    <ul>
+                        <li><strong>Workflow Integrity:</strong> Orchestrated the project across asynchronous channels, ensuring 100% data fidelity between Storyline and the Data Warehouse.</li>
+                        <li><strong>Standards Compliance:</strong> Built to meet <strong>UNESCO 2026 AI Ethics</strong> and <strong>IB Digital Learning Principles</strong> for international academic readiness.</li>
+                    </ul>
+                </div>
+                <div class="exec-item" style="grid-column: span 2;">
+                    <h3>Strategic Impact: From Assessment to Predictive Analytics</h3>
+                    <div class="grid-2" style="gap: 2rem;">
+                        <div>
+                            <p><strong>The 48-Hour Window:</strong> Achieved 100% visibility into learner behavior,
+                                identifying struggling representatives within <strong>48 hours</strong>—a 90%
+                                improvement.</p>
+                        </div>
+                        <div>
+                            <p><strong>Measurable Mastery:</strong> Developed a dynamic <strong>"TrustScore"</strong>
+                                system quantifying "Yes-man" vs. "Strategic Negotiator" archetypes for actionable
+                                performance data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <p><strong>Technical Developer’s Takeaway:</strong> Titanium demonstrates my ability to transform pedagogical blueprints into <strong>production-ready technical systems</strong> while maintaining remote autonomy and global standards.
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Project Executive Summary --- -->
+        <section class="card">
+            <h2>The Challenge</h2>
+            <p>In high-pressure corporate environments, the way a lead handles a "Friday Night Crisis" defines the
+                long-term health of the team. Standard e-learning (video + quiz) fails to capture the
+                <strong>psychological stakes</strong> of real-time negotiation. Learners need an environment where their
+                choices have immediate, visible consequences on stakeholder trust.
+            </p>
+
+            <div class="stat-item" style="border-left: 4px solid var(--danger);">
+                <span class="stat-label">Core Objective</span>
+                <p style="margin:0;">Simulate the "Trust Factor" between a Project Lead, a Client, and their internal
+                    Team using a dynamic multi-variable scoring system.</p>
+            </div>
+        </section>
+
+        <!-- --- Section 2: Technical Architecture --- -->
+        <section class="card">
+            <h2>Technical Implementation</h2>
+            <p>To overcome traditional SCORM limitations, I engineered a serverless data pipeline. This architecture
+                enables granular tracking of every learner interaction, parallelizing data logging and real-time alerts.</p>
+
+            <div class="mermaid-container">
+                <div class="mermaid">
+                    graph TD
+                    A[Storyline UI] -- "1. telemetry Data" --> B["JS Bridge (V4.1)"]
+                    B -- "2. Async Webhook" --> C["n8n Engine"]
+                    C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
+                    D -- "4. Strategic Verdict" --> E["Logic Switch"]
+                    E -- "5a. Data Log" --> F["Google Sheets"]
+                    E -- "5b. Expert Alert" --> G["Telegram Master"]
+
+                    style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
+                    style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
+                    style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
+                </div>
+            </div>
+
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="assets/Titanium_Evidence/n8n.png" alt="n8n Pipeline">
+                </div>
+                <div class="caption" style="border:none;">The Intelligent Diagnostic Bridge: Now powered by a live Gemini AI reasoning node for automated root-cause analysis.</div>
+            </div>
+        </section>
+
+        <!-- --- NEW: Strategic Architectural Resilience --- -->
+        <section class="card" style="border-top: 4px solid var(--primary);">
+            <h2>System Reliability & AI Strategy</h2>
+            <p>In the production version of Titanium, I implemented a <strong>Zero-Trust Configuration Model</strong> and a <strong>Live AI Diagnostic Agent</strong> to ensure system integrity and automated feedback.</p>
+            
+            <div class="grid-stats">
+                <div class="stat-item">
+                    <span class="stat-label">System Security</span>
+                    <p class="stat-desc">Externalized all API secrets into secure <strong>environment variables</strong>, ensuring the infrastructure remains hardened against credential leakage.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">AI Reasoning</span>
+                    <p class="stat-desc">Integrated <strong>Google Gemini AI</strong> to provide real-time <strong>Strategic Verdicts</strong>. The system performs root-cause analysis, identifying learner gaps automatically.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- NEW: Remote Operational Standard --- -->
+        <section class="card" style="border-left: 4px solid var(--success);">
+            <h2>Remote Operational Standard</h2>
+            <p>As a 100% remote developer, I adhere to <strong>Async-First</strong> communication protocols to ensure project transparency and speed without constant meetings.</p>
+            
+            <div class="grid-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Documented Logic</span>
+                    <p class="stat-desc">Every technical decision is recorded in an <strong>IDR (Implementation Decision Record)</strong>, allowing team members to audit project evolution across any time zone.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Scalable Handovers</span>
+                    <p class="stat-desc">Utilized <strong>Loom scripted walkthroughs</strong> and technical READMEs to ensure the technical bridge is 100% maintainable by any team member.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Section 3: The Behavioral Journey --- -->
+        <section class="card">
+            <h2>The Behavioral Journey</h2>
+            <p>The simulator is divided into 3 high-stakes stages. Every decision updates a hidden global
+                <strong>TrustScore</strong>, which determines the aesthetic and outcome of the final dashboard.
+            </p>
+
+            <div class="grid-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Stage 1: Negotiation</span>
+                    <p class="stat-desc">Balancing client pressure against resource reality. Testing "Yes-man" vs
+                        "Strategic Negotiator" patterns.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Stage 2: Diplomacy</span>
+                    <p class="stat-desc">Formalizing strategies via high-stakes communication. Precision alignment with
+                        stakeholder expectations.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Stage 3: Team Alignment</span>
+                    <p class="stat-desc">Leading under pressure. Gauging the impact of managerial stress on team
+                        psychological safety.</p>
+                </div>
+            </div>
+
+            <div class="image-box">
+                <img src="assets/Case_Study/01_Technical_Capture/01_Decision_Logic_And_States.png"
+                    alt="Branching Logic">
+                <div class="caption">Mapping complex behavioral variables: How decision logic translates into
+                    instructional impact.</div>
+            </div>
+        </section>
+
+        <!-- --- Section 4: Visual Fidelity --- -->
+        <section class="card">
+            <h2>Adaptive Feedback</h2>
+            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
+                (Success, Warning, Danger) based on the user's current performance state.</p>
+
+            <div class="state-grid">
+                <div class="evidence-frame" style="border-color: var(--success);">
+                    <img src="assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Success State">
+                </div>
+                <div class="evidence-frame" style="border-color: var(--warning);">
+                    <img src="assets/Case_Study/01_Technical_Capture/04_State_Warning_Visual.png" alt="Warning State">
+                </div>
+                <div class="evidence-frame" style="border-color: var(--danger);">
+                    <img src="assets/Case_Study/01_Technical_Capture/05_State_Fail_Visual.png" alt="Fail State">
+                </div>
+            </div>
+            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
+        </section>
+
+        <!-- --- Section 5: Real-world Impact --- -->
+        <section class="card">
+            <h2>Strategic Diagnostic Center</h2>
+            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant architectural intervention</strong> while all data is logged into the master warehouse.</p>
+
+            <div class="evidence-stack">
+                <div class="evidence-frame">
+                    <div class="image-box " style="margin:0;">
+                        <img src="assets/Titanium_Evidence/Telegram.png" alt="Telegram Notification">
+                    </div>
+                    <div class="caption" style="border:none;">Real-time Telegram Alert Payload: Instant visibility from the serverless bridge.</div>
+                </div>
+
+                <div class="evidence-frame">
+                    <div class="image-box" style="margin:0;">
+                        <img src="assets/Titanium_Evidence/Google Sheets.png" alt="Google Sheets Log">
+                    </div>
+                    <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
+                </div>
+            </div>
+            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Unified Data Ecosystem: Synchronized Telegram alerts and Google Sheets behavioral heatmaps.</p>
+        </section>
+
+        <footer>
+            <div class="badge" style="margin-bottom: 2rem;">Next Case Study</div>
+            <a href="case-study-moodle.html" class="next-step">Universal LMS Scalability →</a>
+            <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
+                &copy; 2026 Phi Tong | Remote Learning Developer & Technical ID
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ULTIMATUM MOBILE FIX: FORCED STACKING & SYNC -->
+    <style>
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem !important; width: 100% !important; max-width: 100% !important; }
+            h1 { font-size: clamp(2rem, 10vw, 3rem) !important; line-height: 1.1 !important; }
+            
+            /* FORCE VERTICAL STACK FOR ALL GRID CONTAINERS */
+            .exec-grid, .grid-stats, .state-grid, .grid-2, .grid-3 {
+                display: block !important;
+                grid-template-columns: 1fr !important;
+            }
+            
+            .exec-item, .stat-item, .evidence-frame {
+                width: 100% !important;
+                margin-bottom: 1.5rem !important;
+                display: block !important;
+            }
+            
+            .exec-item h3 { font-size: 1.1rem !important; }
+            .takeaway-box { padding: 1.2rem !important; }
+            
+            /* IMAGE FIT */
+            img { max-width: 100% !important; height: auto !important; border-radius: 8px !important; }
+            .mermaid-container { overflow-x: auto !important; padding: 0.5rem !important; }
+            .mermaid { transform: scale(0.9); transform-origin: top left; }
+            
+            /* SYNC: Ensure no sections are hidden */
+            section, div, p, span { display: block !important; }
+        }
+    </style>
+</body>
+
+</html>
