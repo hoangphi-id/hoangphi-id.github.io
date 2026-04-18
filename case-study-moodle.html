@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a; /* Deep Navy */
-            --secondary: #3b82f6;
-            --bg-neutral: #f1f5f9;
-            --card-white: #ffffff;
-            --border: #cbd5e1;
-            --text-dark: #0f172a;
-            --text-light: #475569;
+            --primary: #00f2ff;
+            --secondary: #006ae6;
+            --bg-dark: #0a0c10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
         }
 
         * {
@@ -26,137 +26,117 @@
         }
 
         body {
-            background-color: var(--bg-neutral);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(0, 106, 230, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.05) 0%, transparent 40%);
+            z-index: -1;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
         .back-link {
-            display: inline-block;
-            color: var(--secondary);
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
             text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 700;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
         }
 
         header {
-            margin-bottom: 4rem;
-            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .badge {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            display: inline-block;
+            margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            font-weight: 400;
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 800px;
         }
 
-        .main-card {
-            background: var(--card-white);
-            padding: 3.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
+        /* --- Sections --- */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(10px);
         }
 
         h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 1rem;
         }
 
         h2::before {
-            content: '•';
-            color: var(--secondary);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .image-container {
-            margin: 2.5rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-        }
-
-        .image-container img {
-            width: 100%;
-            display: block;
-        }
-
-        .caption {
-            background: #f8fafc;
-            padding: 1rem;
-            font-size: 0.9rem;
-            text-align: center;
-            color: var(--text-light);
-            border-top: 1px solid var(--border);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-box {
-            background: var(--bg-neutral);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary);
-        }
-
-        .tech-pill {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: var(--primary);
             display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 4rem 0;
-            color: var(--text-light);
-        }
-
-        @media (max-width: 768px) {
-            .main-card { padding: 1.5rem; }
-            .feature-grid { grid-template-columns: 1fr; }
+            border-radius: 2px;
         }
 
         /* --- Executive Summary Styles --- */
         .exec-summary {
-            background: rgba(30, 58, 138, 0.03);
-            border: 1px solid rgba(30, 58, 138, 0.1);
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.2);
             border-radius: 24px;
             padding: 3rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
+            margin-bottom: 4rem;
+            backdrop-filter: blur(20px);
             position: relative;
+            overflow: hidden;
         }
 
         .exec-summary::before {
@@ -167,14 +147,15 @@
             font-size: 0.7rem;
             font-weight: 800;
             letter-spacing: 3px;
-            color: rgba(30, 58, 138, 0.3);
+            color: rgba(0, 242, 255, 0.3);
         }
 
         .exec-summary h2 {
-            color: var(--primary);
+            background: linear-gradient(to right, var(--primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 2rem;
             border: none;
-            display: block;
         }
 
         .exec-summary h2::before { display: none; }
@@ -186,13 +167,13 @@
         }
 
         .exec-item h3 {
-            color: var(--primary);
+            color: #fff;
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
 
         .exec-item p {
-            color: var(--text-light);
+            color: var(--text-dim);
             font-size: 0.95rem;
             margin-bottom: 0;
         }
@@ -200,7 +181,7 @@
         .takeaway-box {
             margin-top: 2.5rem;
             padding: 1.5rem;
-            background: rgba(30, 58, 138, 0.05);
+            background: rgba(0, 242, 255, 0.1);
             border-radius: 16px;
             border-left: 4px solid var(--primary);
         }
@@ -208,9 +189,75 @@
         .takeaway-box p {
             margin: 0;
             font-style: italic;
-            color: var(--primary);
-            font-weight: 600;
+            color: #fff;
+            font-size: 1rem;
         }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .image-container {
+            margin: 2.5rem 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            background: #000;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.01);
+        }
+
+        .caption {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-view {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 0;
+            border-top: 1px solid var(--border-glass);
+        }
+    </style>
 
         @media (max-width: 768px) {
             .container { padding: 2rem 1.2rem; }
@@ -223,10 +270,20 @@
     </style>
 <style>html{scroll-behavior:smooth;}</style></head>
 <body>
+    <div class="bg-glow"></div>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Portfolio
+        </a>
         
+        <header>
+            <div class="badge">ECOSYSTEM ARCHITECTURE</div>
+            <h1>IELTS Global Scaling Hub</h1>
+            <p class="subtitle">Architecting a high-fidelity Moodle ecosystem to transform qualitative pedagogical rigor into a quantitative data pipeline.</p>
         </header>
 
         <!-- --- Project Executive Summary --- -->
@@ -261,7 +318,7 @@
             </div>
         </section>
 
-        <section class="main-card">
+        <section class="card">
             <h2>Pedagogical Architecture</h2>
             <p>Designed for academic rigor, this course utilizes a <strong>scaffolded learning pathway</strong>. Each module integrates instructional content via Articulate Rise blocks directly embedded into Moodle, followed by weighted assessments to ensure cumulative knowledge gain.</p>
             
@@ -271,7 +328,7 @@
             </div>
         </section>
 
-        <section class="main-card">
+        <section class="card">
             <h2>Precision Grading & Feedback</h2>
             <p>To eliminate subjective bias in writing assessments, I engineered complex <strong>Advanced Grading Rubrics</strong> aligned with official IELTS Band Descriptors (Task Response, Cohesion, Lexical Resource, Grammatical Range).</p>
             
@@ -281,7 +338,7 @@
             </div>
         </section>
 
-        <section class="main-card">
+        <section class="card">
             <h2>Data-Driven Monitoring</h2>
             <p>L&D managers benefit from real-time <strong>Activity Completion Tracking</strong> and a centralized Gradebook, providing 100% visibility into student success rates and critical bottlenecks.</p>
             
@@ -297,7 +354,7 @@
             </div>
         </section>
 
-        <section class="main-card">
+        <section class="card">
             <h2>Administrative Backbone</h2>
             <p>Behind the scenes, I optimized the LMS settings for scalability, including automated enrolment methods and conditional access restricted by formative assessment scores.</p>
             <div class="image-container">
@@ -307,12 +364,10 @@
         </section>
 
         <footer>
-            <div class="footer-content">
-                <p>&copy; 2026 Phi Tong. Ready to build something together?</p>
-                <a href="mailto:phitong.official@gmail.com" class="footer-btn">Get In Touch</a>
-            </div>
-            <div class="footer-brand" style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
-                &copy; 2026 Phi Tong | Learning Experience Architect
+            <div class="badge" style="margin-bottom: 2rem;">Next Case Study</div>
+            <a href="case-study-onboarding.html" class="btn-view btn-primary">Zero-Friction Onboarding →</a>
+            <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
+                &copy; 2026 Phi Tong | Senior Architect & Learning Engineer
             </div>
         </footer>
     </div>
