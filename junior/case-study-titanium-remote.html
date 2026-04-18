@@ -556,17 +556,20 @@
             <div class="mermaid-container">
                 <div class="mermaid">
                     graph TD
-                    A[Storyline UI] -- "1. telemetry Data" --> B["JS Bridge (V4.1)"]
+                    A[Storyline UI] -- "1. Telemetry Data" --> B["JS Bridge (V4.1)"]
                     B -- "2. Async Webhook" --> C["n8n Engine"]
                     C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
                     D -- "4. Technical Assessment" --> E["Logic Switch"]
+                    
                     E -- "5a. Data Log" --> F["Google Sheets"]
                     E -- "5b. Expert Alert" --> G["Telegram Master"]
+                    E -- "5c. LMS Sync" --> H["LMS / SCORM"]
 
                     style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
                     style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
                     style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
                     style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
+                    style H fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
                 </div>
             </div>
 
