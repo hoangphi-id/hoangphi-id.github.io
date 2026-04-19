@@ -1,10 +1,10 @@
-<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 10:45] [I (AI) CHANGED THIS] -->
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 11:05] [I (AI) CHANGED THIS] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phi Tong | IELTS Teacher Onboarding Specialist</title>
+    <title>Phi Tong | IELTS Teacher Onboarding Case Study</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -86,19 +86,6 @@
 
         p { margin-bottom: 1.5rem; color: var(--text-dim); font-size: 1.1rem; }
 
-        .grid-stats {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem; margin: 3rem 0;
-        }
-        .stat-item {
-            background: rgba(255, 255, 255, 0.02); padding: 2rem; border-radius: 16px;
-            border: 1px solid var(--border-glass);
-        }
-        .stat-label {
-            display: block; font-weight: 700; color: var(--primary);
-            margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8rem;
-        }
-
         .image-box {
             margin: 2.5rem 0; border-radius: 12px; overflow: hidden;
             border: 1px solid var(--border-glass); background: #000;
@@ -125,7 +112,6 @@
             .container { padding: 2rem 1.2rem; }
             h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; }
             .card { padding: 1.5rem; }
-            .grid-stats { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -144,12 +130,12 @@
         <header>
             <div class="badge">Case Study 3</div>
             <h1>IELTS Teacher Onboarding — Rise 360 Micro-learning</h1>
-            <p class="subtitle">Designing a self-paced onboarding ecosystem for distributed academic teams.</p>
+            <p class="subtitle">Designing a self-paced onboarding ecosystem for distributed academic teams using Rise 360.</p>
             <div class="tech-stack">
                 <span class="tech-pill">Articulate Rise 360</span>
                 <span class="tech-pill">Moodle 4.x</span>
                 <span class="tech-pill">SCORM 1.2</span>
-                <span class="tech-pill">Gagne's 9 Events</span>
+                <span class="tech-pill">Gagne's Nine Events</span>
             </div>
         </header>
 
@@ -158,131 +144,123 @@
             <h2>The Problem</h2>
             <p>When new IELTS teachers join a center, getting them aligned on marking criteria, lesson structure, and feedback protocols takes time — and usually requires a senior teacher to walk them through everything in person.</p>
             <p style="margin-top: 1rem;">The goal of this project was to design a self-paced onboarding experience that new teachers could complete independently before their first class, without needing synchronous handholding.</p>
-            
-            <div class="stat-item" style="border-left: 4px solid var(--primary); margin-top: 2rem;">
-                <span class="stat-label">Core Objective</span>
-                <p style="margin:0;">Create a 3-module Rise 360 course covering Band Descriptors, lesson frameworks, and feedback protocols, deployed as SCORM 1.2 to Moodle.</p>
-            </div>
         </section>
 
-        <!-- --- Section 2: What I Built --- -->
+        <!-- --- Section 2: Core Objective --- -->
+        <section class="card">
+            <h2>Core Objective</h2>
+            <p>Create a 3-module Rise 360 course covering:</p>
+            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>1. IELTS marking criteria</strong> and official Band Descriptors.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>2. The 120-minute lesson framework</strong> used at the center.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>3. Feedback protocols</strong> for Writing and Speaking tasks.</span>
+                </li>
+            </ul>
+            <p style="margin-top: 2rem;">Deploy as <strong>SCORM 1.2 to Moodle</strong> with completion tracking, allowing Academic Managers to verify compliance before teacher assignment.</p>
+        </section>
+
+        <!-- --- Section 3: What I Built --- -->
         <section class="card">
             <h2>What I Built</h2>
-            <p>A 3-module self-paced onboarding course in Articulate Rise 360 with:</p>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Mobile-first design</strong> — all blocks tested for responsiveness across screen sizes</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Gagne's Nine Events of Instruction</strong> used as the structural framework for each module</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Interactive blocks</strong> — labeled graphics, sorting activities, and knowledge checks embedded throughout</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>SCORM 1.2 export</strong> deployed to Moodle with completion tracking and activity gating</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Content Aligned to Official Descriptors</strong> — mapped directly to source material</span>
-                </li>
-            </ul>
-
-            <div style="margin-top: 3rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
-                <span class="stat-label">Tools Used</span>
-                <p style="font-size: 1rem; color: var(--text-dim);">Articulate Rise 360 · Moodle 4.x · SCORM 1.2 · IELTS Band Descriptors (official source)</p>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>Instructional Flow</h2>
-            <p>The course was built using a <strong>minimalist aesthetic</strong> to reduce cognitive load, focusing on high-impact interactions that simulate classroom scenarios.</p>
+            <p>A 3-module self-paced onboarding course in Articulate Rise 360 with a focus on usability and instructional rigor:</p>
             
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
-                    <img src="../assets/Case_Study/02_Rise_Onboarding/01_Rise_Cover.png" alt="Rise Cover">
+                    <img src="../assets/Case_Study/02_Rise_Onboarding/01_Rise_Cover.png" alt="Rise Onboarding Cover">
                 </div>
-                <div class="caption">Visual Minimalism: High-impact cover design focusing on core teacher competencies.</div>
+                <div class="caption">Onboarding Core: A minimalist, mobile-ready interface designed for IELTS teachers.</div>
             </div>
 
-            <div class="grid-stats">
-                <div class="stat-item">
-                    <span class="stat-label">Learning Framework</span>
-                    <p class="stat-desc">Sequential progression: Understanding the Task → Lesson Framework → Feedback Protocols.</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Visual Hierarchy</span>
-                    <p class="stat-desc">Block-based structure ensures clarity across desktop and mobile devices.</p>
-                </div>
-            </div>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Mobile-first design</strong> — all blocks tested for responsiveness across screen sizes to support "on-the-go" learning.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Gagne's Nine Events</strong> used as the structural framework to ensure effective sequencing for adult learners.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Interactive engagement</strong> — labeled graphics, sorting activities, and knowledge checks embedded throughout each lesson.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Official Source Mapping</strong> — content mapped directly to IELTS Band Descriptors without paraphrasing bias.</span>
+                </li>
+            </ul>
         </section>
 
-        <!-- --- Section 3: Design Decisions --- -->
+        <!-- --- Section 4: Design Decisions --- -->
         <section class="card" style="border-top: 4px solid var(--primary);">
             <h2>Design Decisions</h2>
-            <div class="grid-stats">
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
                     <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Rise 360?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">Rise 360 is faster to build and easier to update — critical for onboarding content that evolves as criteria changes.</p>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Block-based structure is faster to build and easier to update for content that changes with marking criteria updates.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Embedded Checks?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">Short checks after each section keep adult learners active, rather than passively reading a single long quiz.</p>
-                </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; grid-column: span 2;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Official Descriptors?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">Using the official source ensures new teachers match their mental model to what examiners actually use, leaving no room for interpretation.</p>
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Embedded Checks</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Embedding short checks after each section keeps learners actively processing rather than passively reading a long quiz at the end.</p>
                 </div>
             </div>
         </section>
 
+        <!-- --- Section 5: Technical Evidence --- -->
         <section class="card">
-            <h2>Micro-interactions</h2>
-            <p>Each module integrates interactive elements followed by formative assessments to ensure teachers can apply descriptors to actual student work.</p>
+            <h2>Technical Evidence</h2>
             
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
-                    <img src="../assets/Case_Study/02_Rise_Onboarding/03_Rise_Interaction_1.png" alt="Interaction">
+                    <img src="../assets/Case_Study/02_Rise_Onboarding/03_Rise_Interaction_1.png" alt="Rise Interaction">
                 </div>
-                <div class="caption">Activity: Deconstructing Band Descriptors through interactive labeled graphics.</div>
+                <div class="caption">Active Learning: Deconstructing Band Descriptors through interactive labeled graphics.</div>
             </div>
 
-            <div class="evidence-frame">
+            <div class="evidence-frame" style="margin-bottom: 0;">
                 <div class="image-box" style="margin:0;">
-                    <img src="../assets/Case_Study/02_Rise_Onboarding/05_Rise_Mobile.png" alt="Mobile View" style="max-width: 400px; margin: 0 auto;">
+                    <img src="../assets/Case_Study/02_Rise_Onboarding/05_Rise_Mobile.png" alt="Mobile View" style="max-width: 350px; margin: 0 auto;">
                 </div>
-                <div class="caption">Mobile Mastery: Ensuring a "zero-friction" experience for teachers on the move.</div>
+                <div class="caption">Multi-device Delivery: Ensuring a seamless experience for teachers on mobile and desktop.</div>
             </div>
         </section>
 
-        <!-- --- Section 4: What I Learned --- -->
+        <!-- --- Section 6: What I Learned --- -->
         <section class="card" style="border-left: 4px solid var(--primary);">
             <h2>What I Learned</h2>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+            <ul style="list-style: none; padding: 0;">
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Rise 360's block-based structure encourages modular chunking — each block must serve one clear learning objective.</span>
+                    <span>Rise 360's block-based structure encourages thinking in modular chunks — each block should serve one clear learning objective.</span>
                 </li>
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Gagne's Nine Events provide a useful framework for adult learners who need context and relevance before instruction.</span>
+                    <span>Gagne's Nine Events provided a useful framework for sequencing content, especially for adult learners who need context and relevance.</span>
                 </li>
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Deploying to Moodle via SCORM requires testing completion triggers carefully — defining "complete" must happen before export.</span>
+                    <span>Deploying SCORM to Moodle requires testing completion triggers carefully — defining success criteria must happen before export.</span>
                 </li>
             </ul>
+        </section>
+
+        <section class="card">
+            <h2>Tools Used</h2>
+            <p style="font-size: 1rem; color: var(--text-dim); margin-bottom: 0;">Articulate Rise 360 · Moodle 4.x · SCORM 1.2 · IELTS Band Descriptors (official source)</p>
         </section>
 
         <footer>
-            <div class="badge" style="margin-bottom: 2rem;">End of Case Studies</div>
             <a href="index.html" class="next-step">Return to Portfolio Hub →</a>
             <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
-                &copy; 2026 Phi Tong | Remote Learning Developer & Technical ID
+                &copy; 2026 Phi Tong | Remote Specialist & Technical ID
             </div>
         </footer>
 
