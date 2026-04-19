@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phi Tong | Technical Implementation & Remote Workflow Specialist</title>
+    <title>Phi Tong | High-Fidelity Behavioral Analytics Simulator & ES6 Arch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
@@ -140,37 +140,6 @@
             backdrop-filter: blur(10px);
         }
 
-        .mermaid-container {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 3rem 2rem;
-            margin: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .mermaid {
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-        }
-
-        .mermaid svg {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
-        .diagram-group {
-            margin: 3rem 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
         h2 {
             font-size: 2rem;
             margin-bottom: 2rem;
@@ -201,16 +170,7 @@
             overflow: hidden;
         }
 
-        .exec-summary::before {
-            content: 'EXECUTIVE SUMMARY';
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            color: rgba(0, 242, 255, 0.3);
-        }
+
 
         .exec-summary h2 {
             background: linear-gradient(to right, var(--primary), #fff);
@@ -292,9 +252,15 @@
             margin: 2rem 0;
             border: 1px solid var(--border-glass);
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         /* --- Evidence Containers (Clean & Uniform) --- */
@@ -373,54 +339,6 @@
             font-size: 0.9rem;
             color: var(--text-dim);
             border-top: 1px solid var(--border-glass);
-        }
-
-        /* --- Score Badge Overlay --- */
-        .score-badge {
-            position: absolute;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.85);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            z-index: 10;
-            border: 1px solid var(--border-glass);
-            white-space: nowrap;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .badge-success { color: var(--success); border-color: var(--success); }
-        .badge-warning { color: var(--warning); border-color: var(--warning); }
-        .badge-danger { color: var(--danger); border-color: var(--danger); }
-
-        /* --- Feedback Bubble Overlay --- */
-        .feedback-bubble {
-            position: absolute;
-            bottom: 55px;
-            left: 20px;
-            right: 20px;
-            background: #fff;
-            color: #000;
-            padding: 12px 15px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            line-height: 1.3;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            z-index: 5;
-            text-align: left;
-        }
-        .feedback-bubble::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 20px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #fff;
         }
 
         .grid-stats {
@@ -511,119 +429,223 @@
 
     <div class="bg-glow"></div>
 
+    <!-- --- PRESTIGE BADGE FOR AUDITS --- -->
+    <style>
+        .prestige-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 242, 255, 0.4);
+            z-index: 10;
+        }
+
+        /* --- STATE OVERLAY BADGES --- */
+        .state-badge {
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid currentColor;
+            z-index: 5;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .speech-overlay {
+            position: absolute;
+            top: 22%;
+            left: 5%;
+            width: 50%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 50% 50% 50% 0;
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 700;
+            line-height: 1.4;
+            text-align: center;
+            z-index: 4;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 2px solid var(--border-glass);
+        }
+
+        .speech-overlay::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 5px;
+            border-width: 8px 8px 0 0;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+        }
+    </style>
+
     <div class="container">
 
-        <a href="./index.html" class="back-link">
+        <a href="index.html" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
             Back to Portfolio
         </a>
-        <header>
-            <div class="badge">Case Study 1</div>
-            <h1>Branching Behavioral Simulator — Articulate Storyline 360</h1>
-            <p class="subtitle">Solving for high-stakes negotiation through real-time Behavioral Data Tracking.</p>
-            <div class="tech-stack">
-                <span class="tech-pill">Articulate Storyline 360</span>
-                <span class="tech-pill">JavaScript (ES6)</span>
-                <span class="tech-pill">n8n</span>
-                <span class="tech-pill">Google Sheets</span>
-                <span class="tech-pill">Gemini AI</span>
-                <span class="tech-pill">Moodle (SCORM 1.2)</span>
-            </div>
-        </header>
 
-        <!-- --- Section 1: The Problem --- -->
-        <section class="card">
-            <h2>The Problem</h2>
-            <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough. The real question is: what does a learner's decision pattern reveal about their thinking?</p>
-            <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure.</p>
-            
-            <div class="stat-item" style="border-left: 4px solid var(--primary); margin-top: 2rem;">
-                <span class="stat-label">Core Objective</span>
-                <p style="margin:0;">Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages. Each choice updates a hidden TrustScore variable, which determines the final outcome and feedback the learner receives.</p>
-            </div>
-        </section>
+        <!-- --- Project Executive Summary --- -->
+        <section class="exec-summary">
+            <h2>🚀 Project Executive Summary: TITANIUM</h2>
 
-        <!-- --- Section 2: What I Built --- -->
-        <section class="card">
-            <h2>What I Built</h2>
-            <p>A branching behavioral simulator in Articulate Storyline 360 with:</p>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>3 decision stages:</strong> Negotiation → Diplomacy → Team Alignment</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>TrustScore and Stress Meter variables</strong> tracking learner choices across the entire scenario</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>State-driven visual feedback</strong> — the interface changes color (Success / Warning / Danger) based on current performance</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>JavaScript trigger logic</strong> connecting Storyline to an external data pipeline (n8n → Google Sheets) for behavioral logging</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Automated feedback via Gemini AI</strong> — each submission triggers a diagnostic verdict based on the learner's decision pattern</span>
-                </li>
-            </ul>
-            
-            <div style="margin-top: 3rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
-                <span class="stat-label">Tools Used</span>
-                <p style="font-size: 1rem; color: var(--text-dim);">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
-            </div>
-        </section>
-
-            <div class="diagram-group">
-                <div class="mermaid-container">
-                    <div class="mermaid">
-                        graph TD
-                        A[Storyline UI] -- "1. Telemetry Data" --> B["JS Bridge (V4.1)"]
-                        B -- "2. Async Webhook" --> C["n8n Engine"]
-                        C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
-                        D -- "4. Technical Assessment" --> E["Logic Switch"]
-                        
-                        E -- "5a. Data Log" --> F["Google Sheets"]
-                        E -- "5b. Expert Alert" --> G["Telegram Master"]
-                        E -- "5c. LMS Sync" --> H["LMS / SCORM"]
-
-                        style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
-                        style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
-                        style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
-                        style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
-                        style H fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
+            <div class="exec-grid">
+                <div class="exec-item">
+                    <h3>The Meta-Challenge: Beyond the SCORM "Black Box"</h3>
+                    <p>Standard eLearning development often hits a data wall: we know if a learner finished, but we have
+                        zero visibility into their decision-making logic. For high-stakes sales negotiation,
+                        "completion" is a vanity metric; <strong>behavioral insight</strong> is the real ROI.</p>
+                </div>
+                <div class="exec-item">
+                    <h3>The Architecture: A High-Fidelity Serverless Pipeline</h3>
+                    <p>I engineered <strong>Titanium V9.0 (Ironclad Edition)</strong>, a professional-grade simulator powered by a custom <strong>JavaScript (ES6) Data Bridge</strong> and an <strong>n8n Serverless Pipeline</strong>.</p>
+                    <ul>
+                        <li><strong>Technical Edge:</strong> Bypassed SCORM "Black Box" limitations using asynchronous JSON payloads to a dedicated n8n webhook.
+                        </li>
+                        <li><strong>Enterprise Integrity:</strong> Implemented <strong>Cross-Node Referencing</strong> in n8n, ensuring 100% data fidelity across parallel execution branches (Sheets + Notifications).</li>
+                    </ul>
+                </div>
+                <div class="exec-item" style="grid-column: span 2;">
+                    <h3>Strategic Impact: From Assessment to Predictive Analytics</h3>
+                    <div class="grid-2" style="gap: 2rem;">
+                        <div>
+                            <p><strong>The 48-Hour Window:</strong> Achieved 100% visibility into learner behavior,
+                                identifying struggling representatives within <strong>48 hours</strong>—a 90%
+                                improvement.</p>
+                        </div>
+                        <div>
+                            <p><strong>Measurable Mastery:</strong> Developed a dynamic <strong>"TrustScore"</strong>
+                                system quantifying "Yes-man" vs. "Strategic Negotiator" archetypes for actionable
+                                performance data.</p>
+                        </div>
                     </div>
-                    <div class="caption" style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem; width: 100%; text-align: center;">Technical Architecture: Capturing behavioral data through a serverless pipeline (JS → n8n → Analytics).</div>
+                </div>
+            </div>
+
+            <div class="takeaway-box">
+                <p><strong>Senior Architect’s Takeaway:</strong> Titanium V9.0 isn't just a training module; it's a 
+                    <strong>Hardened Diagnostic Engine</strong>. It proves that a "Senior" approach isn't about more content, but about 
+                    <strong>architectural resilience</strong>—ensuring that every behavioral data point is captured, sanitized, and transformed into an expert strategic verdict.
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Project Architecture Summary (BIG FRAME) --- -->
+        <section class="card" style="padding: 2rem; border: none; background: rgba(255,255,255,0.02); display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Role</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">LXD Architect</p>
+            </div>
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Core Brain</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">Gemini 1.5 Flash</p>
+            </div>
+            <div style="border-right: 1px solid var(--border-glass);">
+                <span class="stat-label" style="font-size: 0.6rem;">Pipeline</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">Hardened n8n</p>
+            </div>
+            <div>
+                <span class="stat-label" style="font-size: 0.6rem;">Bridge</span>
+                <p style="font-size: 0.9rem; color: #fff; margin:0;">ES6 V5.0</p>
+            </div>
+        </section>
+
+        <!-- --- Project Executive Summary --- -->
+        <section class="card">
+            <h2>The Challenge</h2>
+            <p>In high-pressure corporate environments, the way a lead handles a "Friday Night Crisis" defines the
+                long-term health of the team. Standard e-learning (video + quiz) fails to capture the
+                <strong>psychological stakes</strong> of real-time negotiation. Learners need an environment where their
+                choices have immediate, visible consequences on stakeholder trust.
+            </p>
+
+            <div class="stat-item" style="border-left: 4px solid var(--danger);">
+                <span class="stat-label">Core Objective</span>
+                <p style="margin:0;">Simulate the "Trust Factor" between a Project Lead, a Client, and their internal
+                    Team using a dynamic multi-variable scoring system.</p>
+            </div>
+        </section>
+
+        <!-- --- Section 2: Technical Architecture --- -->
+        <section class="card">
+            <h2>Technical Architecture</h2>
+            <p>To overcome traditional SCORM limitations, I engineered a serverless data pipeline. This architecture
+                enables granular tracking of every learner interaction, parallelizing data logging and real-time alerts.</p>
+
+            <div class="mermaid-container">
+                <div class="mermaid">
+                    graph TD
+                    A[Storyline UI] -- "1. Interaction" --> B["JS Bridge (V5.0)"]
+                    B -- "2. Webhook" --> C["n8n Engine"]
+                    C -- "3. Reasoning" --> D["Gemini 1.5 Flash"]
+                    D -- "4. Database Sync" --> E["Google Sheets"]
+                    E -- "5. Intelligence" --> F["Logic Switch"]
+                    F -- "6. Master Alert" --> G["Telegram Master"]
+                    F -- "7. Tactical Alert" --> H["Telegram Good"]
+                    F -- "8. Critical Alert" --> I["Telegram Fail"]
+
+                    style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
+                    style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
+                    style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
+                    style G fill:#0088cc,stroke:#10b981,stroke-width:3px,color:#fff
+                    style I fill:#0088cc,stroke:#ef4444,stroke-width:3px,color:#fff
                 </div>
             </div>
 
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
-                    <img src="assets/Titanium_Evidence/n8n_v9_raw.png" alt="n8n Pipeline">
+                    <img src="assets/Titanium_Evidence/n8n_v9_raw.png" alt="n8n Raw Workflow Blueprint">
                 </div>
-                <div class="caption" style="border:none;">The Intelligent Diagnostic Bridge: Now powered by a live Gemini AI reasoning node for automated root-cause analysis.</div>
+                <div class="caption" style="border:none;">
+                    <strong>Ironclad V9.0 Architecture:</strong> Full serverless pipeline featuring native Telegram Bot API nodes, asynchronous Google Sheets data warehousing, and a multi-tier logic switch driven by Gemini 1.5 Flash reasoning.
+                </div>
+            </div>
+
+            <!-- --- TECHNICAL BLUEPRINT LINKS --- -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem; justify-content: center;">
+                <a href="assets/Titanium_Evidence/Titanium_Architect_Bridge_V9_FIXED.json" target="_blank" class="badge" style="text-decoration: none; border-color: var(--primary);">
+                    View Raw JSON Blueprint
+                </a>
+                <a href="assets/Titanium_Evidence/Titanium_Architect_Bridge_V9_FIXED.json" download class="badge" style="text-decoration: none; background: rgba(255,255,255,0.05);">
+                    Download Logic File
+                </a>
             </div>
         </section>
 
-        <!-- --- Section 3: Design Decisions --- -->
-        <section class="card" style="border-top: 4px solid var(--secondary);">
-            <h2>Design Decisions</h2>
+        <!-- --- Strategic Architectural Resilience --- -->
+        <section class="card" style="border-top: 4px solid var(--primary);">
+            <h2>Architectural Resilience & Zero-Trust</h2>
+            <p>A Senior Architect doesn't just build systems; they protect and scale them. In the production version of Titanium, I implemented a <strong>Zero-Trust Configuration Model</strong>.</p>
+            
             <div class="grid-stats">
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why branching instead of linear?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do — and that's the data worth collecting.</p>
+                <div class="stat-item">
+                    <span class="stat-label">Security Hardening</span>
+                    <p class="stat-desc">By externalizing all API secrets into secure <strong>environment variables</strong>, I ensured the infrastructure remains hardened against credential leakage—enterprise standard.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why track TrustScore across stages?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">A single decision doesn't define a learner's pattern. Tracking cumulative score across 3 stages shows whether a learner is consistently strategic or inconsistent under different types of pressure.</p>
+                <div class="stat-item">
+                    <span class="stat-label">AI Outcome Intelligence</span>
+                    <p class="stat-desc">Integrated <strong>Google Gemini 1.5 Flash via API</strong> to provide automated <strong>Strategic Verdicts</strong>. The system evaluates learner competency based on final performance metrics, identifying high-potential talent instantly.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; grid-column: span 2;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why connect to an external pipeline?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">SCORM's built-in reporting only captures completion and score. Connecting to Google Sheets via n8n allowed logging of every decision path — not just the final result.</p>
+                <div class="stat-item">
+                    <span class="stat-label">Data Sanitization & Integrity</span>
+                    <p class="stat-desc">Implemented a <strong>Triple-Tier Safety Brake</strong> (Regex filtration, Substring truncations, and Parse-Mode silencing) to ensure 100% transmission reliability and prevent API crashes during long-form AI reporting.</p>
                 </div>
             </div>
         </section>
@@ -661,82 +683,196 @@
             </div>
         </section>
 
-        <!-- --- Section 4: Visual Fidelity --- -->
+        <!-- --- Section 4: State-Driven UI & Environmental Intelligence --- -->
         <section class="card">
-            <h2>Adaptive Feedback</h2>
-            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
-                (Success, Warning, Danger) based on the user's current performance state.</p>
+            <h2>State-Driven UI & Environmental Intelligence</h2>
+            <p>The UI is alive. Using <strong>Storyline Variable Logic</strong> and state-driven CSS/Triggers, the environment transforms its visual glow (Success, Warning, Danger) in real-time, providing immediate psychological feedback based on the user's current <strong>TrustScore</strong>.</p>
+
 
             <div class="state-grid">
-                <div class="evidence-frame" style="border-color: var(--success);">
-                    <div class="score-badge badge-success">FINAL TRUST SCORE: 100%</div>
-                    <div class="feedback-bubble">"Implementation complete. Technical standards confirmed. Workflow validated across all target metrics."</div>
-                    <img src="assets/Titanium_Evidence/success_v9.png" alt="Success State">
+                <div class="evidence-frame" style="border-color: var(--success); position: relative;">
+                    <div class="state-badge" style="color: var(--success); border-color: var(--success);">FINAL TRUST SCORE: 100%</div>
+                    <div class="speech-overlay">"Master Status: Operational excellence confirmed. Stakeholders validated across all strategic metrics."</div>
+                    <img src="assets/Titanium_Evidence/Master_v9.png" alt="Success State">
                 </div>
-                <div class="evidence-frame" style="border-color: var(--warning);">
-                    <div class="score-badge badge-warning">FINAL TRUST SCORE: 40%</div>
-                    <div class="feedback-bubble">"Tactical alignment marginal. Communication fragmented—technical adjustment required to ensure stability."</div>
+                <div class="evidence-frame" style="border-color: var(--warning); position: relative;">
+                    <div class="state-badge" style="color: var(--warning); border-color: var(--warning);">FINAL TRUST SCORE: 40%</div>
+                    <div class="speech-overlay">"Tactical alignment marginal. Communication fragmented—realignment required to prevent systemic friction."</div>
                     <img src="assets/Titanium_Evidence/Good_v9.png" alt="Warning State">
                 </div>
-                <div class="evidence-frame" style="border-color: var(--danger);">
-                    <div class="score-badge badge-danger">FINAL TRUST SCORE: 5%</div>
-                    <div class="feedback-bubble">"Technical failure detected. Systemic adjustment required. Implementation readiness non-operational."</div>
+                <div class="evidence-frame" style="border-color: var(--danger); position: relative;">
+                    <div class="state-badge" style="color: var(--danger); border-color: var(--danger);">FINAL TRUST SCORE: 5%</div>
+                    <div class="speech-overlay">"Critical collapse. Systemic failure detected. Mission readiness non-operational. Total retraining mandatory!"</div>
                     <img src="assets/Titanium_Evidence/Fail_v9.png" alt="Fail State">
                 </div>
             </div>
             <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
         </section>
 
-        <!-- --- Section 5: Real-world Impact --- -->
+        <!-- --- Section 5: Strategic Diagnostic Center --- -->
         <section class="card">
-            <h2>Technical Diagnostic Center</h2>
-            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant technical refinement</strong> while all data is logged into the master warehouse.</p>
+            <h2>Strategic Diagnostic Center</h2>
+            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant architectural intervention</strong> while all data is logged into this Master Data Warehouse.</p>
 
-            <div class="evidence-stack">
-                <div class="evidence-frame">
-                    <div class="image-box " style="margin:0;">
-                        <img src="assets/Titanium_Evidence/telegram_v9_audit.png" alt="Telegram Notification">
+            <!-- --- Strategic Audit Explorer --- -->
+            <div class="audit-explorer">
+                <div class="audit-tabs">
+                    <div class="audit-tab active" data-target="master">
+                        <span class="tab-status status-master"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Phillip Tong</span>
+                            <span class="tab-meta">Score: 100% | Master</span>
+                        </div>
                     </div>
-                    <div class="caption" style="border:none;">Real-time Telegram Alert Payload: Instant visibility from the serverless bridge.</div>
+                    <div class="audit-tab" data-target="good">
+                        <span class="tab-status status-good"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Nguyen Pham</span>
+                            <span class="tab-meta">Score: 40% | Tactical</span>
+                        </div>
+                    </div>
+                    <div class="audit-tab" data-target="fail">
+                        <span class="tab-status status-fail"></span>
+                        <div class="tab-info">
+                            <span class="tab-name">Thuan Cao</span>
+                            <span class="tab-meta">Score: 5% | Critical</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="evidence-frame">
-                    <div class="image-box" style="margin:0;">
-                        <img src="assets/Titanium_Evidence/google_sheets_v9_authentic.png" alt="Google Sheets Log">
+                <div class="audit-display">
+                    <!-- Master Case -->
+                    <div id="master" class="audit-content active" style="position: relative;">
+                        <div class="prestige-badge">Strategic Verdict: MASTER</div>
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: PHILLIP_TONG_100_MASTER</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Master Architect. Phillip Tong’s 100% TrustScore represents the highest echelon of pedagogical mastery. He demonstrates an absolute command over LXD systems, architectural integrity, and stakeholder alignment.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Systems Sage. Tong operates via a predictive mental model, prioritizing structural equilibrium and high-fidelity outcomes. His decision-making reflects a deep understanding of the interconnectedness between learning interventions and systemic performance.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>3. [Strategic Risks & Opportunities]</h3>
+                                <ul>
+                                    <li><strong>Pedagogical Precision:</strong> The score indicates a zero-variance execution, where theoretical frameworks were perfectly translated into operational reality.</li>
+                                    <li><strong>Cognitive Load Optimization:</strong> High proficiency in navigating complex data sets without experiencing decision fatigue or strategic drift.</li>
+                                    <li><strong>The Perfection Paradox:</strong> The primary risk is the sustainability of 100% benchmarks in hyper-volatile environments; focus must shift toward resilient adaptability.</li>
+                                </ul>
+                            </div>
+                            <div class="audit-section">
+                                <h3>4. [The Phoenix Action Plan]</h3>
+                                <ul>
+                                    <li><strong>Methodological Codification:</strong> Transition from practitioner to architect by formalizing personal heuristics into scalable organizational playbooks.</li>
+                                    <li><strong>Strategic Mentorship:</strong> Deploy current expertise to upskill "Tactical Practitioners," bridging the gap between execution and foresight.</li>
+                                    <li><strong>Advanced Simulation Modeling:</strong> Pilot stress-test scenarios involving "Black Swan" events to test the limits of current systemic frameworks.</li>
+                                </ul>
+                            </div>
+                            <div class="audit-conclusion">
+                                Phillip, your performance reflects total synchronization with the highest professional standards. You are verified for immediate high-stakes strategic leadership.
+                            </div>
+                        </div>
                     </div>
-                    <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
+
+                    <!-- Good Case -->
+                    <div id="good" class="audit-content">
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: NGUYEN_PHAM_40_TACTICAL</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Tactical Practitioner (Entry Tier). Nguyen Pham occupies the absolute baseline of operational viability. While there is a fundamental grasp of pedagogical mechanics, the lack of strategic foresight prevents advancement into leadership roles.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Reactive Decider. Nguyen’s performance indicates a mental model focused on symptom management rather than root-cause resolution. Decisions appear driven by immediate feedback loops, leading to a fragmented architecture.</p>
+                            </div>
+                            <div class="audit-conclusion">
+                                Nguyen, your current Mission Readiness is Marginal. You are currently a liability in high-stakes environments. Realignment must begin immediately.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fail Case -->
+                    <div id="fail" class="audit-content">
+                        <div class="audit-header">
+                            <span class="audit-id">AUDIT_REF: THUAN_CAO_5_CRITICAL</span>
+                            <span class="audit-date">Live Data: 17/04/2026</span>
+                        </div>
+                        <div class="audit-body">
+                            <div class="audit-section">
+                                <h3>1. [Status Assessment]</h3>
+                                <p>Status: Critical Risk. A TrustScore of 5% signifies a profound deficiency in systemic alignment and professional competency. Thuan Cao currently poses a high operational liability.</p>
+                            </div>
+                            <div class="audit-section">
+                                <h3>2. [Behavioral Archetype]</h3>
+                                <p>The Disconnected Operator. This mental model reflects an absolute absence of strategic cohesion, characterized by erratic inputs and a failure to recognize interdependencies.</p>
+                            </div>
+                            <div class="audit-conclusion">
+                                Thuan Cao, your current status is Non-Operational. You are unfit for mission deployment; immediate and total structural retraining is non-negotiable.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        <!-- --- Section 6: What I Learned --- -->
-        <section class="card" style="border-left: 4px solid var(--primary);">
-            <h2>What I Learned</h2>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
-                    <span style="color: var(--primary);">→</span>
-                    <span>Branching logic requires mapping every decision path before touching the tool. Storyboarding first saves significant rework later.</span>
-                </li>
-                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
-                    <span style="color: var(--primary);">→</span>
-                    <span>Designing the TrustScore variable taught me how to translate abstract learning objectives into measurable, trackable outcomes.</span>
-                </li>
-                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
-                    <span style="color: var(--primary);">→</span>
-                    <span>Connecting SCORM to an external pipeline showed me how behavioral data can inform future course iterations — not just report on past ones.</span>
-                </li>
-            </ul>
-        </section>
 
-        <!-- --- Section 7: Tools Used --- -->
-        <section class="card">
-            <h2>Tools Used</h2>
-            <p style="font-size: 1.1rem; color: var(--text-main); font-weight: 600;">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
+            <style>
+                .audit-explorer { display: flex; background: rgba(0,0,0,0.3); border: 1px solid var(--border-glass); border-radius: 16px; margin: 3rem 0; overflow: hidden; height: 500px; }
+                .audit-tabs { width: 250px; border-right: 1px solid var(--border-glass); background: rgba(255,255,255,0.02); }
+                .audit-tab { padding: 1.5rem; border-bottom: 1px solid var(--border-glass); cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 12px; }
+                .audit-tab:hover { background: rgba(255,255,255,0.05); }
+                .audit-tab.active { background: rgba(0, 242, 255, 0.05); border-left: 4px solid var(--primary); }
+                .tab-status { width: 10px; height: 10px; border-radius: 50%; }
+                .status-master { background: var(--success); box-shadow: 0 0 10px var(--success); }
+                .status-good { background: var(--warning); box-shadow: 0 0 10px var(--warning); }
+                .status-fail { background: var(--danger); box-shadow: 0 0 10px var(--danger); }
+                .tab-name { display: block; font-weight: 600; font-size: 0.9rem; color: #fff; }
+                .tab-meta { font-size: 0.75rem; color: var(--text-dim); }
+                .audit-display { flex: 1; padding: 2rem; overflow-y: auto; background: rgba(255,255,255,0.01); color: var(--text-main); }
+                .audit-content { display: none; }
+                .audit-content.active { display: block; animation: fadeIn 0.5s ease; }
+                .audit-header { display: flex; justify-content: space-between; margin-bottom: 2rem; font-family: monospace; font-size: 0.75rem; color: var(--primary); opacity: 0.7; }
+                .audit-section h3 { font-size: 1rem; color: #fff; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; }
+                .audit-section p, .audit-section ul { font-size: 0.9rem; margin-bottom: 1.5rem; }
+                .audit-conclusion { margin-top: 2rem; padding: 1rem; background: rgba(0, 242, 255, 0.1); border-radius: 8px; font-style: italic; color: #fff; border-left: 3px solid var(--primary); }
+                @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                @media (max-width: 768px) { .audit-explorer { flex-direction: column; height: auto; } .audit-tabs { width: 100%; display: flex; overflow-x: auto; } .audit-tab { flex: 1; min-width: 150px; border-right: 1px solid var(--border-glass); border-bottom: none; } }
+            </style>
+
+            <script>
+                document.querySelectorAll('.audit-tab').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        document.querySelectorAll('.audit-tab').forEach(t => t.classList.remove('active'));
+                        document.querySelectorAll('.audit-content').forEach(c => c.classList.remove('active'));
+                        tab.classList.add('active');
+                        document.getElementById(tab.dataset.target).classList.add('active');
+                    });
+                });
+            </script>
+
+            <div class="evidence-frame" style="overflow: hidden; max-height: 550px; border-radius: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                <div class="image-box" style="margin:0; transition: transform 0.3s; transform: translateY(-26%);">
+                    <img src="assets/Titanium_Evidence/telegram_v9_audit.png" alt="Telegram Strategic Audit Blueprint" style="width: 100%; border-radius: 0;">
+                </div>
+                <div class="prestige-badge" style="top: 1rem; right: 1rem;">Live System Proof</div>
+            </div>
+            <div class="caption" style="margin-top: 1rem;">
+                <strong>Strategic Logic Validation:</strong> The snapshot above illustrates the system's ability to handle critical performance drops. Using <strong>Gemini 1.5 Flash</strong>, the platform generates a comprehensive 5-point remediation roadmap (The Phoenix Action Plan) within seconds of a 'Critical Failure' detection.
+            </div>
         </section>
 
         <footer>
             <div class="badge" style="margin-bottom: 2rem;">Next Case Study</div>
-            <a href="case-study-moodle-remote.html" class="next-step">Universal LMS Scalability →</a>
+            <a href="case-study-moodle.html" class="next-step">Universal LMS Scalability →</a>
             <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
-                &copy; 2026 Phi Tong | Remote Learning Developer & Technical ID
+                &copy; 2026 Phi Tong | Learning Experience Architect
             </div>
         </footer>
 
