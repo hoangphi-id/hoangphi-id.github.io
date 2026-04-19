@@ -1,42 +1,26 @@
-<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 12/04/2026 10:10] [I (AI) CHANGED THIS] -->
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 11:05] [I (AI) CHANGED THIS] -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phi Tong | Technical Implementation & Remote Workflow Specialist</title>
+    <title>Phi Tong | Branching Behavioral Simulator Case Study</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-    <!-- Mermaid JS for diagrams -->
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark',
-            securityLevel: 'loose'
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #00f2ff;
-            --secondary: #006ae6;
+            --primary: #f59e0b; /* Amber/Titanium Theme */
+            --secondary: #d97706;
             --bg-dark: #0a0c10;
             --card-bg: rgba(255, 255, 255, 0.03);
             --border-glass: rgba(255, 255, 255, 0.1);
             --text-main: #e0e6ed;
             --text-dim: #94a3b8;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
         }
 
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
@@ -48,672 +32,223 @@
         }
 
         .bg-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(0, 106, 230, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.05) 0%, transparent 40%);
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, rgba(217, 119, 6, 0.05) 0%, transparent 40%);
             z-index: -1;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
 
         .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary);
-            text-decoration: none;
-            margin-bottom: 3rem;
-            font-weight: 600;
-            gap: 10px;
+            display: inline-flex; align-items: center; color: var(--primary);
+            text-decoration: none; margin-bottom: 3rem; font-weight: 600; gap: 10px;
             transition: transform 0.3s;
         }
+        .back-link:hover { transform: translateX(-5px); }
 
-        .back-link:hover {
-            transform: translateX(-5px);
-        }
-
-        header {
-            margin-bottom: 5rem;
-        }
-
+        header { margin-bottom: 5rem; }
         .badge {
-            background: rgba(0, 242, 255, 0.1);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: 1px solid rgba(0, 242, 255, 0.3);
-            display: inline-block;
-            margin-bottom: 1.5rem;
+            background: rgba(245, 158, 11, 0.1); color: var(--primary);
+            padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem;
+            font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            border: 1px solid rgba(245, 158, 11, 0.3); display: inline-block; margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1;
+            margin-bottom: 1.5rem; background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            max-width: 800px;
-        }
+        .subtitle { font-size: 1.25rem; color: var(--text-dim); max-width: 800px; }
 
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
+        .tech-stack { display: flex; gap: 10px; margin-top: 2rem; flex-wrap: wrap; }
         .tech-pill {
-            background: var(--card-bg);
-            border: 1px solid var(--border-glass);
-            padding: 0.4rem 1rem;
-            border-radius: 10px;
-            font-size: 0.85rem;
-            color: var(--text-main);
+            background: var(--card-bg); border: 1px solid var(--border-glass);
+            padding: 0.4rem 1rem; border-radius: 10px; font-size: 0.85rem; color: var(--text-main);
         }
 
-        /* --- Sections --- */
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .mermaid-container {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 3rem 2rem;
-            margin: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .mermaid {
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-        }
-
-        .mermaid svg {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
-        .diagram-group {
-            margin: 3rem 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            background: var(--card-bg); border: 1px solid var(--border-glass);
+            border-radius: 24px; padding: 3rem; margin-bottom: 4rem; backdrop-filter: blur(10px);
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            font-size: 2rem; margin-bottom: 2rem; color: #fff;
+            display: flex; align-items: center; gap: 1rem;
         }
-
         h2::before {
-            content: '';
-            width: 4px;
-            height: 30px;
-            background: var(--primary);
-            display: inline-block;
-            border-radius: 2px;
+            content: ''; width: 4px; height: 30px; background: var(--primary);
+            display: inline-block; border-radius: 2px;
         }
 
-        /* --- Executive Summary Styles --- */
-        .exec-summary {
-            background: rgba(0, 242, 255, 0.05);
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
+        p { margin-bottom: 1.5rem; color: var(--text-dim); font-size: 1.1rem; }
+
+        .image-box {
+            margin: 2.5rem 0; border-radius: 12px; overflow: hidden;
+            border: 1px solid var(--border-glass); background: #000;
+        }
+        .image-box img { width: 100%; height: auto; display: block; }
+        .caption {
+            padding: 1rem; background: rgba(255, 255, 255, 0.02); text-align: center;
+            font-size: 0.9rem; color: var(--text-dim); border-top: 1px solid var(--border-glass);
         }
 
-        .exec-summary::before {
-            content: 'EXECUTIVE SUMMARY';
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            color: rgba(0, 242, 255, 0.3);
-        }
-
-        .exec-summary h2 {
-            background: linear-gradient(to right, var(--primary), #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 2rem;
-            border: none;
-        }
-
-        .exec-summary h2::before {
-            display: none;
-        }
-
-        .exec-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .exec-item h3 {
-            color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .exec-item h3 i {
-            color: var(--primary);
-        }
-
-        .exec-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .exec-item ul li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        .exec-item ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-
-        .takeaway-box {
-            margin-top: 2.5rem;
-            padding: 1.5rem;
-            background: rgba(0, 242, 255, 0.1);
-            border-radius: 16px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .takeaway-box p {
-            margin: 0;
-            font-style: italic;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-dim);
-            font-size: 1.1rem;
+        .evidence-frame {
+            background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass);
+            border-radius: 16px; padding: 12px; margin-bottom: 3rem;
         }
 
         .mermaid-container {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2rem;
-            border-radius: 16px;
-            margin: 2rem 0;
-            border: 1px solid var(--border-glass);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            background: #fff; padding: 2rem; border-radius: 12px; margin: 2rem 0;
+            display: flex; justify-content: center;
         }
 
-        /* --- Evidence Containers (Clean & Uniform) --- */
-        .evidence-frame {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .evidence-frame:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 242, 255, 0.4);
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .image-box {
-            margin: 2.5rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-glass);
-            background: #000;
-        }
-
-        .image-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
-        }
-
-        .state-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .state-grid .evidence-frame {
-            padding: 8px;
-        }
-
-        .state-grid img {
-            width: 100%;
-            aspect-ratio: 16/10;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        /* --- Image Gallery (Natural Stack) --- */
-        .evidence-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            margin: 2rem 0;
-        }
-
-        .evidence-stack img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .image-box:hover img {
-            transform: scale(1.01);
-        }
-
-        .caption {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.02);
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            border-top: 1px solid var(--border-glass);
-        }
-
-        /* --- Score Badge Overlay --- */
-        .score-badge {
-            position: absolute;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.85);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            z-index: 10;
-            border: 1px solid var(--border-glass);
-            white-space: nowrap;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .badge-success { color: var(--success); border-color: var(--success); }
-        .badge-warning { color: var(--warning); border-color: var(--warning); }
-        .badge-danger { color: var(--danger); border-color: var(--danger); }
-
-        /* --- Feedback Bubble Overlay --- */
-        .feedback-bubble {
-            position: absolute;
-            bottom: 55px;
-            left: 20px;
-            right: 20px;
-            background: #fff;
-            color: #000;
-            padding: 12px 15px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            line-height: 1.3;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            z-index: 5;
-            text-align: left;
-        }
-        .feedback-bubble::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 20px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #fff;
-        }
-
-        .grid-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--border-glass);
-        }
-
-        .stat-label {
-            display: block;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-
-        .stat-desc {
-            font-size: 0.95rem;
-            color: var(--text-dim);
-        }
-
-        /* --- Global Image Enhancements --- */
-        .image-overlay-card {
-            position: relative;
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 1rem;
-            border: 1px solid var(--border-glass);
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 6rem 0;
-            border-top: 1px solid var(--border-glass);
-        }
-
+        footer { text-align: center; padding: 6rem 0; border-top: 1px solid var(--border-glass); }
         .next-step {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 5px;
-            transition: all 0.3s;
+            font-size: 1.5rem; color: #fff; text-decoration: none; font-weight: 700;
+            border-bottom: 2px solid var(--primary); padding-bottom: 5px; transition: all 0.3s;
         }
+        .next-step:hover { color: var(--primary); padding-left: 10px; }
 
-        .next-step:hover {
-            color: var(--primary);
-            padding-left: 10px;
-        }
-
-        /* --- COMPREHENSIVE MOBILE HARDENING --- */
         @media (max-width: 768px) {
             .container { padding: 2rem 1.2rem; }
-            h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; line-height: 1.1; }
-            .subtitle { font-size: 1rem; margin-bottom: 2rem; }
-            .card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
-            
-            /* Force all grids to stack 100% width */
-            .exec-grid, .grid-stats, .state-grid, .grid-2 { 
-                grid-template-columns: 1fr !important; 
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 1.5rem; 
-            }
-            
-            .exec-item { width: 100% !important; }
-            .exec-item h3 { font-size: 1.1rem; }
-            .state-grid .evidence-frame { margin-bottom: 1rem; }
-            .image-box, .evidence-frame { margin: 1.5rem 0; width: 100% !important; }
-            .mermaid-container { padding: 1rem; overflow-x: auto; }
-            .next-step { font-size: 1.2rem; display: block; }
+            h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; }
+            .card { padding: 1.5rem; }
         }
     </style>
 </head>
-
 <body>
 
     <div class="bg-glow"></div>
 
     <div class="container">
-
         <a href="./index.html" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
             Back to Portfolio
         </a>
+
         <header>
             <div class="badge">Case Study 1</div>
             <h1>Branching Behavioral Simulator — Articulate Storyline 360</h1>
-            <p class="subtitle">Solving for high-stakes negotiation through real-time Behavioral Data Tracking.</p>
+            <p class="subtitle">Capturing decision patterns under pressure through high-fidelity simulation and automated data logging.</p>
             <div class="tech-stack">
-                <span class="tech-pill">Articulate Storyline 360</span>
+                <span class="tech-pill">Storyline 360</span>
                 <span class="tech-pill">JavaScript (ES6)</span>
-                <span class="tech-pill">n8n</span>
-                <span class="tech-pill">Google Sheets</span>
+                <span class="tech-pill">n8n Automation</span>
                 <span class="tech-pill">Gemini AI</span>
-                <span class="tech-pill">Moodle (SCORM 1.2)</span>
+                <span class="tech-pill">SCORM 1.2</span>
             </div>
         </header>
 
         <!-- --- Section 1: The Problem --- -->
         <section class="card">
             <h2>The Problem</h2>
-            <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough. The real question is: what does a learner's decision pattern reveal about their thinking?</p>
-            <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure.</p>
-            
-            <div class="stat-item" style="border-left: 4px solid var(--primary); margin-top: 2rem;">
-                <span class="stat-label">Core Objective</span>
-                <p style="margin:0;">Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages. Each choice updates a hidden TrustScore variable, which determines the final outcome and feedback the learner receives.</p>
-            </div>
+            <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough.</p>
+            <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure through their decision pattern.</p>
         </section>
 
-        <!-- --- Section 2: What I Built --- -->
+        <!-- --- Section 2: Core Objective --- -->
         <section class="card">
-            <h2>What I Built</h2>
-            <p>A branching behavioral simulator in Articulate Storyline 360 with:</p>
+            <h2>Core Objective</h2>
+            <p>Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages:</p>
             <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>3 decision stages:</strong> Negotiation → Diplomacy → Team Alignment</span>
+                    <span><strong>Stage 1: Negotiation</strong> — Balancing client demands with reality.</span>
                 </li>
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>TrustScore and Stress Meter variables</strong> tracking learner choices across the entire scenario</span>
+                    <span><strong>Stage 2: Diplomacy</strong> — Navigating internal stakeholder interests.</span>
                 </li>
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>State-driven visual feedback</strong> — the interface changes color (Success / Warning / Danger) based on current performance</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>JavaScript trigger logic</strong> connecting Storyline to an external data pipeline (n8n → Google Sheets) for behavioral logging</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Automated feedback via Gemini AI</strong> — each submission triggers a diagnostic verdict based on the learner's decision pattern</span>
+                    <span><strong>Stage 3: Team Alignment</strong> — Managing direct report capacity and morale.</span>
                 </li>
             </ul>
-            
-            <div style="margin-top: 3rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
-                <span class="stat-label">Tools Used</span>
-                <p style="font-size: 1rem; color: var(--text-dim);">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
-            </div>
+            <p style="margin-top: 2rem;">Each choice updates a <strong>hidden TrustScore variable</strong>, which determines the final outcome and diagnostic feedback the learner receives.</p>
         </section>
 
-            <div class="diagram-group">
+        <!-- --- Section 3: What I Built --- -->
+        <section class="card">
+            <h2>What I Built</h2>
+            <p>A branching behavioral simulator in Articulate Storyline 360 with advanced logic integration:</p>
+            
+            <div class="evidence-frame">
                 <div class="mermaid-container">
-                    <div class="mermaid">
-                        graph TD
-                        A[Storyline UI] -- "1. Telemetry Data" --> B["JS Bridge (V4.1)"]
-                        B -- "2. Async Webhook" --> C["n8n Engine"]
-                        C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
-                        D -- "4. Technical Assessment" --> E["Logic Switch"]
-                        
-                        E -- "5a. Data Log" --> F["Google Sheets"]
-                        E -- "5b. Expert Alert" --> G["Telegram Master"]
-                        E -- "5c. LMS Sync" --> H["LMS / SCORM"]
-
-                        style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
-                        style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
-                        style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
-                        style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
-                        style H fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
-                    </div>
-                    <div class="caption" style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem; width: 100%; text-align: center;">Technical Architecture: Capturing behavioral data through a serverless pipeline (JS → n8n → Analytics).</div>
+                    <img src="https://mermaid.ink/svg/pako:eNptkEELwjAMhf_KkrM7-Q_EHqSInlRUKmUba7uWdiPiv7vRYYIeeY_3kvclL7BWA4ZMoS3Yh9o7z9S7aGzK6v2W_SjE4I-090L0_j6-r5_pI8V7uPCH_Y2rZ0A_0h6EGN2D5N4_yIe7D_6wv3H1AujT-j39Yl6o1WqG92T6jB2T8Ykpg5gyV1fW6soqM1NmpkqmSmaqpKrEVInJTFVUVVREVVREVURFRERFRFRERURFVI7mChWpIicjO8Wv9At0k31y" alt="Architecture Diagram" style="width: 100%; height: auto;">
                 </div>
+                <div class="caption">System Architecture: Connecting Storyline variables to an external data pipeline via JavaScript.</div>
             </div>
 
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Variable Tracking:</strong> TrustScore and Stress Meter variables monitoring choices across all 3 stages.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>State-driven Feedback:</strong> The interface dynamically changes color (Success / Warning / Danger) based on current score.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Data Logging:</strong> JavaScript trigger logic connecting Storyline to an external n8n pipeline for granular behavioral logging.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>AI Diagnostic:</strong> Gemini AI verdict triggered by each submission to provide patterns-based feedback.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Technical Evidence</h2>
+            
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
-                    <img src="../assets/Titanium_Evidence/n8n_v9_raw.png" alt="n8n Pipeline">
+                    <img src="../assets/Case_Study/01_Technical_Capture/08_Google_Apps_Script_Webhook.png" alt="n8n Pipeline">
                 </div>
-                <div class="caption" style="border:none;">The Intelligent Diagnostic Bridge: Now powered by a live Gemini AI reasoning node for automated root-cause analysis.</div>
+                <div class="caption">Data Orchestration: The backend n8n workflow capturing and routing decision data.</div>
+            </div>
+
+            <div class="evidence-frame" style="margin-bottom: 0;">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Case_Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Log">
+                </div>
+                <div class="caption">Behavioral Logging: Decisions are recorded in real-time, enabling analysis of common "failure paths".</div>
             </div>
         </section>
 
-        <!-- --- Section 3: Design Decisions --- -->
-        <section class="card" style="border-top: 4px solid var(--secondary);">
+        <!-- --- Section 4: Design Decisions --- -->
+        <section class="card" style="border-top: 4px solid var(--primary);">
             <h2>Design Decisions</h2>
-            <div class="grid-stats">
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why branching instead of linear?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do — and that's the data worth collecting.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Branching?</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do — and that's the data worth collecting.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why track TrustScore across stages?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">A single decision doesn't define a learner's pattern. Tracking cumulative score across 3 stages shows whether a learner is consistently strategic or inconsistent under different types of pressure.</p>
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Track TrustScore?</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">A single decision doesn't define a pattern. Tracking cumulative scores shows whether a learner is consistently strategic or inconsistent under pressure.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; grid-column: span 2;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why connect to an external pipeline?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem;">SCORM's built-in reporting only captures completion and score. Connecting to Google Sheets via n8n allowed logging of every decision path — not just the final result.</p>
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass); grid-column: span 1;">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">External Pipeline</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">SCORM 1.2 only captures completion and score. Connecting to n8n/Google Sheets via JavaScript allows logging every decision path.</p>
                 </div>
             </div>
         </section>
 
-        <!-- --- Section 3: The Behavioral Journey --- -->
-        <section class="card">
-            <h2>The Behavioral Journey</h2>
-            <p>The simulator is divided into 3 high-stakes stages. Every decision updates a hidden global
-                <strong>TrustScore</strong>, which determines the aesthetic and outcome of the final dashboard.
-            </p>
-
-            <div class="grid-stats">
-                <div class="stat-item">
-                    <span class="stat-label">Stage 1: Negotiation</span>
-                    <p class="stat-desc">Balancing client pressure against resource reality. Testing "Yes-man" vs
-                        "Strategic Negotiator" patterns.</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Stage 2: Diplomacy</span>
-                    <p class="stat-desc">Formalizing strategies via high-stakes communication. Precision alignment with
-                        stakeholder expectations.</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Stage 3: Team Alignment</span>
-                    <p class="stat-desc">Leading under pressure. Gauging the impact of managerial stress on team
-                        psychological safety.</p>
-                </div>
-            </div>
-
-            <div class="image-box">
-                <img src="../assets/Case_Study/01_Technical_Capture/01_Decision_Logic_And_States.png"
-                    alt="Branching Logic">
-                <div class="caption">Mapping complex behavioral variables: How decision logic translates into
-                    instructional impact.</div>
-            </div>
-        </section>
-
-        <!-- --- Section 4: Visual Fidelity --- -->
-        <section class="card">
-            <h2>Adaptive Feedback</h2>
-            <p>The UI is alive. Using state-driven CSS/Storyline triggers, the environment transforms its visual glow
-                (Success, Warning, Danger) based on the user's current performance state.</p>
-
-            <div class="state-grid">
-                <div class="evidence-frame" style="border-color: var(--success);">
-                    <div class="score-badge badge-success">FINAL TRUST SCORE: 100%</div>
-                    <div class="feedback-bubble">"Implementation complete. Technical standards confirmed. Workflow validated across all target metrics."</div>
-                    <img src="../assets/Titanium_Evidence/success_v9.png" alt="Success State">
-                </div>
-                <div class="evidence-frame" style="border-color: var(--warning);">
-                    <div class="score-badge badge-warning">FINAL TRUST SCORE: 40%</div>
-                    <div class="feedback-bubble">"Tactical alignment marginal. Communication fragmented—technical adjustment required to ensure stability."</div>
-                    <img src="../assets/Titanium_Evidence/Good_v9.png" alt="Warning State">
-                </div>
-                <div class="evidence-frame" style="border-color: var(--danger);">
-                    <div class="score-badge badge-danger">FINAL TRUST SCORE: 5%</div>
-                    <div class="feedback-bubble">"Technical failure detected. Systemic adjustment required. Implementation readiness non-operational."</div>
-                    <img src="../assets/Titanium_Evidence/Fail_v9.png" alt="Fail State">
-                </div>
-            </div>
-            <p style="text-align:center; font-size:0.8rem; margin-top:10px; color: var(--text-dim);">Visual States: Dynamic environment transformations based on real-time TrustScore.</p>
-        </section>
-
-        <!-- --- Section 5: Real-world Impact --- -->
-        <section class="card">
-            <h2>Technical Diagnostic Center</h2>
-            <p>Behind the aesthetics lies the data. Stakeholders receive real-time, unbranded diagnostic alerts via Telegram, allowing for <strong>instant technical refinement</strong> while all data is logged into the master warehouse.</p>
-
-            <div class="evidence-stack">
-                <div class="evidence-frame">
-                    <div class="image-box " style="margin:0;">
-                        <img src="../assets/Titanium_Evidence/telegram_v9_audit.png" alt="Telegram Notification">
-                    </div>
-                    <div class="caption" style="border:none;">Real-time Telegram Alert Payload: Instant visibility from the serverless bridge.</div>
-                </div>
-
-                <div class="evidence-frame">
-                    <div class="image-box" style="margin:0;">
-                        <img src="../assets/Titanium_Evidence/google_sheets_v9_authentic.png" alt="Google Sheets Log">
-                    </div>
-                    <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
-                </div>
-            </div>
-        <!-- --- Section 6: What I Learned --- -->
+        <!-- --- Section 5: What I Learned --- -->
         <section class="card" style="border-left: 4px solid var(--primary);">
             <h2>What I Learned</h2>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+            <ul style="list-style: none; padding: 0;">
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Branching logic requires mapping every decision path before touching the tool. Storyboarding first saves significant rework later.</span>
+                    <span>Branching logic requires mapping every path before touching the tool. Storyboarding first saves significant rework later.</span>
                 </li>
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
@@ -726,52 +261,19 @@
             </ul>
         </section>
 
-        <!-- --- Section 7: Tools Used --- -->
         <section class="card">
             <h2>Tools Used</h2>
-            <p style="font-size: 1.1rem; color: var(--text-main); font-weight: 600;">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
+            <p style="font-size: 1rem; color: var(--text-dim); margin-bottom: 0;">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
         </section>
 
         <footer>
-            <div class="badge" style="margin-bottom: 2rem;">Next Case Study</div>
-            <a href="case-study-moodle-remote.html" class="next-step">Universal LMS Scalability →</a>
+            <a href="index.html" class="next-step">Return to Portfolio Hub →</a>
             <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
-                &copy; 2026 Phi Tong | Remote Learning Developer & Technical ID
+                &copy; 2026 Phi Tong | Remote Specialist & Technical ID
             </div>
         </footer>
 
     </div>
 
-    <!-- ULTIMATUM MOBILE FIX: FORCED STACKING & SYNC -->
-    <style>
-        @media (max-width: 768px) {
-            .container { padding: 2rem 1rem !important; width: 100% !important; max-width: 100% !important; }
-            h1 { font-size: clamp(2rem, 10vw, 3rem) !important; line-height: 1.1 !important; }
-            
-            /* FORCE VERTICAL STACK FOR ALL GRID CONTAINERS */
-            .exec-grid, .grid-stats, .state-grid, .grid-2, .grid-3 {
-                display: block !important;
-                grid-template-columns: 1fr !important;
-            }
-            
-            .exec-item, .stat-item, .evidence-frame {
-                width: 100% !important;
-                margin-bottom: 1.5rem !important;
-                display: block !important;
-            }
-            
-            .exec-item h3 { font-size: 1.1rem !important; }
-            .takeaway-box { padding: 1.2rem !important; }
-            
-            /* IMAGE FIT */
-            img { max-width: 100% !important; height: auto !important; border-radius: 8px !important; }
-            .mermaid-container { overflow-x: auto !important; padding: 0.5rem !important; }
-            .mermaid { transform: scale(0.9); transform-origin: top left; }
-            
-            /* SYNC: Ensure no sections are hidden */
-            section, div, p, span { display: block !important; }
-        }
-    </style>
 </body>
-
 </html>
