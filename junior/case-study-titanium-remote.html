@@ -1,4 +1,4 @@
-<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 11:05] [I (AI) CHANGED THIS] -->
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 11:18] [HARD OVERWRITE: JUNIOR PERSONA SYNC] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,29 +148,14 @@
         <!-- --- Section 1: The Problem --- -->
         <section class="card">
             <h2>The Problem</h2>
-            <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough.</p>
-            <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure through their decision pattern.</p>
+            <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough. The real question is: what does a learner's decision pattern reveal about their thinking?</p>
+            <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure.</p>
         </section>
 
         <!-- --- Section 2: Core Objective --- -->
         <section class="card">
             <h2>Core Objective</h2>
-            <p>Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages:</p>
-            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Stage 1: Negotiation</strong> — Balancing client demands with reality.</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Stage 2: Diplomacy</strong> — Navigating internal stakeholder interests.</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Stage 3: Team Alignment</strong> — Managing direct report capacity and morale.</span>
-                </li>
-            </ul>
-            <p style="margin-top: 2rem;">Each choice updates a <strong>hidden TrustScore variable</strong>, which determines the final outcome and diagnostic feedback the learner receives.</p>
+            <p>Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages. Each choice updates a hidden <strong>TrustScore variable</strong>, which determines the final outcome and feedback the learner receives.</p>
         </section>
 
         <!-- --- Section 3: What I Built --- -->
@@ -178,49 +163,28 @@
             <h2>What I Built</h2>
             <p>A branching behavioral simulator in Articulate Storyline 360 with advanced logic integration:</p>
             
-            <div class="evidence-frame">
-                <div class="mermaid-container">
-                    <img src="https://mermaid.ink/svg/pako:eNptkEELwjAMhf_KkrM7-Q_EHqSInlRUKmUba7uWdiPiv7vRYYIeeY_3kvclL7BWA4ZMoS3Yh9o7z9S7aGzK6v2W_SjE4I-090L0_j6-r5_pI8V7uPCH_Y2rZ0A_0h6EGN2D5N4_yIe7D_6wv3H1AujT-j39Yl6o1WqG92T6jB2T8Ykpg5gyV1fW6soqM1NmpkqmSmaqpKrEVInJTFVUVVREVVREVURFRERFRFRERURFVI7mChWpIicjO8Wv9At0k31y" alt="Architecture Diagram" style="width: 100%; height: auto;">
-                </div>
-                <div class="caption">System Architecture: Connecting Storyline variables to an external data pipeline via JavaScript.</div>
-            </div>
-
-            <ul style="list-style: none; padding: 0;">
+            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>Variable Tracking:</strong> TrustScore and Stress Meter variables monitoring choices across all 3 stages.</span>
+                    <span><strong>3 decision stages:</strong> Negotiation → Diplomacy → Team Alignment.</span>
                 </li>
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>State-driven Feedback:</strong> The interface dynamically changes color (Success / Warning / Danger) based on current score.</span>
+                    <span><strong>TrustScore and Stress Meter variables:</strong> Tracking learner choices across the entire scenario.</span>
                 </li>
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>Data Logging:</strong> JavaScript trigger logic connecting Storyline to an external n8n pipeline for granular behavioral logging.</span>
+                    <span><strong>State-driven visual feedback:</strong> The interface changes color based on current performance.</span>
                 </li>
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
-                    <span><strong>AI Diagnostic:</strong> Gemini AI verdict triggered by each submission to provide patterns-based feedback.</span>
+                    <span><strong>JavaScript trigger logic:</strong> Connecting Storyline to an external data pipeline (n8n → Google Sheets) for behavioral logging.</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Gemini AI Integration:</strong> Triggers a diagnostic verdict based on the learner's decision pattern.</span>
                 </li>
             </ul>
-        </section>
-
-        <section class="card">
-            <h2>Technical Evidence</h2>
-            
-            <div class="evidence-frame">
-                <div class="image-box" style="margin:0;">
-                    <img src="../assets/Case_Study/01_Technical_Capture/08_Google_Apps_Script_Webhook.png" alt="n8n Pipeline">
-                </div>
-                <div class="caption">Data Orchestration: The backend n8n workflow capturing and routing decision data.</div>
-            </div>
-
-            <div class="evidence-frame" style="margin-bottom: 0;">
-                <div class="image-box" style="margin:0;">
-                    <img src="../assets/Case_Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Log">
-                </div>
-                <div class="caption">Behavioral Logging: Decisions are recorded in real-time, enabling analysis of common "failure paths".</div>
-            </div>
         </section>
 
         <!-- --- Section 4: Design Decisions --- -->
@@ -228,16 +192,12 @@
             <h2>Design Decisions</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
                 <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Branching?</h3>
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why branching?</h3>
                     <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do — and that's the data worth collecting.</p>
                 </div>
                 <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why Track TrustScore?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">A single decision doesn't define a pattern. Tracking cumulative scores shows whether a learner is consistently strategic or inconsistent under pressure.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass); grid-column: span 1;">
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">External Pipeline</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">SCORM 1.2 only captures completion and score. Connecting to n8n/Google Sheets via JavaScript allows logging every decision path.</p>
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Tracking TrustScore</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">A single decision doesn't define a pattern. Tracking cumulative scores shows consistency under pressure.</p>
                 </div>
             </div>
         </section>
@@ -248,15 +208,15 @@
             <ul style="list-style: none; padding: 0;">
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Branching logic requires mapping every path before touching the tool. Storyboarding first saves significant rework later.</span>
+                    <span>Branching logic requires mapping every path before touching the tool. Storyboarding first saves significant rework.</span>
                 </li>
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Designing the TrustScore variable taught me how to translate abstract learning objectives into measurable, trackable outcomes.</span>
+                    <span>Designing the TrustScore variable taught me how to translate abstract learning objectives into measurable outcomes.</span>
                 </li>
                 <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
                     <span style="color: var(--primary);">→</span>
-                    <span>Connecting SCORM to an external pipeline showed me how behavioral data can inform future course iterations — not just report on past ones.</span>
+                    <span>Connecting SCORM to an external pipeline showed me how behavioral data can inform future pedagogical iterations.</span>
                 </li>
             </ul>
         </section>
