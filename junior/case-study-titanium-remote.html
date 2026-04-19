@@ -533,38 +533,12 @@
             </div>
         </header>
 
-        <section class="exec-summary">
-            <h2 style="border:none; margin-bottom: 2rem;">Branching Behavioral Simulator — Articulate Storyline 360</h2>
-
-            <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2.5rem; font-style: italic; opacity: 0.9;">
-                "Standard eLearning often only tells us if a learner finished — not why they made each decision. For a high-stakes negotiation scenario, completion data alone isn't enough. The real question is: what does a learner's decision pattern reveal about their thinking?"
-            </p>
-
-            <div class="exec-item" style="margin-top: 3rem; grid-column: span 2;">
-                <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 1.5rem;">What I learned from this project:</h3>
-                <ul class="exec-list" style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem; position: relative; padding-left: 1.5rem;">
-                        <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                        <span>Branching logic requires mapping every decision path before touching the tool. Storyboarding first saves significant rework later.</span>
-                    </li>
-                    <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem; position: relative; padding-left: 1.5rem;">
-                        <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                        <span>Designing the TrustScore variable taught me how to translate abstract learning objectives into measurable, trackable outcomes.</span>
-                    </li>
-                    <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem; position: relative; padding-left: 1.5rem;">
-                        <span style="position: absolute; left: 0; color: var(--primary);">→</span>
-                        <span>Connecting SCORM to an external pipeline showed me how behavioral data can inform future course iterations — not just report on past ones.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <!-- --- Section 1: The Problem --- -->
         <section class="card">
             <h2>The Problem</h2>
             <p>Standard eLearning often only tells us if a learner finished a course — not why they made each decision along the way. For a scenario that simulates high-stakes negotiation, completion data alone isn't enough. The real question is: what does a learner's decision pattern reveal about their thinking?</p>
             <p style="margin-top: 1rem;">Most quiz-based assessments give a score. This project was designed to give something more useful — a picture of how a learner thinks under pressure.</p>
-
+            
             <div class="stat-item" style="border-left: 4px solid var(--primary); margin-top: 2rem;">
                 <span class="stat-label">Core Objective</span>
                 <p style="margin:0;">Simulate a "Friday Night Crisis" scenario where a Project Lead must balance client pressure, team capacity, and stakeholder trust across 3 decision stages. Each choice updates a hidden TrustScore variable, which determines the final outcome and feedback the learner receives.</p>
@@ -733,6 +707,29 @@
                     <div class="caption" style="border:none;">Master Behavioral Data Warehouse: 100% data fidelity in the centralized hub.</div>
                 </div>
             </div>
+        <!-- --- Section 6: What I Learned --- -->
+        <section class="card" style="border-left: 4px solid var(--primary);">
+            <h2>What I Learned</h2>
+            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>Branching logic requires mapping every decision path before touching the tool. Storyboarding first saves significant rework later.</span>
+                </li>
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>Designing the TrustScore variable taught me how to translate abstract learning objectives into measurable, trackable outcomes.</span>
+                </li>
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>Connecting SCORM to an external pipeline showed me how behavioral data can inform future course iterations — not just report on past ones.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- --- Section 7: Tools Used --- -->
+        <section class="card">
+            <h2>Tools Used</h2>
+            <p style="font-size: 1.1rem; color: var(--text-main); font-weight: 600;">Articulate Storyline 360 · JavaScript (ES6) · n8n · Google Sheets · Gemini AI · Moodle (SCORM 1.2 deployment)</p>
         </section>
 
         <footer>

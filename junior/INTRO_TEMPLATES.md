@@ -4,16 +4,16 @@ These templates are optimized for the international remote market. They address 
 
 ---
 
-## Template 1: For EdTech Startups (Direct & Performance-Driven)
-**Goal**: Highlight speed, AI orchestration, and a "Generalist/Builder" mindset.
+## Template 1: For EdTech & Training Startups (Direct & Implementation-Driven)
+**Goal**: Highlight speed, backend automation, and the transition from teaching to specialized ID.
 
 > "Hi [Hiring Manager's Name],
 >
-> I'm Phi Tong, an English pedagogy specialist (10+ years experience) currently pivoting into **E-Learning Implementation and Instructional Design**.
+> I'm Phi Tong, a language learning specialist (10+ years experience) currently pivoting into **Technical Instructional Design and LMS Implementation**.
 >
-> I am applying for the Junior role at [Company Name] because I respect your remote operational standards and want to integrate into your workflow as a dedicated executor. However, I bring a unique 'unfair advantage': **AI-Native Efficiency**. 
+> I am applying for the Junior role at [Company Name] because I want to bring my pedagogical depth to your technical workflow. While I am new to the Remote ID title, I bring an 'unfair advantage' in **Technical Automation**.
 > 
-> Rather than just designing content, I build 'intelligent learning systems' (such as Behavioral Simulators and AI-Socratic Tutors) that reduce operational 'shadow work' by 40%. My goal isn't just to work; it's to demonstrate that a Junior with an AI-first mindset can deliver the output and quality of a high-level lead.
+> Rather than just designing slides, I build **automated learning pipelines** (using n8n, JavaScript, and Moodle) that turn static content into data-driven behavioral simulators. My goal is to demonstrate that a Junior with a technical-first mindset can deliver the stability and output of a high-level developer.
 > 
 > I’m excited about the possibility of bringing my blend of tactical execution and pedagogical depth to your team.
 > 
@@ -22,16 +22,16 @@ These templates are optimized for the international remote market. They address 
 
 ---
 
-## Template 2: For International Schools & Global Orgs (Academic & Standard-Driven)
-**Goal**: Highlight alignment with global frameworks (UNESCO/IB) and human-centered design.
+## Template 2: For Academic Orgs & Global English Providers (Curriculum & Assessment Focus)
+**Goal**: Highlight 10 years of IELTS success and alignment with instructional standards.
 
 > "Dear [Hiring Manager's Name / Search Committee],
 >
-> Having spent the last decade driving academic excellence in the classroom, I’ve learned that technology is most powerful when it amplifies human agency.
+> Having spent the last decade coaching adult learners (IELTS 5.5 to 7.0) at leading institutions in Vietnam, I’ve learned that learning impact is driven by precise **Assessment Design** and **Formative Feedback**.
 > 
-> I am currently pivoting my career toward **Instructional Design**, with a focus on implementing global frameworks such as the **UNESCO AI Competency (2026)** and **IB Digital Learning Principles**. My recent work involves building scalable digital infrastructure that turns traditional 'compliance' into active 'inquiry-based' learning.
+> I am currently pivoting my career toward **Instructional Design**, with a focus on implementing criteria-based rubrics and mobile-first learning pathways. My recent work involves building digital simulators and onboarding sequences that simplify complex academic standards into learner-ready experiences.
 > 
-> I am specifically targeting a Junior position at [Organization Name] to master the nuances of your remote-first culture and international curriculum standards. I believe my combination of deep pedagogical experience and technical agility makes me a highly reliable and high-impact addition to your design team.
+> I am specifically targeting a Junior position at [Organization Name] to master your remote-first culture. I believe my combination of deep classroom experience and Technical ID agility (Storyline/Moodle) makes me a highly mission-ready addition to your design team.
 > 
 > Sincerely,
 > Phi Tong"
