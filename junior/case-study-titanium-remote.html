@@ -144,17 +144,31 @@
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-glass);
             border-radius: 16px;
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 3rem 2rem;
+            margin: 0;
             width: 100%;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         .mermaid {
             width: 100% !important;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mermaid svg {
             max-width: 100% !important;
+            height: auto !important;
+        }
+
+        .diagram-group {
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         h2 {
@@ -585,26 +599,28 @@
             </ul>
         </section>
 
-            <div class="mermaid-container">
-                <div class="mermaid">
-                    graph TD
-                    A[Storyline UI] -- "1. Telemetry Data" --> B["JS Bridge (V4.1)"]
-                    B -- "2. Async Webhook" --> C["n8n Engine"]
-                    C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
-                    D -- "4. Technical Assessment" --> E["Logic Switch"]
-                    
-                    E -- "5a. Data Log" --> F["Google Sheets"]
-                    E -- "5b. Expert Alert" --> G["Telegram Master"]
-                    E -- "5c. LMS Sync" --> H["LMS / SCORM"]
+            <div class="diagram-group">
+                <div class="mermaid-container">
+                    <div class="mermaid">
+                        graph TD
+                        A[Storyline UI] -- "1. Telemetry Data" --> B["JS Bridge (V4.1)"]
+                        B -- "2. Async Webhook" --> C["n8n Engine"]
+                        C -- "3. Context Injection" --> D["Gemini 1.5 AI Brain"]
+                        D -- "4. Technical Assessment" --> E["Logic Switch"]
+                        
+                        E -- "5a. Data Log" --> F["Google Sheets"]
+                        E -- "5b. Expert Alert" --> G["Telegram Master"]
+                        E -- "5c. LMS Sync" --> H["LMS / SCORM"]
 
-                    style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
-                    style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
-                    style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
-                    style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
-                    style H fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
+                        style B fill:#006ae6,stroke:#00f2ff,stroke-width:2px,color:#fff
+                        style D fill:#f59e0b,stroke:#fff,stroke-width:4px,color:#0a0c10
+                        style C fill:#00f2ff,stroke:#333,stroke-width:4px,color:#0a0c10
+                        style G fill:#0088cc,stroke:#333,stroke-width:2px,color:#fff
+                        style H fill:#10b981,stroke:#333,stroke-width:2px,color:#fff
+                    </div>
                 </div>
+                <div class="caption">Technical Architecture: Capturing behavioral data through a serverless pipeline (JS → n8n → Analytics).</div>
             </div>
-            <div class="caption">Technical Architecture: Capturing behavioral data through a serverless pipeline (JS → n8n → Analytics).</div>
 
             <div class="evidence-frame">
                 <div class="image-box" style="margin:0;">
