@@ -170,6 +170,13 @@
             <h2>What I Built</h2>
             <p>A branching behavioral simulator in Articulate Storyline 360 with advanced logic integration:</p>
             
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Case_Study/01_Technical_Capture/01_Decision_Logic_And_States.png" alt="Decision Logic">
+                </div>
+                <div class="caption">Branching Logic: Mapping the "Friday Night Crisis" decision paths in Storyline 360.</div>
+            </div>
+
             <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
                 <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
                     <span style="color: var(--primary);">→</span>
@@ -179,33 +186,47 @@
                     <span style="color: var(--primary);">→</span>
                     <span><strong>TrustScore and Stress Meter variables:</strong> Tracking learner choices across the entire scenario.</span>
                 </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>State-driven visual feedback:</strong> The interface changes color based on current performance.</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>JavaScript trigger logic:</strong> Connecting Storyline to an external data pipeline (n8n → Google Sheets) for behavioral logging.</span>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
-                    <span style="color: var(--primary);">→</span>
-                    <span><strong>Gemini AI Integration:</strong> Triggers a diagnostic verdict based on the learner's decision pattern.</span>
-                </li>
             </ul>
         </section>
 
         <!-- --- Section 4: Design Decisions --- -->
         <section class="card" style="border-top: 4px solid var(--primary);">
             <h2>Design Decisions</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
                 <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
                     <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why branching?</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do — and that's the data worth collecting.</p>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">Linear scenarios tell learners what to do. Branching scenarios reveal what learners actually do.</p>
                 </div>
                 <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-glass);">
                     <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Tracking TrustScore</h3>
-                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">A single decision doesn't define a pattern. Tracking cumulative scores shows consistency under pressure.</p>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; margin:0;">A single decision doesn't define a pattern. Tracking cumulative scores shows consistency.</p>
                 </div>
+            </div>
+
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Case_Study/01_Technical_Capture/02_JS_Data_Bridge_Trigger.png" alt="JS Trigger">
+                </div>
+                <div class="caption">Data Bridge: JavaScript trigger capturing TrustScore variables for external logging.</div>
+            </div>
+        </section>
+
+        <!-- --- Section 5: Technical Evidence --- -->
+        <section class="card">
+            <h2>Technical Evidence</h2>
+            
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Case_Study/01_Technical_Capture/03_State_Success_Visual.png" alt="Visual States">
+                </div>
+                <div class="caption">Behavioral Feedback: Interface states responding in real-time to learner decision patterns.</div>
+            </div>
+
+            <div class="evidence-frame" style="margin-bottom: 0;">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Case_Study/01_Technical_Capture/07_Google_Sheets_Data_Log.png" alt="Data Log">
+                </div>
+                <div class="caption">Actionable Insights: Final data landing in Google Sheets via n8n for behavioral analysis.</div>
             </div>
         </section>
 
