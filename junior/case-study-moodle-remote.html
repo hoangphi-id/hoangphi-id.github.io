@@ -1,355 +1,287 @@
+<!-- [AUTHOR: AI ANTIGRAVITY | TIMESTAMP: 19/04/2026 10:30] [I (AI) CHANGED THIS] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phi Tong | LMS Implementation & Curriculum Specialist</title>
+    <title>Phi Tong | IELTS Moodle Implementation Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a; /* Deep Navy */
-            --secondary: #3b82f6;
-            --bg-neutral: #f1f5f9;
-            --card-white: #ffffff;
-            --border: #cbd5e1;
-            --text-dark: #0f172a;
-            --text-light: #475569;
+            --primary: #f59e0b; /* Amber/IELTS Theme */
+            --secondary: #d97706;
+            --bg-dark: #0a0c10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
+            --success: #10b981;
         }
 
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-neutral);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.05) 0%, transparent 40%);
+            z-index: -1;
         }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
 
         .back-link {
-            display: inline-block;
-            color: var(--secondary);
-            text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 700;
+            display: inline-flex; align-items: center; color: var(--primary);
+            text-decoration: none; margin-bottom: 3rem; font-weight: 600; gap: 10px;
+            transition: transform 0.3s;
         }
+        .back-link:hover { transform: translateX(-5px); }
 
-        header {
-            margin-bottom: 4rem;
-            text-align: center;
+        header { margin-bottom: 5rem; }
+        .badge {
+            background: rgba(245, 158, 11, 0.1); color: var(--primary);
+            padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem;
+            font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            border: 1px solid rgba(245, 158, 11, 0.3); display: inline-block; margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1;
+            margin-bottom: 1.5rem; background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            font-weight: 400;
+        .subtitle { font-size: 1.25rem; color: var(--text-dim); max-width: 800px; }
+
+        .tech-stack { display: flex; gap: 10px; margin-top: 2rem; flex-wrap: wrap; }
+        .tech-pill {
+            background: var(--card-bg); border: 1px solid var(--border-glass);
+            padding: 0.4rem 1rem; border-radius: 10px; font-size: 0.85rem; color: var(--text-main);
         }
 
-        .main-card {
-            background: var(--card-white);
-            padding: 3.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
+        .card {
+            background: var(--card-bg); border: 1px solid var(--border-glass);
+            border-radius: 24px; padding: 3rem; margin-bottom: 4rem; backdrop-filter: blur(10px);
         }
 
         h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 2rem; margin-bottom: 2rem; color: #fff;
+            display: flex; align-items: center; gap: 1rem;
         }
-
         h2::before {
-            content: '•';
-            color: var(--secondary);
+            content: ''; width: 4px; height: 30px; background: var(--primary);
+            display: inline-block; border-radius: 2px;
         }
 
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+        p { margin-bottom: 1.5rem; color: var(--text-dim); font-size: 1.1rem; }
+
+        .grid-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem; margin: 3rem 0;
+        }
+        .stat-item {
+            background: rgba(255, 255, 255, 0.02); padding: 2rem; border-radius: 16px;
+            border: 1px solid var(--border-glass);
+        }
+        .stat-label {
+            display: block; font-weight: 700; color: var(--primary);
+            margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8rem;
         }
 
-        .image-container {
-            margin: 2.5rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border);
+        .image-box {
+            margin: 2.5rem 0; border-radius: 12px; overflow: hidden;
+            border: 1px solid var(--border-glass); background: #000;
         }
-
-        .image-container img {
-            width: 100%;
-            display: block;
-        }
-
+        .image-box img { width: 100%; height: auto; display: block; }
         .caption {
-            background: #f8fafc;
-            padding: 1rem;
-            font-size: 0.9rem;
-            text-align: center;
-            color: var(--text-light);
-            border-top: 1px solid var(--border);
+            padding: 1rem; background: rgba(255, 255, 255, 0.02); text-align: center;
+            font-size: 0.9rem; color: var(--text-dim); border-top: 1px solid var(--border-glass);
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+        .evidence-frame {
+            background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass);
+            border-radius: 16px; padding: 12px; margin-bottom: 3rem;
         }
 
-        .stat-box {
-            background: var(--bg-neutral);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary);
+        footer { text-align: center; padding: 6rem 0; border-top: 1px solid var(--border-glass); }
+        .next-step {
+            font-size: 1.5rem; color: #fff; text-decoration: none; font-weight: 700;
+            border-bottom: 2px solid var(--primary); padding-bottom: 5px; transition: all 0.3s;
         }
-
-        .tech-pill {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 4rem 0;
-            color: var(--text-light);
-        }
-
-        @media (max-width: 768px) {
-            .main-card { padding: 1.5rem; }
-            .feature-grid { grid-template-columns: 1fr; }
-        }
-
-        /* --- Executive Summary Styles --- */
-        .exec-summary {
-            background: rgba(30, 58, 138, 0.03);
-            border: 1px solid rgba(30, 58, 138, 0.1);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
-
-        .exec-summary::before {
-            content: 'EXECUTIVE SUMMARY';
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            color: rgba(30, 58, 138, 0.3);
-        }
-
-        .exec-summary h2 {
-            color: var(--primary);
-            margin-bottom: 2rem;
-            border: none;
-            display: block;
-        }
-
-        .exec-summary h2::before { display: none; }
-
-        .exec-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .exec-item h3 {
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .exec-item p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        .takeaway-box {
-            margin-top: 2.5rem;
-            padding: 1.5rem;
-            background: rgba(30, 58, 138, 0.05);
-            border-radius: 16px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .takeaway-box p {
-            margin: 0;
-            font-style: italic;
-            color: var(--primary);
-            font-weight: 600;
-        }
+        .next-step:hover { color: var(--primary); padding-left: 10px; }
 
         @media (max-width: 768px) {
             .container { padding: 2rem 1.2rem; }
-            h1 { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.1; margin-bottom: 2rem; }
-            .subtitle { font-size: 1rem; }
-            .main-card, .exec-summary { padding: 1.5rem; margin-bottom: 2.5rem; }
-            .exec-grid, .feature-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .image-container { margin: 1.5rem 0; width: 100%; }
+            h1 { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; }
+            .card { padding: 1.5rem; }
+            .grid-stats { grid-template-columns: 1fr !important; }
         }
     </style>
-<style>html{scroll-behavior:smooth;}</style></head>
+</head>
 <body>
 
+    <div class="bg-glow"></div>
+
     <div class="container">
-        <a href="./index.html" class="back-link">← Back to Portfolio</a>
-        
+        <a href="./index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Portfolio
+        </a>
+
         <header>
-            <h1>Moodle Ecosystem Infrastructure</h1>
-            <p class="subtitle">Scaling Global Learning through Remote Operational Standards</p>
+            <div class="badge">Case Study 2</div>
+            <h1>IELTS Writing Task 2 Course — Criteria-Based Assessment on Moodle</h1>
+            <p class="subtitle">Scaling evaluation transparency through data-driven rubrics and activity gating.</p>
+            <div class="tech-stack">
+                <span class="tech-pill">Moodle 4.x</span>
+                <span class="tech-pill">IELTS Band Descriptors</span>
+                <span class="tech-pill">Rubric Logic</span>
+                <span class="tech-pill">Activity Gating</span>
+                <span class="tech-pill">Completion Tracking</span>
+            </div>
         </header>
 
-        <!-- --- Project Executive Summary --- -->
-        <section class="exec-summary">
-            <h2>🚀 Project Implementation: IELTS Moodle Masterclass (Remote)</h2>
+        <!-- --- Section 1: The Problem --- -->
+        <section class="card">
+            <h2>The Problem</h2>
+            <p>Most IELTS Writing courses tell learners their band score without explaining why they received it. A learner who gets 6.0 on Task Achievement often doesn't know which specific aspect of their response caused the deduction — was it the position statement, the supporting ideas, or the conclusion?</p>
+            <p style="margin-top: 1rem;">This project was designed around one question: how do we give learners enough transparency about evaluation criteria that they can self-assess and improve between sessions?</p>
             
-            <div class="exec-grid">
-                <div class="exec-item">
-                    <h3>The Challenge: Structural Inefficiency</h3>
-                    <p>Building a high-performing IELTS program requires more than just content; it requires a <strong>Scalable Digital Infrastructure</strong> that can handle 500+ assets while maintaining pedagogical clarity.</p>
-                </div>
-                <div class="exec-item">
-                    <h3>The Execution: Implementation at Scale</h3>
-                    <p>I led the <strong>Digital Transformation</strong> of the IELTS course, migrating 500+ assets into a unified Moodle environment, optimized for <strong>Remote Autonomy</strong> and mobile-first learning.</p>
-                    <p style="margin-top:10px;">Pioneered the implementation of <strong>"Asymptotic Rubrics"</strong> strictly mapped to international standards, transforming qualitative feedback into a quantitative data pipeline.</p>
-                </div>
-                <div class="exec-item" style="grid-column: span 2;">
-                    <h3>Strategic Impact: Evidence-Based Pedagogy</h3>
-                    <div class="grid-2" style="gap: 2rem;">
-                        <div>
-                            <li><strong>LMS Deployment:</strong> Engineered complex <strong>Gradebook Logic</strong> and <strong>Restrict Access rules</strong> to automate the learner journey—reducing teacher oversight by 25%.</li>
-                            <li><strong>Standards Mapping:</strong> Aligned 100% with <strong>IB Approaches to Teaching and Learning (ATL)</strong> and <strong>UNESCO AI Pedagogy</strong> standards for international academic compliance.</li>
-                            <li><strong>Operational Speed:</strong> Achieved a 40% reduction in lead times for content updates through modular template design.</li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="takeaway-box">
-                <p><strong>Curriculum Developer’s Takeaway:</strong> This project proves my ability to take complex academic requirements and transform them into <strong>production-ready LMS infrastructures</strong> that are scalable, remote-friendly, and globally compliant.</p>
+            <div class="stat-item" style="border-left: 4px solid var(--primary); margin-top: 2rem;">
+                <span class="stat-label">Core Objective</span>
+                <p style="margin:0;">Build a 4-unit IELTS Writing Task 2 course on Moodle that maps directly to official Band Descriptors, ensuring learners understand exactly how their work is judged.</p>
             </div>
         </section>
 
-        <section class="main-card">
-            <h2>Remote Operational Standard</h2>
-            <p>To ensure consistency across distributed teams, I established a <strong>Remote Operational Standard</strong>. This includes standardized naming conventions, modular asset versioning, and automated backup protocols that allow any remote administrator to deploy updates without central oversight.</p>
+        <!-- --- Section 2: What I Built --- -->
+        <section class="card">
+            <h2>What I Built</h2>
+            <p>A self-paced IELTS Writing Task 2 course on MoodleCloud with:</p>
+            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>4 units</strong> covering: Understanding the Task → Essay Structure → Writing the Essay → Assessment & Feedback</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>4-level rubric</strong> per band score mapped directly to official IELTS Band Descriptors across 4 criteria</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Activity gating</strong> — learners cannot access Unit 2 until Unit 1 is marked complete</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>MCQ knowledge checks</strong> at the end of each unit</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 1rem; color: var(--text-dim);">
+                    <span style="color: var(--primary);">→</span>
+                    <span><strong>Peer forum</strong> for learners to submit and compare practice essays</span>
+                </li>
+            </ul>
+
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
+                <span class="stat-label">Tools Used</span>
+                <p style="font-size: 1rem; color: var(--text-dim);">Moodle 4.x (MoodleCloud) · IELTS Band Descriptors · MCQ assessments · Rubric-based grading · Activity completion tracking</p>
+            </div>
         </section>
 
-        <section class="main-card">
-            <h2>Pedagogical Framework</h2>
-            <p>Designed for academic rigor, this course utilizes a <strong>scaffolded learning pathway</strong>. Each module integrates instructional content via Articulate Rise blocks directly embedded into Moodle, followed by weighted assessments to ensure cumulative knowledge gain.</p>
+        <section class="card">
+            <h2>Course Architecture</h2>
+            <p>Designed for academic rigor, this course utilizes a <strong>scaffolded learning pathway</strong>. Each unit integrates instructional content followed by specific assessments to ensure sequential mastery.</p>
             
-            <div class="image-container">
-                <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Course_Homepage.png" alt="Moodle Home">
-                <div class="caption">Structured Curriculum: Logic-gated topics ensuring a linear learning journey.</div>
-            </div>
-        </section>
-
-        <section class="main-card">
-            <h2>Precision Grading & Feedback</h2>
-            <p>To eliminate subjective bias in writing assessments, I engineered complex <strong>Advanced Grading Rubrics</strong> aligned with official IELTS Band Descriptors (Task Response, Cohesion, Lexical Resource, Grammatical Range).</p>
-            
-            <div class="image-container">
-                <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Unit2_Rubric.png" alt="Moodle Rubric">
-                <div class="caption">Advanced Rubric: Automated criterion-based marking for consistent feedback.</div>
-            </div>
-        </section>
-
-        <section class="main-card">
-            <h2>Data-Driven Monitoring</h2>
-            <p>L&D managers benefit from real-time <strong>Activity Completion Tracking</strong> and a centralized Gradebook, providing 100% visibility into student success rates and critical bottlenecks.</p>
-            
-            <div class="feature-grid">
-                <div class="image-container" style="margin:0;">
-                    <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Admin_Gradebook.png" alt="Gradebook">
-                    <div class="caption">Centralized Gradebook.</div>
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Course_Homepage.png" alt="Moodle Home">
                 </div>
-                <div class="image-container" style="margin:0;">
-                    <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Unit4_Completion.png" alt="Completion">
-                    <div class="caption">Real-time Progression Tracking.</div>
+                <div class="caption">Structured Curriculum: Logic-gated units ensuring a linear learning journey on Moodle.</div>
+            </div>
+        </section>
+
+        <!-- --- Section 3: Design Decisions --- -->
+        <section class="card" style="border-top: 4px solid var(--primary);">
+            <h2>Design Decisions</h2>
+            <div class="grid-stats">
+                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why use official Band Descriptors?</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem;">Simplifying criteria creates a gap. Mapping directly means learners practice with the same language examiners use.</p>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why a 4-level rubric?</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem;">A single score tells a learner where they are. A rubric tells them why — and which specific area to prioritize next.</p>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; grid-column: span 2;">
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;">Why activity gating?</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem;">Without gating, learners skip to the final assessment and miss foundational concepts. Gating enforces the pedagogical sequence automatically.</p>
                 </div>
             </div>
         </section>
 
-        <section class="main-card">
-            <h2>Administrative Backbone</h2>
-            <p>Behind the scenes, I optimized the LMS settings for scalability, including automated enrolment methods and conditional access restricted by formative assessment scores.</p>
-            <div class="image-container">
-                <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Admin_CompletionSettings.png" alt="Admin Settings">
-                <div class="caption">Admin Control: Configuring complex conditional logic for asynchronous delivery.</div>
+        <section class="card">
+            <h2>Precision Grading</h2>
+            <p>To eliminate subjective bias, the course uses Advanced Rubrics aligned with official IELTS descriptors across 4 criteria: Task Achievement, Cohesion, Lexical Resource, and Grammar.</p>
+            
+            <div class="evidence-frame">
+                <div class="image-box" style="margin:0;">
+                    <img src="../assets/Moodle%20Backup/Moodle_Portfolio_Screenshots/Moodle_Unit2_Rubric.png" alt="Moodle Rubric">
+                </div>
+                <div class="caption">Moodle Rubric: Translating official IELTS standards into actionable teacher feedback.</div>
             </div>
+
+            <div class="grid-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Data Visibility</span>
+                    <p class="stat-desc">Centralized Gradebook ensures teachers and admins have 100% visibility into individual progression.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Automated Mastery</span>
+                    <p class="stat-desc">Conditional access restricted by formative assessment scores ensures no learner falls behind.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Section 4: What I Learned --- -->
+        <section class="card" style="border-left: 4px solid var(--primary);">
+            <h2>What I Learned</h2>
+            <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>Moodle's rubric tool requires learner-friendly language. Criteria must be accessible while still mapping accurately to official sources.</span>
+                </li>
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>LMS structure (gating/tracking) can guide learner behavior automatically, reducing the need for manual instructor intervention.</span>
+                </li>
+                <li style="margin-bottom: 1.2rem; display: flex; gap: 1rem; color: var(--text-dim); font-size: 1.05rem;">
+                    <span style="color: var(--primary);">→</span>
+                    <span>Social learning features like forums require clear scaffolding. Without instructions on peer feedback, engagement remains superficial.</span>
+                </li>
+            </ul>
         </section>
 
         <footer>
-            <div class="footer-content">
-                <p>&copy; 2026 Phi Tong. Ready to build something together?</p>
-                <a href="mailto:phitong.official@gmail.com" class="footer-btn">Get In Touch</a>
-            </div>
-            <div class="footer-brand" style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
-                &copy; 2026 Phi Tong | Curriculum Developer & LMS Specialist
+            <div class="badge" style="margin-bottom: 2rem;">Next Case Study</div>
+            <a href="case-study-onboarding-remote.html" class="next-step">Scalable Employee Onboarding →</a>
+            <div style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">
+                &copy; 2026 Phi Tong | Remote Learning Developer & Technical ID
             </div>
         </footer>
+
     </div>
-    <!-- ULTIMATUM MOBILE FIX: FORCED STACKING & SYNC -->
-    <style>
-        @media (max-width: 768px) {
-            .container { padding: 2rem 1rem !important; width: 100% !important; max-width: 100% !important; }
-            h1 { font-size: clamp(1.8rem, 10vw, 3rem) !important; line-height: 1.1 !important; margin-bottom: 2rem !important; }
-            
-            /* FORCE VERTICAL STACK FOR ALL GRID CONTAINERS */
-            .exec-grid, .feature-grid, .grid-2 {
-                display: block !important;
-                grid-template-columns: 1fr !important;
-            }
-            
-            .exec-item, .main-card, .image-container {
-                width: 100% !important;
-                margin-bottom: 1.5rem !important;
-                display: block !important;
-                padding: 1.2rem !important;
-            }
-            
-            .exec-item h3 { font-size: 1.1rem !important; }
-            
-            /* IMAGE FIT */
-            img { max-width: 100% !important; height: auto !important; border-radius: 8px !important; }
-            
-            /* SYNC: Ensure no sections are hidden */
-            section, div, p, span { display: block !important; }
-        }
-    </style>
+
 </body>
 </html>
