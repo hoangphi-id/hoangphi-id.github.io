@@ -2,7 +2,7 @@
 **Instructional Designer | LMS Implementation | Language Learning Specialist**
 
 Ho Chi Minh City, Vietnam · phitong.official@gmail.com · +84 799 445 377
-[linkedin.com/in/hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong/) · [hoangphi-id.github.io/junior](https://hoangphi-id.github.io/junior/)
+[linkedin.com/in/hoang-phi-tong](https://www.linkedin.com/in/hoang-phi-tong/) · [hoangphi-id.github.io/id](https://hoangphi-id.github.io/id/)
 
 ---
 
@@ -52,15 +52,15 @@ Ho Chi Minh City, Vietnam · phitong.official@gmail.com · +84 799 445 377
 ### Titanium Branching Simulator | Articulate Storyline 360 + Moodle + n8n Pipeline | 2026
 - Designed a branching simulator to assess behavioral actions of learners across 3 decision stages, tracking Trust Score and Stress Meter variables in real time.
 - Implemented JavaScript variables and trigger logic to create dynamic, state-driven feedback; connected SCORM output to a live data pipeline for behavioral logging.
-- Case Study: [hoangphi-id.github.io/junior/case-study-titanium-remote.html](https://hoangphi-id.github.io/junior/case-study-titanium-remote.html)
+- Case Study: [hoangphi-id.github.io/id/case-study-titanium-remote.html](https://hoangphi-id.github.io/id/case-study-titanium-remote.html)
 
 ### IELTS Teacher Onboarding | Rise 360 — 3-module SCORM course deployed to Moodle | 2025
 - Mapped all content to official IELTS Band Descriptors; designed mobile-first micro-learning with branching scenarios and reflective assessments.
-- Case Study: [hoangphi-id.github.io/junior/case-study-onboarding-remote.html](https://hoangphi-id.github.io/junior/case-study-onboarding-remote.html)
+- Case Study: [hoangphi-id.github.io/id/case-study-onboarding-remote.html](https://hoangphi-id.github.io/id/case-study-onboarding-remote.html)
 
 ### IELTS Writing Task 2 Course | MoodleCloud LMS with rubric-based assessment | 2025
 - Designed 4 criteria per band score from official IELTS Band Descriptors; structured criteria-based formative feedback to help learners identify strengths and weaknesses.
-- Case Study: [hoangphi-id.github.io/junior/case-study-moodle-remote.html](https://hoangphi-id.github.io/junior/case-study-moodle-remote.html)
+- Case Study: [hoangphi-id.github.io/id/case-study-moodle-remote.html](https://hoangphi-id.github.io/id/case-study-moodle-remote.html)
 
 ---
 
